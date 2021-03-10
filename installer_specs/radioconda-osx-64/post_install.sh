@@ -1,0 +1,1 @@
+rm -f $PREFIX/pkgs/*.tar.bz2

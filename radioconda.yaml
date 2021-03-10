@@ -16,7 +16,7 @@ dependencies:
   - gnuradio-soapy
   - gqrx
   - libiio
-  #- libm2k
+  - libm2k
   - limesuite
   - pyadi-iio
   - rtl-sdr

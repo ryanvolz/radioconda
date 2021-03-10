@@ -1,0 +1,1 @@
+del /q %PREFIX%\pkgs\*.tar.bz2

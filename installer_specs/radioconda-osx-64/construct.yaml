@@ -1,0 +1,33 @@
+channels:
+- conda-forge
+company: github.com/ryanvolz/radioconda
+initialize_by_default: true
+installer_type: all
+keep_pkgs: true
+license_file: LICENSE
+name: radioconda
+post_install: post_install.sh
+register_python_default: false
+specs:
+- digital_rf=2.6.6=py39h8d93ffa_1
+- gnuradio-osmosdr=0.2.3=py39hc9aad0a_2
+- gnuradio-satellites=3.7.0=py39h4dc7599_0
+- gnuradio-soapy=2.1.3=py39h10efd34_4
+- gnuradio=3.8.2.0=py39h5e22cea_8
+- gqrx=2.14.4=h5073cc2_0
+- libiio=0.21=py39he4a4a3a_4
+- libm2k=0.3.2=py39heea7e63_0
+- limesuite=20.10.0=h1ad935b_0
+- mamba=0.8.0=py39hb671511_0
+- pyadi-iio=0.0.7=pyhd8ed1ab_0
+- python=3.9.2=h2502468_0_cpython
+- rtl-sdr=0.6.0=haf1e3a3_1
+- soapysdr-module-lms7=20.10.0=hb03de04_0
+- soapysdr-module-plutosdr=0.2.1=h3fcbbe8_1
+- soapysdr-module-remote=0.5.2=h9903d45_1
+- soapysdr-module-rtlsdr=0.3.0=ha1b3eb9_0
+- soapysdr-module-uhd=0.4.1=hbf6900a_1
+- soapysdr=0.7.2=py39hedf5dff_3
+- uhd=3.15.0.0=py39h05227b4_5
+version: 2021.03.10
+write_condarc: true
