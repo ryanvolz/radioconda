@@ -1,0 +1,121 @@
+name: Build radioconda
+on: [push, pull_request]
+
+env:
+  DISTNAME: radioconda
+  SOURCE: github.com/ryanvolz/radioconda
+
+jobs:
+  build:
+    name: ${{ matrix.PLATFORM }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            PLATFORM: linux-64
+            OS_NAME: Linux
+            ARCH: x86_64
+          - os: macos-latest
+            PLATFORM: osx-64
+            OS_NAME: MacOSX
+            ARCH: x86_64
+          - os: windows-latest
+            PLATFORM: win-64
+            OS_NAME: Windows
+            ARCH: x86_64
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Install python environment
+        uses: mamba-org/provision-with-micromamba@main
+        with:
+          environment-file: buildenv.yaml
+
+      - name: Build installer (bash)
+        if: runner.os != 'Windows'
+        shell: bash -l {0}
+        env:
+          PLATFORM: ${{ matrix.PLATFORM }}
+        run: |
+          python build_installer.py -v
+
+      - name: Build installer (cmd.exe)
+        if: runner.os == 'Windows'
+        shell: powershell
+        env:
+          PLATFORM: ${{ matrix.PLATFORM }}
+        run: |
+          $Env:Path = "$Env:CONDA_PREFIX\NSIS;$Env:Path"
+          echo $Env:Path
+          python build_installer.py -v
+
+      - name: List built installers
+        shell: bash
+        run: |
+          ls -lh dist
+
+      - name: Test installer (sh)
+        if: contains(matrix.OS_NAME, 'Linux') || contains(matrix.OS_NAME, 'MacOSX')
+        shell: bash
+        env:
+          OS_NAME: ${{ matrix.OS_NAME }}
+          ARCH: ${{ matrix.ARCH }}
+          INSTALL_PATH: ${{ github.workspace }}/test_installation
+        run: |
+          bash dist/$DISTNAME-*-$OS_NAME-$ARCH.sh -b -p $INSTALL_PATH
+          eval "$($INSTALL_PATH/bin/conda shell.bash hook)"
+          conda info
+          conda list
+
+      - name: Test installer (pkg)
+        if: contains(matrix.OS_NAME, 'MacOSX')
+        continue-on-error: true # this test doesn't work yet
+        shell: bash
+        env:
+          OS_NAME: ${{ matrix.OS_NAME }}
+          ARCH: ${{ matrix.ARCH }}
+          TARGET_VOLUME: CurrentUserHomeDirectory
+          INSTALL_PATH: ~/Applications/${{ env.DISTNAME }}
+        run: |
+          installer -verbose -pkg dist/$DISTNAME-*-$OS_NAME-$ARCH.pkg -target $TARGET_VOLUME
+          eval "$($INSTALL_PATH/bin/conda shell.bash hook)"
+          conda info
+          conda list
+
+      - name: Test installer (exe)
+        if: contains(matrix.OS_NAME, 'Windows')
+        shell: bash
+        env:
+          OS_NAME: ${{ matrix.OS_NAME }}
+          ARCH: ${{ matrix.ARCH }}
+          INSTALL_PATH_W: ${{ github.workspace }}\test_installation
+        run: |
+          INSTALL_PATH=$(cygpath -u $INSTALL_PATH_W)
+          INSTALLER_EXE="dist/$DISTNAME-*-$OS_NAME-$ARCH.exe"
+          INSTALLER_EXE_W=$(cygpath -w $INSTALLER_EXE)
+          echo "start /wait \"\" $INSTALLER_EXE_W /InstallationType=JustMe /RegisterPython=0 /S /D=$INSTALL_PATH_W" > install.bat
+          cmd.exe /c install.bat
+          source $INSTALL_PATH/Scripts/activate
+          conda info
+          conda list
+
+      - name: Upload to Github artifact
+        if: ${{ (success() || failure()) && !startsWith(github.ref, 'refs/tags/') }}
+        uses: actions/upload-artifact@v2
+        with:
+          path: dist/*
+          name: ${{ matrix.OS_NAME }}-${{ matrix.ARCH }}
+
+      - name: Upload to release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: dist/*
+          tag: ${{ github.ref }}
+          overwrite: true
+          file_glob: true

@@ -1,0 +1,5 @@
+name: buildenv
+channels:
+  - conda-forge
+dependencies:
+  - constructor

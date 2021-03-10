@@ -109,8 +109,12 @@ def render_constructor_specs(
 if __name__ == "__main__":
     import argparse
     import datetime
+    import os
 
-    here = pathlib.Path(__file__).parent.relative_to("")
+    cwd = pathlib.Path(".").absolute()
+    here = pathlib.Path(__file__).parent.absolute().relative_to(cwd)
+    distname = os.getenv("DISTNAME", "radioconda")
+    source = os.getenv("SOURCE", "github.com/ryanvolz/radioconda")
 
     parser = argparse.ArgumentParser(
         description=(
@@ -122,7 +126,7 @@ if __name__ == "__main__":
         "environment_file",
         type=pathlib.Path,
         nargs="?",
-        default=here / "radioconda.yaml",
+        default=here / f"{distname}.yaml",
         help=(
             "YAML file defining an installer distribution, with a 'name' string and"
             " 'channels', 'platforms', and 'dependencies' lists."
@@ -132,7 +136,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--company",
         type=str,
-        default="github.com/ryanvolz/radioconda",
+        default=source,
         help=(
             "Name of the company/entity who is responsible for the installer."
             " (default: %(default)s)"

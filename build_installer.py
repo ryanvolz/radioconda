@@ -20,14 +20,16 @@ def spec_dir_extract_platform(installer_spec_dir: pathlib.Path) -> str:
 
 if __name__ == "__main__":
     import argparse
+    import os
     import subprocess
     import sys
 
     from constructor import main as constructor_main
 
-    platform = constructor_main.cc_platform
     cwd = pathlib.Path(".").absolute()
     here = pathlib.Path(__file__).parent.absolute().relative_to(cwd)
+    distname = os.getenv("DISTNAME", "radioconda")
+    platform = os.getenv("PLATFORM", constructor_main.cc_platform)
 
     parser = argparse.ArgumentParser(
         description=(
@@ -39,7 +41,7 @@ if __name__ == "__main__":
         "installer_spec_dir",
         type=pathlib.Path,
         nargs="?",
-        default=here / "installer_specs" / f"radioconda-{platform}",
+        default=here / "installer_specs" / f"{distname}-{platform}",
         help=(
             "Installer specification directory (containing construct.yaml)"
             " for a particular platform (name ends in the platform identifier)."
@@ -60,6 +62,8 @@ if __name__ == "__main__":
     args, constructor_args = parser.parse_known_args()
 
     platform = spec_dir_extract_platform(args.installer_spec_dir)
+
+    args.output_dir.mkdir(parents=True, exist_ok=True)
 
     constructor_cmdline = [
         "constructor",
