@@ -103,6 +103,17 @@ jobs:
           conda info
           conda list
 
+      - name: Calculate sha256 hash
+        shell: bash
+        env:
+          OS_NAME: ${{ matrix.OS_NAME }}
+          ARCH: ${{ matrix.ARCH }}
+        run: |
+          for INSTALLER_PATH in dist/$DISTNAME-*-$OS_NAME-$ARCH.*; do
+            HASH_PATH="$INSTALLER_PATH.sha256"
+            sha256sum $INSTALLER_PATH > $HASH_PATH
+          done
+
       - name: Upload to Github artifact
         if: ${{ (success() || failure()) && !startsWith(github.ref, 'refs/tags/') }}
         uses: actions/upload-artifact@v2
