@@ -18,7 +18,7 @@ specs:
 - libiio=0.21=py39he4a4a3a_4
 - libm2k=0.3.2=py39heea7e63_0
 - limesuite=20.10.0=h1ad935b_0
-- mamba=0.8.0=py39hb671511_0
+- mamba=0.8.2=py39hb671511_0
 - pyadi-iio=0.0.7=pyhd8ed1ab_0
 - python=3.9.2=h2502468_0_cpython
 - rtl-sdr=0.6.0=haf1e3a3_1
@@ -29,5 +29,5 @@ specs:
 - soapysdr-module-uhd=0.4.1=hbf6900a_1
 - soapysdr=0.7.2=py39hedf5dff_3
 - uhd=3.15.0.0=py39h05227b4_5
-version: 2021.03.10
+version: 2021.03.12
 write_condarc: true
