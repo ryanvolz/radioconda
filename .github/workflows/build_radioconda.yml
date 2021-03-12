@@ -30,6 +30,10 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
+      - name: Install coreutils for macOS
+        if: runner.os == 'macOS'
+        run: brew install coreutils
+
       - name: Install python environment
         uses: mamba-org/provision-with-micromamba@main
         with:
@@ -112,6 +116,8 @@ jobs:
           for INSTALLER_PATH in dist/$DISTNAME-*-$OS_NAME-$ARCH.*; do
             HASH_PATH="$INSTALLER_PATH.sha256"
             sha256sum $INSTALLER_PATH > $HASH_PATH
+            echo $INSTALLER_PATH
+            cat $HASH_PATH
           done
 
       - name: Upload to Github artifact
