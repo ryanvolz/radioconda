@@ -38,7 +38,7 @@ For non-interactive usage, look at the options by running the following:
 
 or if you are on Windows, run:
 
-    start /wait "" build/radioconda-*-Windows-x86_64.exe /InstallationType=JustMe /RegisterPython=0 /S /D=%UserProfile%\radioconda
+    start /wait "" build/radioconda-<VERSION>-Windows-x86_64.exe /InstallationType=JustMe /RegisterPython=0 /S /D=%UserProfile%\radioconda
 
 ## Developers
 
@@ -57,13 +57,9 @@ So, the procedure to create a new installer package is:
 
 To release a new version of radioconda and build installer packages using GitHub's CI:
 
-- Update the repository following steps 1-3 above.
-- Make a new pre-release on GitHub with a name equal to the version.
-- Wait until all artifacts are uploaded by CI
-  - For each build, we upload 3 artifacts
-    1. One installer with the version name
-    2. One installer without the version name
-    3. The SHA256
-- Mark the pre-release as a release
+1. Update the repository following steps 1-3 above.
+2. Make a new pre-release on GitHub with a name equal to the version.
+3. Wait until all artifacts are uploaded by CI
+4. Mark the pre-release as a release
 
-NOTE: using a pre-release is important to make sure the latest links work.
+NOTE: using a pre-release is important to make sure the "latest" links work.
