@@ -7,6 +7,7 @@ platforms:
   - win-64
 dependencies:
   - mamba
+  - ipython
   - python
   # restrict to python 3.8 on Windows for Windows 7 compatibility
   - python 3.8 # [win]
