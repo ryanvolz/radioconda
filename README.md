@@ -40,6 +40,70 @@ or if you are on Windows, run:
 
     start /wait "" build/radioconda-<VERSION>-Windows-x86_64.exe /InstallationType=JustMe /RegisterPython=0 /S /D=%UserProfile%\radioconda
 
+## Additional Installation for Device Support
+
+To use particular software radio devices, it might be necessary to install additional drivers or firmware. Find your device below and follow the instructions. (Help add to this section by filing an issue if the instructions don't work or you have additional instructions to add!)
+
+### RTL-SDR
+
+#### Linux users
+
+Blacklist the DVB-T modules that would otherwise claim the device:
+
+    sudo ln -s $CONDA_PREFIX/etc/modprobe.d/rtl-sdr-blacklist.conf /etc/modprobe.d/radioconda-rtl-sdr-blacklist.conf
+    sudo modprobe -r $(cat $CONDA_PREFIX/etc/modprobe.d/rtl-sdr-blacklist.conf | sed -n -e 's/^blacklist //p')
+
+Install a udev rule by creating a link into your radioconda installation:
+
+    sudo ln -s $CONDA_PREFIX/lib/udev/rules.d/rtl-sdr.rules /etc/udev/rules.d/radioconda-rtl-sdr.rules
+    sudo udevadm control --reload
+    sudo udevadm trigger
+
+#### Windows users
+
+[Install the WinUSB driver with Zadig](#installing-the-winusb-driver-with-zadig), selecting the device that is called "Bulk-In, Interface (Interface 0)".
+
+### IIO (Pluto SDR)
+
+Once you can talk to the hardware (by following the instructions below), you may want to perform the post-install steps detailed on the [Pluto users wiki](https://wiki.analog.com/university/tools/pluto/users).
+
+#### Linux users
+
+Install a udev rule by creating a link into your radioconda installation:
+
+    sudo ln -s $CONDA_PREFIX/lib/udev/rules.d/90-libiio.rules /etc/udev/rules.d/90-radioconda-libiio.rules
+    sudo udevadm control --reload
+    sudo udevadm trigger
+
+#### Windows users
+
+Install the latest USB drivers by download and installing [this file](https://github.com/analogdevicesinc/plutosdr-m2k-drivers-win/releases/latest/download/PlutoSDR-M2k-USB-Drivers.exe).
+
+### UHD (Ettus USRP)
+
+#### All devices
+
+Download the firmware files by activating your conda prompt and running
+
+    uhd_images_downloader
+
+#### USB devices (e.g. B series)
+
+Windows users might have to install a USB driver for the device. Follow the instructions [from the Ettus site](https://files.ettus.com/manual/page_transport.html#transport_usb_installwin), or [install the WinUSB driver with Zadig](#installing-the-winusb-driver-with-zadig) (your device will have a USB ID that starts with 2500).
+
+## Installing the WinUSB driver with Zadig
+
+Many USB devices use libusb and need a WinUSB driver installed on Windows. Follow this procedure to install the driver for your device:
+
+1. Download and run [Zadig](https://zadig.akeo.ie/)
+2. Select your device
+
+   - It may be auto-selected since it is missing a driver
+   - It may not have a sensible name, but you can verify the USB ID
+
+3. Ensure the target driver (middle of the interface) reads "WinUSB"
+4. Click "Install Driver" or "Replace Driver"
+
 ## Developers
 
 ### Usage
