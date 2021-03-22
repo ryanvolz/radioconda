@@ -2,7 +2,30 @@
 
 ![Build radioconda](https://github.com/ryanvolz/radioconda/actions/workflows/build_radioconda.yml/badge.svg)
 
-This repository holds cross-platform installers for a collection of **software radio** packages bundled with the [conda](https://conda.io/) package manager. These installers will get you started with an environment that includes the packages listed [here](https://github.com/ryanvolz/radioconda/blob/master/radioconda.yaml). Once installed, you will have a fully functional conda distribution, meaning that you can install additional packages (if available through [conda-forge](https://conda-forge.org/feedstock-outputs)) or upgrade to the latest versions using `conda` or `mamba`, e.g.:
+This repository holds cross-platform installers for a collection of open source **software radio** packages bundled with the [conda](https://conda.io/) package manager, including
+
+- Digital RF
+- GNU Radio
+- gqrx
+- gr-satellites
+
+and support for the following SDR devices and device libraries:
+
+|      Device      |             Library              |
+| :--------------: | :------------------------------: |
+| [ADALM-PLUTO][1] | libiio ([setup](#iio-pluto-sdr)) |
+| [Ettus USRPs][2] |  UHD ([setup](#uhd-ettus-usrp))  |
+|   [LimeSDR][3]   |  Lime Suite ([setup](#limesdr))  |
+|   [RTL-SDR][4]   |   rtl-sdr ([setup](#rtl-sdr))    |
+
+[1]: https://www.analog.com/en/design-center/evaluation-hardware-and-software/evaluation-boards-kits/adalm-pluto.html
+[2]: https://www.ettus.com/products/
+[3]: https://limemicro.com/products/boards/
+[4]: https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/
+
+The complete list of packages can be found [here](https://github.com/ryanvolz/radioconda/blob/master/radioconda.yaml).
+
+Once installed, you will have a fully functional conda distribution/environment, meaning that you can install additional packages (if available through [conda-forge](https://conda-forge.org/feedstock-outputs)) or upgrade to the latest versions using `conda` or `mamba`, e.g.:
 
     mamba install <pkg-name>
     mamba upgrade --all
@@ -46,6 +69,10 @@ To use particular software radio devices, it might be necessary to install addit
 
 ### RTL-SDR
 
+#### Windows users
+
+[Install the WinUSB driver with Zadig](#installing-the-winusb-driver-with-zadig), selecting the device that is called "Bulk-In, Interface (Interface 0)".
+
 #### Linux users
 
 Blacklist the DVB-T modules that would otherwise claim the device:
@@ -59,13 +86,11 @@ Install a udev rule by creating a link into your radioconda installation:
     sudo udevadm control --reload
     sudo udevadm trigger
 
-#### Windows users
-
-[Install the WinUSB driver with Zadig](#installing-the-winusb-driver-with-zadig), selecting the device that is called "Bulk-In, Interface (Interface 0)".
-
 ### IIO (Pluto SDR)
 
-Once you can talk to the hardware (by following the instructions below), you may want to perform the post-install steps detailed on the [Pluto users wiki](https://wiki.analog.com/university/tools/pluto/users).
+#### Windows users
+
+Install the latest USB drivers by download and installing [this file](https://github.com/analogdevicesinc/plutosdr-m2k-drivers-win/releases/latest/download/PlutoSDR-M2k-USB-Drivers.exe).
 
 #### Linux users
 
@@ -75,9 +100,25 @@ Install a udev rule by creating a link into your radioconda installation:
     sudo udevadm control --reload
     sudo udevadm trigger
 
+#### All users
+
+Once you can talk to the hardware (by following the instructions below), you may want to perform the post-install steps detailed on the [Pluto users wiki](https://wiki.analog.com/university/tools/pluto/users).
+
+### LimeSDR
+
 #### Windows users
 
-Install the latest USB drivers by download and installing [this file](https://github.com/analogdevicesinc/plutosdr-m2k-drivers-win/releases/latest/download/PlutoSDR-M2k-USB-Drivers.exe).
+The conda-forge package uses libusb to communicate over USB with your LimeSDR device, instead of the standard CyUSB library which is not open source. If you have used your LimeSDR with another software package, you will have to switch USB drivers to one compatible with WinUSB/libusb.
+
+[Install the WinUSB driver with Zadig](#installing-the-winusb-driver-with-zadig), selecting your Lime device.
+
+#### Linux users
+
+Install a udev rule by creating a link into your radioconda installation:
+
+    sudo ln -s $CONDA_PREFIX/lib/udev/rules.d/64-limesuite.rules /etc/udev/rules.d/64-radioconda-limesuite.rules
+    sudo udevadm control --reload
+    sudo udevadm trigger
 
 ### UHD (Ettus USRP)
 
