@@ -103,6 +103,15 @@ def render_constructor_specs(
         with construct_yaml_path.open("w") as f:
             yaml.safe_dump(construct_dict, stream=f)
 
+        lockfile_contents = [
+            f"# platform: {rendered_lock_spec.platform}",
+            f"# env_hash: {rendered_lock_spec.env_hash()}",
+        ]
+        lockfile_contents.extend(rendered_lock_spec.specs)
+        lock_file_path = constructor_dir / f"{constructor_name}.txt"
+        with lock_file_path.open("w") as f:
+            f.writelines(s + "\n" for s in lockfile_contents)
+
     return constructor_specs
 
 
