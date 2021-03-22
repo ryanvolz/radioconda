@@ -1,6 +1,7 @@
 name: radioconda
 channels:
   - conda-forge
+  - ryanvolz # [win]
 platforms:
   - linux-64
   - osx-64
@@ -11,6 +12,7 @@ dependencies:
   - python
   # restrict to python 3.8 on Windows for Windows 7 compatibility
   - python 3.8 # [win]
+  - radioconda_console_shortcut # [win]
 
   - digital_rf
   - gnuradio
