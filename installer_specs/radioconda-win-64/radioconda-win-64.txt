@@ -1,0 +1,24 @@
+# platform: win-64
+# env_hash: ab273ce2494a7e97588d381ec245985de4ce92961806088fa03cc111c1fcdd94
+digital_rf=2.6.6=py38haa20497_1
+gnuradio-osmosdr=0.2.3=py38h6ffbe7b_2
+gnuradio-satellites=3.7.0=py38hd090a73_0
+gnuradio-soapy=2.1.3.1=py38he3a1c6d_0
+gnuradio=3.8.2.0=py38hc062659_8
+gqrx=2.14.4=h5ff14be_1
+ipython=7.21.0=py38hc5df569_0
+libiio=0.21=py38h292cb97_4
+libm2k=0.4.0=py38haf3f0dc_2
+limesuite=20.10.0=hbaad480_0
+mamba=0.8.2=py38hdd88130_0
+pyadi-iio=0.0.7=pyhd8ed1ab_0
+python=3.8.0=hc9e8b01_5
+radioconda_console_shortcut=1.0=0
+rtl-sdr=0.6.0=h8ffe710_2
+soapysdr-module-lms7=20.10.0=h54dde43_0
+soapysdr-module-plutosdr=0.2.1=h94b6719_1
+soapysdr-module-remote=0.5.2=hcf9c798_1
+soapysdr-module-rtlsdr=0.3.0=h74a9793_0
+soapysdr-module-uhd=0.4.1=hc03c0ee_1
+soapysdr=0.7.2=py38hbd9d945_4
+uhd=3.15.0.0=py38h1d4ea3b_6
