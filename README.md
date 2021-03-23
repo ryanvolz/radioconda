@@ -25,12 +25,7 @@ and support for the following SDR devices and device libraries:
 
 The complete list of packages can be found [here](https://github.com/ryanvolz/radioconda/blob/master/radioconda.yaml).
 
-Once installed, you will have a fully functional conda distribution/environment, meaning that you can install additional packages (if available through [conda-forge](https://conda-forge.org/feedstock-outputs)) or upgrade to the latest versions using `conda` or `mamba`, e.g.:
-
-    mamba install <pkg-name>
-    mamba upgrade --all
-
-Think of radioconda as an alternative to [Anaconda](https://www.anaconda.com/products/individual) or [Miniforge](https://github.com/conda-forge/miniforge), but specialized for software radio.
+Once installed, you will have a fully functional conda distribution/environment, meaning that you can use the `conda` or `mamba` commands to install additional packages (if available through [conda-forge](https://conda-forge.org/feedstock-outputs)) or upgrade to the latest versions. Think of radioconda as an alternative to [Anaconda](https://www.anaconda.com/products/individual) or [Miniforge](https://github.com/conda-forge/miniforge), but specialized for software radio.
 
 **NOTE:** Radioconda is built from packages maintained by the [conda-forge](https://conda-forge.org/) project. If you have questions or issues that are specific to the conda installation of a particular package, please report them at the corresponding [feedstock repository](https://github.com/conda-forge/feedstocks).
 
@@ -47,7 +42,7 @@ Radioconda installers are available here: https://github.com/ryanvolz/radioconda
 
 ## Install
 
-For a command line install, download the installer and run,
+For a command line install, download the installer and run:
 
     bash radioconda-*-Linux-x86_64.sh   # or similar for other installers for unix platforms
 
@@ -62,6 +57,58 @@ For non-interactive usage, look at the options by running the following:
 or if you are on Windows, run:
 
     start /wait "" build/radioconda-<VERSION>-Windows-x86_64.exe /InstallationType=JustMe /RegisterPython=0 /S /D=%UserProfile%\radioconda
+
+## Use
+
+You will mostly use radioconda through the command line, although on Windows some applications will install shortcuts to the Start menu.
+
+### Windows
+
+Launch a terminal by running "Conda Prompt" in the "radioconda" directory in the Start menu. From this command line, you can run `mamba` to install/upgrade packages or run any of the applications installed with radioconda. Some applications can also be launched through shortcuts added to the Start menu.
+
+### Linux and macOS
+
+Launch your favorite terminal. Depending on the options you chose while installing, you may or may not already have the radioconda "base" environment activated automatically (you will see "(base)" on your command line prompt). To otherwise activate the radioconda "base" environment, run:
+
+    conda activate base
+
+If this fails because the `conda` command is not found, you can activate the environment manually by running
+
+    sh <PATH_TO_RADIOCONDA>/bin/activate
+
+From an activated environment, you will be able to run `mamba` to install/upgrade packages or run any of the applications installed with radioconda.
+
+### Installing packages
+
+To install a particular package:
+
+    mamba install <pkg-name>
+
+## Upgrade
+
+Once you have radioconda installed, you can stay up to date for all packages with:
+
+    mamba upgrade --all
+
+### Upgrade to latest release
+
+To install the latest release in particular, run (on Windows):
+
+    mamba install --file https://github.com/ryanvolz/radioconda/releases/latest/download/radioconda-win-64.txt
+
+(on Linux/macOS):
+
+    mamba install --file https://github.com/ryanvolz/radioconda/releases/latest/download/radioconda-$(conda info | sed -n -e 's/^.*platform : //p').txt
+
+### Install a particular release
+
+To install the package versions associated with a particular release, substitute the release number and run the following (on Windows):
+
+    mamba install --file https://github.com/ryanvolz/radioconda/releases/download/20NN.NN.NN/radioconda-win-64.txt
+
+(on Linux/macOS):
+
+    mamba install --file https://github.com/ryanvolz/radioconda/releases/download/20NN.NN.NN/radioconda-$(conda info | sed -n -e 's/^.*platform : //p').txt
 
 ## Additional Installation for Device Support
 
