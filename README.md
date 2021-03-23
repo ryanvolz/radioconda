@@ -48,6 +48,8 @@ For a command line install, download the installer and run:
 
 For a graphical install, download the installer and double-click it.
 
+See [below](#additional-installation-for-device-support) for additional installation steps for particular software radio devices.
+
 ### Non-interactive install
 
 For non-interactive usage, look at the options by running the following:
