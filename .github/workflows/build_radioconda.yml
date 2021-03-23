@@ -63,9 +63,12 @@ jobs:
           echo $Env:Path
           python build_installer.py -v
 
-      - name: List built installers
+      - name: Copy spec and list built installers
         shell: bash
+        env:
+          PLATFORM: ${{ matrix.PLATFORM }}
         run: |
+          cp installer_specs/$DISTNAME-$PLATFORM/$DISTNAME-$PLATFORM.txt dist/
           ls -lh dist
 
       - name: Test installer (sh)
