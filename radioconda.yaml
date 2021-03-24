@@ -23,8 +23,12 @@ dependencies:
   - libiio
   - libm2k
   - limesuite
+  - matplotlib
+  - numpy
+  - pandas
   - pyadi-iio
   - rtl-sdr
+  - scipy
   - soapysdr
   - soapysdr-module-lms7
   - soapysdr-module-plutosdr
