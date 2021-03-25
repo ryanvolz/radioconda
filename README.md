@@ -118,11 +118,11 @@ To use particular software radio devices, it might be necessary to install addit
 
 ### RTL-SDR
 
-#### Windows users
+##### Windows users
 
 [Install the WinUSB driver with Zadig](#installing-the-winusb-driver-with-zadig), selecting the device that is called "Bulk-In, Interface (Interface 0)".
 
-#### Linux users
+##### Linux users
 
 Blacklist the DVB-T modules that would otherwise claim the device:
 
@@ -137,11 +137,11 @@ Install a udev rule by creating a link into your radioconda installation:
 
 ### IIO (Pluto SDR)
 
-#### Windows users
+##### Windows users
 
 Install the latest USB drivers by download and installing [this file](https://github.com/analogdevicesinc/plutosdr-m2k-drivers-win/releases/latest/download/PlutoSDR-M2k-USB-Drivers.exe).
 
-#### Linux users
+##### Linux users
 
 Install a udev rule by creating a link into your radioconda installation:
 
@@ -149,19 +149,19 @@ Install a udev rule by creating a link into your radioconda installation:
     sudo udevadm control --reload
     sudo udevadm trigger
 
-#### All users
+##### All users
 
 Once you can talk to the hardware (by following the instructions below), you may want to perform the post-install steps detailed on the [Pluto users wiki](https://wiki.analog.com/university/tools/pluto/users).
 
 ### LimeSDR
 
-#### Windows users
+##### Windows users
 
 The conda-forge package uses libusb to communicate over USB with your LimeSDR device, instead of the standard CyUSB library which is not open source. If you have used your LimeSDR with another software package, you will have to switch USB drivers to one compatible with WinUSB/libusb.
 
 [Install the WinUSB driver with Zadig](#installing-the-winusb-driver-with-zadig), selecting your Lime device.
 
-#### Linux users
+##### Linux users
 
 Install a udev rule by creating a link into your radioconda installation:
 
@@ -179,7 +179,17 @@ Download the firmware files by activating your conda prompt and running
 
 #### USB devices (e.g. B series)
 
-Windows users might have to install a USB driver for the device. Follow the instructions [from the Ettus site](https://files.ettus.com/manual/page_transport.html#transport_usb_installwin), or [install the WinUSB driver with Zadig](#installing-the-winusb-driver-with-zadig) (your device will have a USB ID that starts with 2500).
+##### Windows users
+
+You probably have to install a USB driver for the device. Follow the instructions [from the Ettus site](https://files.ettus.com/manual/page_transport.html#transport_usb_installwin), or [install the WinUSB driver with Zadig](#installing-the-winusb-driver-with-zadig) (your device will have a USB ID that starts with 2500 or 3923).
+
+##### Linux users
+
+Install a udev rule by creating a link into your radioconda installation:
+
+    sudo ln -s $CONDA_PREFIX/lib/uhd/utils/uhd-usrp.rules /etc/udev/rules.d/radioconda-uhd-usrp.rules
+    sudo udevadm control --reload
+    sudo udevadm trigger
 
 ## Installing the WinUSB driver with Zadig
 
