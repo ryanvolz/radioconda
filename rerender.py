@@ -22,17 +22,26 @@ def render_lock_spec(
     )
 
     rendered_specs = []
+    rendered_dep_specs = []
     for pkg in pkgs:
+        pkg_spec = "{name}={version}={build_string}".format(**pkg)
         if pkg["name"] in spec_names:
-            rendered_specs.append("{name}={version}={build_string}".format(**pkg))
+            rendered_specs.append(pkg_spec)
+        else:
+            rendered_dep_specs.append(pkg_spec)
 
     rendered_lock_spec = conda_lock.src_parser.LockSpecification(
         specs=sorted(rendered_specs),
         channels=lock_spec.channels,
         platform=lock_spec.platform,
     )
+    rendered_full_lock_spec = conda_lock.src_parser.LockSpecification(
+        specs=sorted(rendered_specs + rendered_dep_specs),
+        channels=lock_spec.channels,
+        platform=lock_spec.platform,
+    )
 
-    return rendered_lock_spec
+    return rendered_lock_spec, rendered_full_lock_spec
 
 
 def render_constructor_specs(
@@ -62,7 +71,9 @@ def render_constructor_specs(
         lock_spec = conda_lock.conda_lock.parse_environment_file(
             environment_file=environment_file, platform=platform
         )
-        rendered_lock_spec = render_lock_spec(lock_spec, conda_exe)
+        rendered_lock_spec, rendered_full_lock_spec = render_lock_spec(
+            lock_spec, conda_exe
+        )
         construct_dict = dict(
             name=installer_name,
             version=version,
@@ -104,10 +115,10 @@ def render_constructor_specs(
             yaml.safe_dump(construct_dict, stream=f)
 
         lockfile_contents = [
-            f"# platform: {rendered_lock_spec.platform}",
-            f"# env_hash: {rendered_lock_spec.env_hash()}",
+            f"# platform: {rendered_full_lock_spec.platform}",
+            f"# env_hash: {rendered_full_lock_spec.env_hash()}",
         ]
-        lockfile_contents.extend(rendered_lock_spec.specs)
+        lockfile_contents.extend(rendered_full_lock_spec.specs)
         lock_file_path = constructor_dir / f"{constructor_name}.txt"
         with lock_file_path.open("w") as f:
             f.writelines(s + "\n" for s in lockfile_contents)
