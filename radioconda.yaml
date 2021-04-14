@@ -11,11 +11,11 @@ dependencies:
   - ipython
   - python
   # restrict to python 3.8 on Windows for Windows 7 compatibility
-  - python 3.8 # [win]
+  - python 3.8.* # [win]
   - radioconda_console_shortcut # [win]
 
   - digital_rf
-  - gnuradio
+  - gnuradio 3.9.*
   - gnuradio-osmosdr
   - gnuradio-satellites
   - gnuradio-soapy
@@ -35,4 +35,4 @@ dependencies:
   - soapysdr-module-remote
   - soapysdr-module-rtlsdr
   - soapysdr-module-uhd
-  - uhd
+  - uhd 4.0.*
