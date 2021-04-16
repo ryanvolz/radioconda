@@ -136,6 +136,9 @@ if __name__ == "__main__":
     distname = os.getenv("DISTNAME", "radioconda")
     source = os.getenv("SOURCE", "github.com/ryanvolz/radioconda")
 
+    dt = datetime.datetime.now()
+    version = dt.strftime("%Y.%m.%d")
+
     parser = argparse.ArgumentParser(
         description=(
             "Re-render installer specification directories to be used by conda"
@@ -150,6 +153,16 @@ if __name__ == "__main__":
         help=(
             "YAML file defining an installer distribution, with a 'name' string and"
             " 'channels', 'platforms', and 'dependencies' lists."
+            " (default: %(default)s)"
+        ),
+    )
+    parser.add_argument(
+        "-v",
+        "--version",
+        type=str,
+        default=version,
+        help=(
+            "Version tag for the installer, defaults to the current date."
             " (default: %(default)s)"
         ),
     )
@@ -198,12 +211,9 @@ if __name__ == "__main__":
         conda_executable=args.conda_exe, mamba=True, micromamba=True
     )
 
-    dt = datetime.datetime.now()
-    version = dt.strftime("%Y.%m.%d")
-
     constructor_specs = render_constructor_specs(
         environment_file=args.environment_file,
-        version=version,
+        version=args.version,
         company=args.company,
         license_file=args.license_file,
         output_dir=args.output_dir,
