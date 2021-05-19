@@ -6,6 +6,7 @@ on:
   pull_request:
     paths:
       - "installer_specs/**"
+  workflow_dispatch:
 
 env:
   DISTNAME: radioconda
