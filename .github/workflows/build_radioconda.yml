@@ -94,7 +94,7 @@ jobs:
           TARGET_VOLUME: CurrentUserHomeDirectory
           INSTALL_PATH: ~/${{ env.DISTNAME }}
         run: |
-          installer -verbose -pkg dist/$DISTNAME-*-$OS_NAME-$ARCH.pkg -target $TARGET_VOLUME
+          installer -verbose -dumplog -pkg dist/$DISTNAME-*-$OS_NAME-$ARCH.pkg -target $TARGET_VOLUME
           eval "$($INSTALL_PATH/bin/conda shell.bash hook)"
           conda info
           conda list
