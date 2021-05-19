@@ -105,10 +105,20 @@ def render_constructor_specs(
         # write the post_install scripts referenced in the construct dict
         if platform.startswith("win"):
             with (constructor_dir / "post_install.bat").open("w") as f:
-                f.write("\n".join((r"del /q %PREFIX%\pkgs\*.tar.bz2", "")))
+                f.write("\n".join((r"del /q %PREFIX%\pkgs\*.tar.bz2", "exit 0", "")))
         else:
             with (constructor_dir / "post_install.sh").open("w") as f:
-                f.write("\n".join((r"rm -f $PREFIX/pkgs/*.tar.bz2", "")))
+                f.write(
+                    "\n".join(
+                        (
+                            "#!/bin/sh",
+                            f'PREFIX="${{PREFIX:-$2/{installer_name}}}"',
+                            r"rm -f $PREFIX/pkgs/*.tar.bz2",
+                            "exit 0",
+                            "",
+                        )
+                    )
+                )
 
         construct_yaml_path = constructor_dir / "construct.yaml"
         with construct_yaml_path.open("w") as f:
