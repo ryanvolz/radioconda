@@ -92,7 +92,7 @@ jobs:
           OS_NAME: ${{ matrix.OS_NAME }}
           ARCH: ${{ matrix.ARCH }}
           TARGET_VOLUME: CurrentUserHomeDirectory
-          INSTALL_PATH: ~/Applications/${{ env.DISTNAME }}
+          INSTALL_PATH: ~/${{ env.DISTNAME }}
         run: |
           installer -verbose -pkg dist/$DISTNAME-*-$OS_NAME-$ARCH.pkg -target $TARGET_VOLUME
           eval "$($INSTALL_PATH/bin/conda shell.bash hook)"
