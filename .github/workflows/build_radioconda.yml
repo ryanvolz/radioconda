@@ -86,13 +86,12 @@ jobs:
 
       - name: Test installer (pkg)
         if: contains(matrix.OS_NAME, 'MacOSX')
-        continue-on-error: true # this test doesn't work yet
         shell: bash
         env:
           OS_NAME: ${{ matrix.OS_NAME }}
           ARCH: ${{ matrix.ARCH }}
           TARGET_VOLUME: CurrentUserHomeDirectory
-          INSTALL_PATH: ~/${{ env.DISTNAME }}
+          INSTALL_PATH: /Users/runner/${{ env.DISTNAME }}
         run: |
           installer -verbose -dumplog -pkg dist/$DISTNAME-*-$OS_NAME-$ARCH.pkg -target $TARGET_VOLUME
           eval "$($INSTALL_PATH/bin/conda shell.bash hook)"
