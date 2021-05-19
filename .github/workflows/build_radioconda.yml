@@ -92,7 +92,7 @@ jobs:
           OS_NAME: ${{ matrix.OS_NAME }}
           ARCH: ${{ matrix.ARCH }}
           TARGET_VOLUME: CurrentUserHomeDirectory
-          INSTALL_PATH: ${{ github.workspace }}/../${{ env.DISTNAME }}
+          INSTALL_PATH: ${{ github.workspace }}/../../../${{ env.DISTNAME }}
         run: |
           installer -verbose -dumplog -pkg dist/$DISTNAME-*-$OS_NAME-$ARCH.pkg -target $TARGET_VOLUME
           eval "$($INSTALL_PATH/bin/conda shell.bash hook)"
