@@ -105,10 +105,10 @@ def render_constructor_specs(
         # write the post_install scripts referenced in the construct dict
         if platform.startswith("win"):
             with (constructor_dir / "post_install.bat").open("w") as f:
-                f.writelines((r"del /q %PREFIX%\pkgs\*.tar.bz2", ""))
+                f.write("\n".join((r"del /q %PREFIX%\pkgs\*.tar.bz2", "")))
         else:
             with (constructor_dir / "post_install.sh").open("w") as f:
-                f.writelines((r"rm -f $PREFIX/pkgs/*.tar.bz2", ""))
+                f.write("\n".join((r"rm -f $PREFIX/pkgs/*.tar.bz2", "")))
 
         construct_yaml_path = constructor_dir / "construct.yaml"
         with construct_yaml_path.open("w") as f:
@@ -121,7 +121,7 @@ def render_constructor_specs(
         lockfile_contents.extend(rendered_full_lock_spec.specs)
         lock_file_path = constructor_dir / f"{constructor_name}.txt"
         with lock_file_path.open("w") as f:
-            f.writelines(s + "\n" for s in lockfile_contents)
+            f.write("\n".join(lockfile_contents))
 
     return constructor_specs
 
