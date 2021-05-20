@@ -10,7 +10,8 @@ on:
 
 env:
   DISTNAME: radioconda
-  SOURCE: github.com/ryanvolz/radioconda
+  LICENSE_ID: BSD-3-Clause
+  METAPACKAGE_SUMMARY: Metapackage to install the radioconda package set.
 
 jobs:
   build:
@@ -64,13 +65,20 @@ jobs:
           echo $Env:Path
           python build_installer.py -v
 
-      - name: Copy spec and list built installers
+      - name: Build metapackage
+        shell: bash -l {0}
+        env:
+          PLATFORM: ${{ matrix.PLATFORM }}
+        run: |
+          python build_metapackage.py
+
+      - name: Copy spec and list built installers and packages
         shell: bash
         env:
           PLATFORM: ${{ matrix.PLATFORM }}
         run: |
           cp installer_specs/$DISTNAME-$PLATFORM.txt dist/
-          ls -lh dist
+          ls -lhR dist
 
       - name: Test installer (sh)
         if: contains(matrix.OS_NAME, 'Linux') || contains(matrix.OS_NAME, 'MacOSX')
@@ -145,3 +153,10 @@ jobs:
           tag: ${{ github.ref }}
           overwrite: true
           file_glob: true
+
+      - name: Upload metapackage to Anaconda.org
+        shell: bash -l {0}
+        env:
+          ANACONDA_API_TOKEN: ${{ secrets.ANACONDA_API_TOKEN }}
+        run: |
+          anaconda upload -l test dist/conda-bld/**/*

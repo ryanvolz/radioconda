@@ -215,7 +215,12 @@ if __name__ == "__main__":
     cwd = pathlib.Path(".").absolute()
     here = pathlib.Path(__file__).parent.absolute().relative_to(cwd)
     distname = os.getenv("DISTNAME", "radioconda")
-    source = os.getenv("SOURCE", "github.com/ryanvolz/radioconda")
+    source = "/".join(
+        (
+            os.getenv("GITHUB_SERVER_URL", "https://github.com"),
+            os.getenv("GITHUB_REPOSITORY", "ryanvolz/radioconda"),
+        )
+    )
 
     dt = datetime.datetime.now()
     version = dt.strftime("%Y.%m.%d")
