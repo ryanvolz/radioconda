@@ -69,7 +69,7 @@ jobs:
         env:
           PLATFORM: ${{ matrix.PLATFORM }}
         run: |
-          cp installer_specs/$DISTNAME-$PLATFORM/$DISTNAME-$PLATFORM.txt dist/
+          cp installer_specs/$DISTNAME-$PLATFORM.txt dist/
           ls -lh dist
 
       - name: Test installer (sh)
