@@ -17,11 +17,11 @@ specs:
 - gqrx=2.14.4=h7579640_2
 - ipython=7.23.1=py39h71a6800_0
 - libiio=0.21=h694c41f_6
-- libm2k=0.4.0=py39ha4a404c_2
+- libm2k=0.4.0=py39ha4a404c_3
 - limesuite=20.10.0=h1ad935b_1
 - mamba=0.13.0=py39hb671511_0
 - matplotlib=3.4.2=py39h6e9494a_0
-- numpy=1.20.2=py39h7eed0ac_0
+- numpy=1.20.3=py39h7eed0ac_0
 - pandas=1.2.4=py39h4d6be9b_0
 - pyadi-iio=0.0.7=pyhd8ed1ab_1
 - python=3.9.4=h9133fd0_0_cpython
@@ -34,5 +34,5 @@ specs:
 - soapysdr-module-uhd=0.4.1=h92a74a4_2
 - soapysdr=0.8.0=py39hf018cea_0
 - uhd=3.15.0.0=py39he85038b_6
-version: 2021.05.19
+version: 2021.05.20
 write_condarc: true

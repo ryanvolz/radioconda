@@ -1,5 +1,8 @@
 # platform: osx-64
-# env_hash: 0c05b827d42179b8b5d679dc2c2817666da9ad533032fb9b7dec009f417cb3dd
+# env_hash: 1fccaac301582e71219fb4225bf6963aaedd5b4d0c58ebffbab292f929a40297
+# name: radioconda
+# version: 2021.05.20
+# channels: conda-forge
 adwaita-icon-theme=40.1.1=h694c41f_1
 appdirs=1.4.4=pyh9f0ad1d_0
 appnope=0.1.2=py39h6e9494a_1
@@ -20,10 +23,8 @@ certifi=2020.12.5=py39h6e9494a_1
 cffi=1.14.5=py39h319c39b_0
 chardet=4.0.0=py39h6e9494a_1
 click-plugins=1.1.1=py_0
-click=8.0.0=py39h6e9494a_0
+click=8.0.1=py39h6e9494a_0
 codec2=0.9.2=haf1e3a3_1
-conda-package-handling=1.7.3=py39h89e85a6_0
-conda=4.10.1=py39h6e9494a_0
 construct=2.9.45=py_0
 cryptography=3.4.7=py39ha2c9959_0
 cycler=0.10.0=py_2
@@ -78,7 +79,6 @@ kiwisolver=1.3.1=py39hedf5dff_1
 krb5=1.19.1=hcfbf3a7_0
 lcms2=2.12=h577c468_0
 libad9361-iio=0.2=hd953885_2
-libarchive=3.5.1=h0a5793d_1
 libblas=3.9.0=9_openblas
 libcblas=3.9.0=9_openblas
 libclang=11.1.0=default_he082bbe_1
@@ -96,14 +96,13 @@ libiio=0.21=h694c41f_6
 liblapack=3.9.0=9_openblas
 liblimesuite=20.10.0=he49afe7_1
 libllvm11=11.1.0=hd011deb_2
-libm2k=0.4.0=py39ha4a404c_2
+libm2k=0.4.0=py39ha4a404c_3
 libnghttp2=1.43.0=h07e645a_0
 libopenblas=0.3.15=openmp_h5e1b9a4_1
 libpng=1.6.37=hb0a8c7a_2
 libpq=13.3=hea3049e_0
 librsvg=2.50.5=hd2a7919_0
 libsodium=1.0.18=hbcb3906_1
-libsolv=0.7.18=hcf210ce_0
 libssh2=1.9.0=h52ee1ee_6
 libtiff=4.2.0=h46d1c8c_2
 libusb=1.0.24=h0d85af4_4
@@ -115,10 +114,8 @@ llvm-openmp=11.1.0=hda6cdc1_1
 log4cpp=1.1.3=he49afe7_1002
 lxml=4.6.3=py39hf41e7f8_0
 lz4-c=1.9.3=h046ec9c_0
-lzo=2.10=haf1e3a3_1000
 mako=1.1.4=pyh44b312d_0
-mamba=0.13.0=py39hb671511_0
-markupsafe=2.0.0=py39h89e85a6_0
+markupsafe=2.0.1=py39h89e85a6_0
 matplotlib-base=3.4.2=py39hb07454d_0
 matplotlib-inline=0.1.2=pyhd8ed1ab_2
 matplotlib=3.4.2=py39h6e9494a_0
@@ -127,7 +124,7 @@ mysql-libs=8.0.23=h54f5a68_2
 ncurses=6.2=h2e338ed_4
 nspr=4.30=hcd9eead_0
 nss=3.65=h31e2bf1_0
-numpy=1.20.2=py39h7eed0ac_0
+numpy=1.20.3=py39h7eed0ac_0
 olefile=0.46=pyh9f0ad1d_1
 openjpeg=2.4.0=h6e7aa92_1
 openssl=1.1.1k=h0d85af4_0
@@ -145,7 +142,6 @@ prompt-toolkit=3.0.18=pyha770c72_0
 ptyprocess=0.7.0=pyhd3deb0d_0
 pyadi-iio=0.0.7=pyhd8ed1ab_1
 pycairo=1.20.0=py39hbe14034_1
-pycosat=0.6.3=py39hcbf5805_1006
 pycparser=2.20=pyh9f0ad1d_2
 pygments=2.9.0=pyhd8ed1ab_0
 pygobject=3.40.1=py39h8819ad7_1
@@ -167,11 +163,8 @@ pyzmq=22.0.3=py39h7fec2f1_1
 qt=5.12.9=h126340a_4
 qwt=6.1.6=h3050948_0
 readline=8.1=h05e3726_0
-reproc-cpp=14.2.1=h2e338ed_0
-reproc=14.2.1=hbcb3906_0
 requests=2.25.1=pyhd3deb0d_0
 rtl-sdr=0.6.0=h0d85af4_2
-ruamel_yaml=0.15.80=py39h4b0b724_1004
 scipy=1.6.3=py39h056f1c0_0
 setuptools=49.6.0=py39h6e9494a_3
 six=1.16.0=pyh6c4a22f_0
@@ -184,7 +177,6 @@ soapysdr=0.8.0=py39hf018cea_0
 sqlite=3.35.5=h44b9ce1_0
 tk=8.6.10=hb0a8c7a_1
 tornado=6.1=py39hcbf5805_1
-tqdm=4.60.0=pyhd8ed1ab_0
 traitlets=5.0.5=py_0
 tzdata=2021a=he74cb21_0
 uhd=3.15.0.0=py39he85038b_6
