@@ -66,6 +66,8 @@ jobs:
           PLATFORM: ${{ matrix.PLATFORM }}
           OS_NAME: ${{ matrix.OS_NAME }}
         run: |
+          # update to a micromamba-compatible conda constructor
+          pip install git+git://github.com/wolfv/constructor@69eaa20b12ea1020438f645ec834f47ac9d3c3a7#egg=constructor --force --no-deps
           if [ "$OS_NAME" == "Windows" ]; then
             PATH=$CONDA_PREFIX/NSIS:$PATH
           fi
