@@ -1,0 +1,37 @@
+channels:
+- conda-forge
+company: https://github.com/ryanvolz/radioconda
+initialize_by_default: true
+installer_type: all
+keep_pkgs: true
+license_file: LICENSE
+name: radioconda
+post_install: post_install.sh
+register_python_default: false
+specs:
+- digital_rf=2.6.6=py39h1a70d2d_1
+- gnuradio-osmosdr=0.2.3=py39h61db5fd_6
+- gnuradio-satellites=4.1.0=py39heb355c1_1
+- gnuradio-soapy=2.1.3.1=py39h0fef4b3_3
+- gnuradio=3.9.1.0=py39h79ff117_8
+- ipython=7.23.1=py39h32adebf_0
+- libiio=0.21=hce30654_6
+- libm2k=0.4.0=py39h1e86038_3
+- limesuite=20.10.0=h75efa04_1
+- mamba=0.13.0=py39he886a54_0
+- matplotlib=3.4.2=py39hdf13c20_0
+- numpy=1.20.3=py39h1f3b974_0
+- pandas=1.2.4=py39h7f752ed_0
+- pyadi-iio=0.0.7=pyhd8ed1ab_1
+- python=3.9.4=h5b20da3_0_cpython
+- rtl-sdr=0.6.0=h3422bc3_2
+- scipy=1.6.3=py39h5060c3b_0
+- soapysdr-module-lms7=20.10.0=h1576d20_1
+- soapysdr-module-plutosdr=0.2.1=h1c51a56_2
+- soapysdr-module-remote=0.5.2=h4306ade_2
+- soapysdr-module-rtlsdr=0.3.0=h4306ade_1
+- soapysdr-module-uhd=0.4.1=h4d034c9_3
+- soapysdr=0.8.0=py39h4d2d688_0
+- uhd=4.0.0.0=py39h97c5db2_4
+version: 2021.05.21.dev
+write_condarc: true
