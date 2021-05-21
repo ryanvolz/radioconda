@@ -1,0 +1,2 @@
+# github helper pieces to make some files not show up in diffs automatically
+installer_specs/*.lock linguist-generated=true

@@ -1,26 +1,49 @@
 #!/usr/bin/env python3
 import pathlib
-import re
+from typing import List
 
-comment_re = re.compile(r"^\s*#\s*(?P<comment>.*)\s*$")
-key_value_re = re.compile(r"^(?P<key>.*):\s*(?P<value>.*)\s*$")
+import yaml
 
 
-def read_lock_file(lock_file: pathlib.Path) -> dict:
-    with lock_file.open("r") as f:
-        lines = f.read().splitlines()
+def read_env_file(
+    env_file: pathlib.Path,
+    fallback_name: str,
+    fallback_version: str,
+    fallback_platform: str,
+    fallback_channels: List[str],
+) -> dict:
+    with env_file.open("r") as f:
+        env_dict = yaml.safe_load(f)
 
-    lock_dict = dict(specs=[])
-    for line in lines:
-        comment_match = comment_re.match(line)
-        if comment_match:
-            m = key_value_re.match(comment_match.group("comment"))
-            if m:
-                lock_dict[m.group("key")] = m.group("value")
-        else:
-            lock_dict["specs"].append(line)
+    env_dict.setdefault("name", fallback_name)
+    env_dict.setdefault("version", fallback_version)
+    env_dict.setdefault("platform", fallback_platform)
+    env_dict.setdefault("channels", fallback_channels)
 
-    return lock_dict
+    return env_dict
+
+
+def get_conda_metapackage_cmdline(
+    env_dict: dict, home: str, license_id: str, summary: str
+):
+    cmdline = [
+        "conda",
+        "metapackage",
+        env_dict["name"],
+        env_dict["version"],
+        "--no-anaconda-upload",
+        "--home",
+        home,
+        "--license",
+        license_id,
+        "--summary",
+        summary,
+    ]
+    for channel in env_dict["channels"]:
+        cmdline.extend(["--channel", channel])
+    cmdline.extend(["--dependencies"] + env_dict["dependencies"])
+
+    return cmdline
 
 
 if __name__ == "__main__":
@@ -54,12 +77,12 @@ if __name__ == "__main__":
         )
     )
     parser.add_argument(
-        "lock_file",
+        "env_file",
         type=pathlib.Path,
         nargs="?",
-        default=here / "installer_specs" / f"{distname}-{platform}.txt",
+        default=here / "installer_specs" / f"{distname}-{platform}.yml",
         help=(
-            "Environment lock file for a particular platform"
+            "Environment yaml file for a particular platform"
             " (name ends in the platform identifier)."
             " (default: %(default)s)"
         ),
@@ -92,45 +115,32 @@ if __name__ == "__main__":
 
     args, metapackage_args = parser.parse_known_args()
 
-    lock_dict = read_lock_file(args.lock_file)
+    env_dict = read_env_file(
+        args.env_file,
+        fallback_name=distname,
+        fallback_version="0",
+        fallback_platform=platform,
+        fallback_channels=["conda-forge"],
+    )
 
-    name = lock_dict.get("name", distname)
-    version = lock_dict.get("version", "0")
-    platform = lock_dict.get("platform", platform)
+    cmdline = get_conda_metapackage_cmdline(
+        env_dict=env_dict, home=args.home, license_id=args.license, summary=args.summary
+    )
+    cmdline.extend(metapackage_args)
 
     env = os.environ.copy()
-    env["CONDA_SUBDIR"] = platform
+    env["CONDA_SUBDIR"] = env_dict["platform"]
 
-    channels = [c.strip() for c in lock_dict.get("channels", "conda-forge").split(",")]
-
-    conda_metapackage_cmdline = [
-        "conda",
-        "metapackage",
-        name,
-        version,
-        "--no-anaconda-upload",
-        "--home",
-        args.home,
-        "--license",
-        args.license,
-        "--summary",
-        args.summary,
-    ]
-    for channel in channels:
-        conda_metapackage_cmdline.extend(["--channel", channel])
-    conda_metapackage_cmdline.extend(["--dependencies"] + lock_dict["specs"])
-    conda_metapackage_cmdline.extend(metapackage_args)
-
-    proc = subprocess.run(conda_metapackage_cmdline, env=env)
+    proc = subprocess.run(cmdline, env=env)
 
     try:
         proc.check_returncode()
     except subprocess.CalledProcessError:
         sys.exit(1)
 
-    bldpkgs_dir = pathlib.Path(conda_build_config.bldpkgs_dir)
-    pkg_paths = list(bldpkgs_dir.glob(f"{name}-{version}*.bz2"))
-    pkg_out_dir = args.output_dir / platform
+    bldpkgs_dir = pathlib.Path(conda_build_config.croot) / env_dict["platform"]
+    pkg_paths = list(bldpkgs_dir.glob(f"{env_dict['name']}-{env_dict['version']}*.bz2"))
+    pkg_out_dir = args.output_dir / env_dict["platform"]
     pkg_out_dir.mkdir(parents=True, exist_ok=True)
 
     for pkg in pkg_paths:
