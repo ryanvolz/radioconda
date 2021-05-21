@@ -26,10 +26,22 @@ jobs:
             PLATFORM: linux-64
             OS_NAME: Linux
             ARCH: x86_64
+          - os: ubuntu-latest
+            PLATFORM: linux-aarch64
+            OS_NAME: Linux
+            ARCH: aarch64
+          - os: ubuntu-latest
+            PLATFORM: linux-ppc64le
+            OS_NAME: Linux
+            ARCH: ppc64le
           - os: macos-latest
             PLATFORM: osx-64
             OS_NAME: MacOSX
             ARCH: x86_64
+          - os: macos-latest
+            PLATFORM: osx-arm64
+            OS_NAME: MacOSX
+            ARCH: arm64
           - os: windows-latest
             PLATFORM: win-64
             OS_NAME: Windows
@@ -57,7 +69,7 @@ jobs:
           if [ "$OS_NAME" == "Windows" ]; then
             PATH=$CONDA_PREFIX/NSIS:$PATH
           fi
-          python build_installer.py -v
+          python build_installer.py -v --conda-exe $MAMBA_EXE
 
       - name: Build metapackage
         shell: bash -l {0}

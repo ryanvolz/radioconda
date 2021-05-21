@@ -4,7 +4,10 @@ channels:
   - ryanvolz # [win]
 platforms:
   - linux-64
+  - linux-aarch64
+  - linux-ppc64le
   - osx-64
+  - osx-arm64
   - win-64
 dependencies:
   - digital_rf
@@ -12,7 +15,9 @@ dependencies:
   - gnuradio-osmosdr
   - gnuradio-satellites
   - gnuradio-soapy
-  - gqrx
+  - gqrx # [linux64]
+  - gqrx # [osx64]
+  - gqrx # [win64]
   - ipython
   - libiio
   - libm2k
