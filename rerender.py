@@ -32,26 +32,51 @@ def lock_env_spec(
     return locked_env_spec
 
 
-def write_lock_file(
-    lock_spec: conda_lock.src_parser.LockSpecification,
-    lock_file_path: pathlib.Path,
+def write_env_file(
+    env_spec: conda_lock.src_parser.LockSpecification,
+    file_path: pathlib.Path,
     name: Optional[str] = None,
     version: Optional[str] = None,
-    channels: Optional[List[str]] = None,
 ):
-    lockfile_contents = [
-        f"# platform: {lock_spec.platform}",
-        f"# env_hash: {lock_spec.env_hash()}",
-    ]
+    env_dict = dict(
+        name=name,
+        version=version,
+        platform=env_spec.platform,
+        channels=env_spec.channels,
+        dependencies=env_spec.specs,
+    )
     if name:
-        lockfile_contents.append(f"# name: {name}")
+        env_dict["name"] = name
     if version:
-        lockfile_contents.append(f"# version: {version}")
-    if channels:
-        lockfile_contents.append(f"# channels: {','.join(channels)}")
-    lockfile_contents.extend(lock_spec.specs)
-    with lock_file_path.open("w") as f:
-        f.write("\n".join(lockfile_contents))
+        env_dict["version"] = version
+    with file_path.open("w") as f:
+        yaml.safe_dump(env_dict, stream=f)
+
+    return env_dict
+
+
+def write_lock_file(
+    lock_spec: conda_lock.src_parser.LockSpecification,
+    file_path: pathlib.Path,
+    conda_exe: str,
+):
+    lockfile_contents = conda_lock.conda_lock.create_lockfile_from_spec(
+        channels=lock_spec.channels, conda=conda_exe, spec=lock_spec
+    )
+
+    def sanitize_lockfile_line(line):
+        line = line.strip()
+        if line == "":
+            return "#"
+        else:
+            return line
+
+    lockfile_contents = [sanitize_lockfile_line(ln) for ln in lockfile_contents]
+
+    with file_path.open("w") as f:
+        f.write("\n".join(lockfile_contents) + "\n")
+
+    return lockfile_contents
 
 
 def render_constructor(
@@ -151,14 +176,19 @@ def render_platforms(
         # lock the full environment specification to specific versions and builds
         locked_env_spec = lock_env_spec(env_spec, conda_exe)
 
-        # write the full environment specification to a lock file
-        lock_file_path = output_dir / f"{output_name}.txt"
-        write_lock_file(
-            locked_env_spec,
-            lock_file_path,
+        # write the full environment specification to a yaml file (to build metapackage)
+        locked_env_dict = write_env_file(
+            env_spec=locked_env_spec,
+            file_path=output_dir / f"{output_name}.yml",
             name=env_name,
             version=version,
-            channels=locked_env_spec.channels,
+        )
+
+        # write the full environment specification to a lock file (to install from file)
+        lockfile_contents = write_lock_file(
+            lock_spec=locked_env_spec,
+            file_path=output_dir / f"{output_name}.lock",
+            conda_exe=conda_exe,
         )
 
         # add installer-only (base environment) packages and lock those too
@@ -200,6 +230,8 @@ def render_platforms(
         # aggregate output
         rendered_platforms[output_name] = dict(
             locked_env_spec=locked_env_spec,
+            locked_env_dict=locked_env_dict,
+            lockfile_contents=lockfile_contents,
             locked_installer_spec=locked_installer_spec,
             constructor_dict=constructor_dict,
         )

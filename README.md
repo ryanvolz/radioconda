@@ -104,15 +104,15 @@ To install a particular release version, substitute the desired version number a
 
     mamba install -c ryanvolz radioconda=20NN.NN.NN
 
-### Install from environment file
+### Install from environment lock file
 
-You can also install from the released environment file (on Windows):
+You can also install from the released environment lock file (on Windows):
 
-    mamba install --file https://github.com/ryanvolz/radioconda/releases/latest/download/radioconda-win-64.txt
+    mamba install --file https://github.com/ryanvolz/radioconda/releases/latest/download/radioconda-win-64.lock
 
 (on Linux/macOS):
 
-    mamba install --file https://github.com/ryanvolz/radioconda/releases/latest/download/radioconda-$(conda info | sed -n -e 's/^.*platform : //p').txt
+    mamba install --file https://github.com/ryanvolz/radioconda/releases/latest/download/radioconda-$(conda info | sed -n -e 's/^.*platform : //p').lock
 
 ## Additional Installation for Device Support
 

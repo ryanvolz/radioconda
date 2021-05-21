@@ -64,14 +64,14 @@ jobs:
         env:
           PLATFORM: ${{ matrix.PLATFORM }}
         run: |
-          python build_metapackage.py installer_specs/$DISTNAME-$PLATFORM.txt
+          python build_metapackage.py
 
       - name: Copy lock file and list built installers and packages
         shell: bash
         env:
           PLATFORM: ${{ matrix.PLATFORM }}
         run: |
-          cp installer_specs/$DISTNAME-$PLATFORM.txt dist/
+          cp installer_specs/$DISTNAME-$PLATFORM.lock dist/
           ls -lhR dist
 
       - name: Test installer (sh)
