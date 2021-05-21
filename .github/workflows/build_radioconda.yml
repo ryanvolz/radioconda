@@ -11,6 +11,7 @@ on:
 env:
   DISTNAME: radioconda
   LICENSE_ID: BSD-3-Clause
+  METAPACKAGE_LABEL: test
   METAPACKAGE_SUMMARY: Metapackage to install the radioconda package set.
 
 jobs:
@@ -48,29 +49,33 @@ jobs:
           environment-file: buildenv.yaml
 
       - name: Build installer (bash)
-        if: runner.os != 'Windows'
+        # if: runner.os != 'Windows'
         shell: bash -l {0}
         env:
           PLATFORM: ${{ matrix.PLATFORM }}
+          OS_NAME: ${{ matrix.OS_NAME }}
         run: |
+          if [ "$OS_NAME" == "Windows" ]; then
+            PATH=$CONDA_PREFIX/NSIS:$PATH
+          fi
           python build_installer.py -v
 
-      - name: Build installer (cmd.exe)
-        if: runner.os == 'Windows'
-        shell: powershell
-        env:
-          PLATFORM: ${{ matrix.PLATFORM }}
-        run: |
-          $Env:Path = "$Env:CONDA_PREFIX\NSIS;$Env:Path"
-          echo $Env:Path
-          python build_installer.py -v
+      #   - name: Build installer (cmd.exe)
+      #     if: runner.os == 'Windows'
+      #     shell: powershell
+      #     env:
+      #       PLATFORM: ${{ matrix.PLATFORM }}
+      #     run: |
+      #       $Env:Path = "$Env:CONDA_PREFIX\NSIS;$Env:Path"
+      #       echo $Env:Path
+      #       python build_installer.py -v
 
       - name: Build metapackage
         shell: bash -l {0}
         env:
           PLATFORM: ${{ matrix.PLATFORM }}
         run: |
-          python build_metapackage.py
+          python build_metapackage.py installer_specs/$DISTNAME-$PLATFORM.txt
 
       - name: Copy spec and list built installers and packages
         shell: bash
@@ -102,6 +107,8 @@ jobs:
           TARGET_VOLUME: CurrentUserHomeDirectory
           INSTALL_PATH: ${{ github.workspace }}/../../../${{ env.DISTNAME }}
         run: |
+          installer -showChoiceChangesXML -pkg dist/$DISTNAME-*-$OS_NAME-$ARCH.pkg > pkg-choices.xml
+          cat pkg-choices.xml
           installer -verbose -dumplog -pkg dist/$DISTNAME-*-$OS_NAME-$ARCH.pkg -target $TARGET_VOLUME
           eval "$($INSTALL_PATH/bin/conda shell.bash hook)"
           conda info
@@ -159,4 +166,5 @@ jobs:
         env:
           ANACONDA_API_TOKEN: ${{ secrets.ANACONDA_API_TOKEN }}
         run: |
-          anaconda upload -l test dist/conda-bld/**/*
+          micromamba --info
+          anaconda upload -l $METAPACKAGE_LABEL dist/conda-bld/**/*
