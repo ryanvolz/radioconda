@@ -1,7 +1,7 @@
 channels:
 - conda-forge
 - ryanvolz
-company: github.com/ryanvolz/radioconda
+company: https://github.com/ryanvolz/radioconda
 initialize_by_default: true
 installer_type: all
 keep_pkgs: true
@@ -36,5 +36,5 @@ specs:
 - soapysdr-module-uhd=0.4.1=h4a99580_2
 - soapysdr=0.8.0=py38hbd9d945_0
 - uhd=3.15.0.0=py38h1d4ea3b_6
-version: 2021.05.20
+version: 2021.05.21
 write_condarc: true
