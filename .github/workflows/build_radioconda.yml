@@ -11,7 +11,7 @@ on:
 env:
   DISTNAME: radioconda
   LICENSE_ID: BSD-3-Clause
-  METAPACKAGE_LABEL: test
+  METAPACKAGE_LABEL: main
   METAPACKAGE_SUMMARY: Metapackage to install the radioconda package set.
 
 jobs:
@@ -112,7 +112,6 @@ jobs:
           </array>
           </plist>
           EOF
-          installer -showChoicesAfterApplyingChangesXML pkg-choices.xml -pkg dist/$DISTNAME-*-$OS_NAME-$ARCH.pkg -target $TARGET_VOLUME
           installer -verbose -dumplog -applyChoiceChangesXML pkg-choices.xml -pkg dist/$DISTNAME-*-$OS_NAME-$ARCH.pkg -target $TARGET_VOLUME
           eval "$($INSTALL_PATH/bin/conda shell.bash hook)"
           conda info
@@ -166,6 +165,7 @@ jobs:
           file_glob: true
 
       - name: Upload metapackage to Anaconda.org
+        if: startsWith(github.ref, 'refs/tags/')
         shell: bash -l {0}
         env:
           ANACONDA_API_TOKEN: ${{ secrets.ANACONDA_API_TOKEN }}
