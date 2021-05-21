@@ -34,7 +34,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description=(
             "Build installer package(s) using conda constructor."
-            " Additional command-line options will be passed to constructor."
+            " Additional command-line options following '--' will be passed to"
+            " constructor."
         )
     )
     parser.add_argument(
@@ -59,7 +60,13 @@ if __name__ == "__main__":
         ),
     )
 
-    args, constructor_args = parser.parse_known_args()
+    # allow a delimiter to separate constructor arguments
+    argv = sys.argv[1:]
+    if "--" in argv:
+        i = argv.index("--")
+        args, constructor_args = parser.parse_args(argv[:i]), argv[i + 1 :]
+    else:
+        args, constructor_args = parser.parse_args(argv), []
 
     platform = spec_dir_extract_platform(args.installer_spec_dir)
 

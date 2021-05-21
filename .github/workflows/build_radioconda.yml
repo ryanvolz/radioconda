@@ -69,7 +69,7 @@ jobs:
           if [ "$OS_NAME" == "Windows" ]; then
             PATH=$CONDA_PREFIX/NSIS:$PATH
           fi
-          python build_installer.py -v --conda-exe $MAMBA_EXE
+          python build_installer.py -- -v --conda-exe $MAMBA_EXE
 
       - name: Build metapackage
         shell: bash -l {0}

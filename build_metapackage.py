@@ -73,7 +73,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description=(
             "Build environment metapackage using conda-build."
-            " Additional command-line options will be passed to conda metapackage."
+            " Additional command-line options following '--' will be passed to conda"
+            " metapackage."
         )
     )
     parser.add_argument(
@@ -113,7 +114,13 @@ if __name__ == "__main__":
         help="Summary of the package. (default: %(default)s)",
     )
 
-    args, metapackage_args = parser.parse_known_args()
+    # allow a delimiter to separate metapackage arguments
+    argv = sys.argv[1:]
+    if "--" in argv:
+        i = argv.index("--")
+        args, metapackage_args = parser.parse_args(argv[:i]), argv[i + 1 :]
+    else:
+        args, metapackage_args = parser.parse_args(argv), []
 
     env_dict = read_env_file(
         args.env_file,
