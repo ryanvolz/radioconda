@@ -94,23 +94,25 @@ Once you have radioconda installed, you can stay up to date for all packages wit
 
 ### Upgrade to latest release
 
-To install the latest release in particular, run (on Windows):
+To install the latest release in particular, run
 
-    mamba install --file https://github.com/ryanvolz/radioconda/releases/latest/download/radioconda-win-64.txt
-
-(on Linux/macOS):
-
-    mamba install --file https://github.com/ryanvolz/radioconda/releases/latest/download/radioconda-$(conda info | sed -n -e 's/^.*platform : //p').txt
+    mamba upgrade -c ryanvolz radioconda
 
 ### Install a particular release
 
-To install the package versions associated with a particular release, substitute the release number and run the following (on Windows):
+To install a particular release version, substitute the desired version number and run
 
-    mamba install --file https://github.com/ryanvolz/radioconda/releases/download/20NN.NN.NN/radioconda-win-64.txt
+    mamba install -c ryanvolz radioconda=20NN.NN.NN
+
+### Install from environment lock file
+
+You can also install from the released environment lock file (on Windows):
+
+    mamba install --file https://github.com/ryanvolz/radioconda/releases/latest/download/radioconda-win-64.lock
 
 (on Linux/macOS):
 
-    mamba install --file https://github.com/ryanvolz/radioconda/releases/download/20NN.NN.NN/radioconda-$(conda info | sed -n -e 's/^.*platform : //p').txt
+    mamba install --file https://github.com/ryanvolz/radioconda/releases/latest/download/radioconda-$(conda info | sed -n -e 's/^.*platform : //p').lock
 
 ## Additional Installation for Device Support
 

@@ -1,0 +1,7 @@
+name: radioconda_installer
+channels:
+  - conda-forge
+  - ryanvolz # [win]
+dependencies:
+  - mamba
+  - radioconda_console_shortcut # [win]
