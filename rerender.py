@@ -143,7 +143,7 @@ def render_constructor(
 
 def render_platforms(
     environment_file: pathlib.Path,
-    installer_pkg_specs: List[str],
+    installer_environment_file: pathlib.Path,
     version: str,
     company: str,
     license_file: pathlib.Path,
@@ -192,9 +192,14 @@ def render_platforms(
         )
 
         # add installer-only (base environment) packages and lock those too
+        installer_pkg_spec = conda_lock.conda_lock.parse_environment_file(
+            environment_file=installer_environment_file, platform=platform
+        )
         installer_spec = conda_lock.src_parser.LockSpecification(
-            specs=sorted(locked_env_spec.specs + installer_pkg_specs),
-            channels=locked_env_spec.channels,
+            specs=sorted(locked_env_spec.specs + installer_pkg_spec.specs),
+            channels=sorted(
+                set(locked_env_spec.channels) | set(installer_pkg_spec.channels)
+            ),
             platform=locked_env_spec.platform,
         )
         locked_installer_spec = lock_env_spec(installer_spec, conda_exe)
@@ -202,7 +207,8 @@ def render_platforms(
         # get a set of only the packages to put in the constructor specification
         # taken from the installer-only list and those explicitly selected originally
         constructor_pkg_names = set(
-            name_from_pkg_spec(spec) for spec in env_spec.specs + installer_pkg_specs
+            name_from_pkg_spec(spec)
+            for spec in env_spec.specs + installer_pkg_spec.specs
         )
 
         # filter the installer spec by the constructor package names
@@ -269,8 +275,19 @@ if __name__ == "__main__":
         nargs="?",
         default=here / f"{distname}.yaml",
         help=(
-            "YAML file defining an installer distribution, with a 'name' string and"
+            "YAML file defining a distribution, with a 'name' string and"
             " 'channels', 'platforms', and 'dependencies' lists."
+            " (default: %(default)s)"
+        ),
+    )
+    parser.add_argument(
+        "installer_environment_file",
+        type=pathlib.Path,
+        nargs="?",
+        default=here / f"{distname}_installer.yaml",
+        help=(
+            "YAML file defining additional packages for the installer, with a 'name'"
+            " string and 'channels' and 'dependencies' lists."
             " (default: %(default)s)"
         ),
     )
@@ -331,7 +348,7 @@ if __name__ == "__main__":
 
     constructor_specs = render_platforms(
         environment_file=args.environment_file,
-        installer_pkg_specs=["mamba"],
+        installer_environment_file=args.installer_environment_file,
         version=args.version,
         company=args.company,
         license_file=args.license_file,
