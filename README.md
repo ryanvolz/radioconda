@@ -96,13 +96,15 @@ Once you have radioconda installed, you can stay up to date for all packages wit
 
 To install the latest release in particular, run
 
-    mamba upgrade -c ryanvolz radioconda
+    mamba install -c ryanvolz radioconda python
+
+(You need to add `python` to the package list so that it can be upgraded if necessary.)
 
 ### Install a particular release
 
 To install a particular release version, substitute the desired version number and run
 
-    mamba install -c ryanvolz radioconda=20NN.NN.NN
+    mamba install -c ryanvolz radioconda=20NN.NN.NN python
 
 ### Install from environment lock file
 
