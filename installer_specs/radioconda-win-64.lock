@@ -1,7 +1,6 @@
 # platform: win-64
-# env_hash: dd9a74b01235ea822f6439aec0252480c0c5f80f0d01afad0cedd51254807bc3
+# env_hash: a6c4c49c97fc2a05e7e80ad2abf45b057b95bf65f48079317cf56f55e3b1dca4
 @EXPLICIT
-https://conda.anaconda.org/ryanvolz/win-64/radioconda_console_shortcut-1.0-0.tar.bz2#29b615e3784c3011eaad9451ae284d30
 https://conda.anaconda.org/conda-forge/win-64/ca-certificates-2021.5.30-h5b45459_0.tar.bz2#cfb6380d41af681ad323403f02755a15
 https://conda.anaconda.org/conda-forge/noarch/font-ttf-dejavu-sans-mono-2.37-hab24e00_0.tar.bz2#0c96522c6bdaed4b1566d11387caaf45
 https://conda.anaconda.org/conda-forge/noarch/font-ttf-inconsolata-3.000-h77eed37_0.tar.bz2#34893075a5c9e55cdafac56607368fc6
