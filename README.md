@@ -48,6 +48,10 @@ For a command line install, download the installer and run:
 
 For a graphical install, download the installer and double-click it.
 
+If you already have conda/mamba, you can skip the installer and create a new environment with all of the radioconda packages by running:
+
+    conda create -n radioconda -c conda-forge -c ryanvolz radioconda
+
 See [below](#additional-installation-for-device-support) for additional installation steps for particular software radio devices.
 
 ### Non-interactive install
