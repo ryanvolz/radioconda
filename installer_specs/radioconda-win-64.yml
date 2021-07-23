@@ -1,5 +1,6 @@
 channels:
 - conda-forge
+- ryanvolz
 dependencies:
 - adwaita-icon-theme=40.1.1=h57928b3_1
 - appdirs=1.4.4=pyh9f0ad1d_0
@@ -114,7 +115,6 @@ dependencies:
 - matplotlib-inline=0.1.2=pyhd8ed1ab_2
 - matplotlib=3.4.2=py38haa244fe_0
 - menuinst=1.4.17=py38haa244fe_1
-- miniforge_console_shortcut=2.0=h57928b3_0
 - mkl=2021.2.0=hb70f87d_389
 - mpir=3.0.0=he025d50_1002
 - msys2-conda-epoch=20160418=1
@@ -160,6 +160,7 @@ dependencies:
 - pyzmq=22.1.0=py38h09162b1_0
 - qt=5.12.9=h5909a2a_4
 - qwt=6.1.6=h552f0f6_0
+- radioconda_console_shortcut=1.0=0
 - requests=2.26.0=pyhd8ed1ab_0
 - rtl-sdr=0.6.0=h8ffe710_2
 - scipy=1.7.0=py38he847743_0
