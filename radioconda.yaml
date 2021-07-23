@@ -10,7 +10,7 @@ platforms:
   - win-64
 dependencies:
   - digital_rf
-  - gnuradio 3.9.*
+  - gnuradio
   - gnuradio-osmosdr
   - gnuradio-satellites
   - gnuradio-soapy
@@ -37,4 +37,4 @@ dependencies:
   - soapysdr-module-remote
   - soapysdr-module-rtlsdr
   - soapysdr-module-uhd
-  - uhd 4.0.*
+  - uhd
