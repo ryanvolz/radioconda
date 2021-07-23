@@ -96,7 +96,7 @@ def render_constructor(
         company=company,
         channels=lock_spec.channels,
         specs=lock_spec.specs,
-        initialize_by_default=True,
+        initialize_by_default=False if platform.startswith("win") else True,
         installer_type="all",
         keep_pkgs=True,
         license_file="LICENSE",
