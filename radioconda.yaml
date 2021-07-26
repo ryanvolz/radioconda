@@ -6,6 +6,8 @@ platforms:
   - osx-64
   - win-64
 dependencies:
+  - airspy
+  - airspyhf
   - digital_rf
   - gnuradio 3.8.*
   - gnuradio-osmosdr
@@ -26,6 +28,8 @@ dependencies:
   - rtl-sdr
   - scipy
   - soapysdr
+  - soapysdr-module-airspy
+  - soapysdr-module-airspyhf
   - soapysdr-module-lms7
   - soapysdr-module-plutosdr
   - soapysdr-module-remote
