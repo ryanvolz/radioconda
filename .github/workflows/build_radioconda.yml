@@ -11,7 +11,7 @@ on:
 env:
   DISTNAME: radioconda
   LICENSE_ID: BSD-3-Clause
-  METAPACKAGE_LABEL: dev
+  METAPACKAGE_LABEL: main
   METAPACKAGE_SUMMARY: Metapackage to install the radioconda package set.
 
 jobs:
