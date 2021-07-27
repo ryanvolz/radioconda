@@ -9,6 +9,8 @@ name: radioconda
 post_install: post_install.sh
 register_python_default: false
 specs:
+- airspy=1.0.10=h7f98852_0
+- airspyhf=1.6.8=h7f98852_0
 - digital_rf=2.6.6=py39h9f22dbf_1
 - gnuradio-osmosdr=0.2.3=py39hbf5d4b3_7
 - gnuradio-satellites=3.9.0=py39hc53be63_1
@@ -22,17 +24,19 @@ specs:
 - mamba=0.15.2=py39h951de11_0
 - matplotlib=3.4.2=py39hf3d152e_0
 - numpy=1.21.1=py39hdbf815f_0
-- pandas=1.3.0=py39hde0f152_0
+- pandas=1.3.1=py39hde0f152_0
 - pyadi-iio=0.0.8=pyhd8ed1ab_0
 - python=3.9.6=h49503c6_1_cpython
 - rtl-sdr=0.6.0=h18f079d_2
 - scipy=1.7.0=py39hee8e79c_1
+- soapysdr-module-airspy=0.2.0=hee64af1_0
+- soapysdr-module-airspyhf=0.2.0=hee64af1_0
 - soapysdr-module-lms7=20.10.0=hbab49e3_1
 - soapysdr-module-plutosdr=0.2.1=h14e0a3d_2
 - soapysdr-module-remote=0.5.2=hee64af1_2
 - soapysdr-module-rtlsdr=0.3.0=hee64af1_1
 - soapysdr-module-uhd=0.4.1=h75dc44c_2
-- soapysdr=0.8.0=py39h1a9c180_0
+- soapysdr=0.8.1=py39h1a9c180_0
 - uhd=3.15.0.0=py39h48e10c5_6
-version: 2021.07.23
+version: 2021.07.27
 write_condarc: true

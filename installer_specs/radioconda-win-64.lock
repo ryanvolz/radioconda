@@ -1,5 +1,5 @@
 # platform: win-64
-# env_hash: a6c4c49c97fc2a05e7e80ad2abf45b057b95bf65f48079317cf56f55e3b1dca4
+# env_hash: 2e9daeb4fd4fc8d6b1466386666b6ea1f59068e9b4fb3aabd52963b0e6d0a323
 @EXPLICIT
 https://conda.anaconda.org/conda-forge/win-64/ca-certificates-2021.5.30-h5b45459_0.tar.bz2#cfb6380d41af681ad323403f02755a15
 https://conda.anaconda.org/conda-forge/noarch/font-ttf-dejavu-sans-mono-2.37-hab24e00_0.tar.bz2#0c96522c6bdaed4b1566d11387caaf45
@@ -52,6 +52,8 @@ https://conda.anaconda.org/conda-forge/win-64/yaml-0.2.5-he774522_0.tar.bz2#d41c
 https://conda.anaconda.org/conda-forge/win-64/zlib-1.2.11-h62dcd97_1010.tar.bz2#a4cdf389c5f73e60a0ca121ff77c22a9
 https://conda.anaconda.org/conda-forge/win-64/gettext-0.19.8.1-h1a89ca6_1005.tar.bz2#9c6f6abe9d77d69553c2b287f4c5f0e6
 https://conda.anaconda.org/conda-forge/win-64/krb5-1.19.1-hbae68bd_0.tar.bz2#518741884ccc4022b720acfced197048
+https://conda.anaconda.org/conda-forge/win-64/libairspy-1.0.10-h8ffe710_0.tar.bz2#d97f7b93b14b4c2551758da5de612632
+https://conda.anaconda.org/conda-forge/win-64/libairspyhf-1.6.8-h8ffe710_0.tar.bz2#8f3fc43a918692f4031c2b379e9b8a94
 https://conda.anaconda.org/conda-forge/win-64/liblimesuite-20.10.0-h0e60522_1.tar.bz2#c33690386bae1f0eb92791f8ca966b8d
 https://conda.anaconda.org/conda-forge/win-64/libpng-1.6.37-h1d00b33_2.tar.bz2#005ddb14b8f876ed6a85b76dfc9892db
 https://conda.anaconda.org/conda-forge/win-64/libssh2-1.9.0-h680486a_6.tar.bz2#4633dc7f3ab2692be68952ded790dd16
@@ -62,6 +64,8 @@ https://conda.anaconda.org/conda-forge/win-64/python-3.8.10-h7840368_1_cpython.t
 https://conda.anaconda.org/conda-forge/win-64/rtl-sdr-0.6.0-h8ffe710_2.tar.bz2#3a41cd45313fa3a9ac098a7d95c0dbe1
 https://conda.anaconda.org/conda-forge/win-64/zeromq-4.3.4-h0e60522_0.tar.bz2#e9004ac5d24937850e9edff978c7e515
 https://conda.anaconda.org/conda-forge/win-64/zstd-1.5.0-h6255e5f_0.tar.bz2#3a997ecef5b2cf97db57a6fcf64e4728
+https://conda.anaconda.org/conda-forge/win-64/airspy-1.0.10-h8ffe710_0.tar.bz2#fcb6419d32d9912061c6345ea71b2245
+https://conda.anaconda.org/conda-forge/win-64/airspyhf-1.6.8-h8ffe710_0.tar.bz2#0a63c50fdaf76c041e8606e4651ca049
 https://conda.anaconda.org/conda-forge/noarch/appdirs-1.4.4-pyh9f0ad1d_0.tar.bz2#5f095bc6454094e96f146491fd03633b
 https://conda.anaconda.org/conda-forge/win-64/argh-0.26.2-py38_1001.tar.bz2#646045f4ccc023ce24a8a1979891f66a
 https://conda.anaconda.org/conda-forge/noarch/backcall-0.2.0-pyh9f0ad1d_0.tar.bz2#6006a6d08a3fa99268a2681c7fb55213
@@ -77,7 +81,7 @@ https://conda.anaconda.org/conda-forge/win-64/freetype-2.10.4-h546665d_1.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/idna-3.1-pyhd3deb0d_0.tar.bz2#9c9aea4b8391264477df484f798562d0
 https://conda.anaconda.org/conda-forge/noarch/ipython_genutils-0.2.0-py_1.tar.bz2#5071c982548b3a20caf70462f04f5287
 https://conda.anaconda.org/conda-forge/win-64/libblas-3.9.0-9_mkl.tar.bz2#9db32f9669e4bfce8e167811d1c5e0a0
-https://conda.anaconda.org/conda-forge/win-64/libcurl-7.77.0-h789b8ee_0.tar.bz2#1d87f8a14c648643536078816d489b9c
+https://conda.anaconda.org/conda-forge/win-64/libcurl-7.78.0-h789b8ee_0.tar.bz2#a66b11729352995f02b7607620c017a8
 https://conda.anaconda.org/conda-forge/win-64/libglib-2.68.3-h1e62bf3_0.tar.bz2#d78a9b94d41ab931cbacc906adbacc76
 https://conda.anaconda.org/conda-forge/win-64/libiio-c-0.21-h65864e5_6.tar.bz2#665553851b3858c1cec36ba1a0c6ac5a
 https://conda.anaconda.org/conda-forge/win-64/libtiff-4.3.0-h0c97f57_1.tar.bz2#d65e06251d965c1baca8c448576adc22
@@ -122,7 +126,7 @@ https://conda.anaconda.org/conda-forge/win-64/pywin32-300-py38h294d835_0.tar.bz2
 https://conda.anaconda.org/conda-forge/win-64/pyyaml-5.4.1-py38h294d835_0.tar.bz2#6502967250cd8e7512fc8252c0da28d7
 https://conda.anaconda.org/conda-forge/win-64/pyzmq-22.1.0-py38h09162b1_0.tar.bz2#037b788a874a647c62bfc2eaae91ec81
 https://conda.anaconda.org/conda-forge/win-64/qwt-6.1.6-h552f0f6_0.tar.bz2#5270243d5ab58507e93f4d2f20712a83
-https://conda.anaconda.org/conda-forge/win-64/soapysdr-0.8.0-py38hbd9d945_0.tar.bz2#22b67a741cca64a62a801c4d34fb11c6
+https://conda.anaconda.org/conda-forge/win-64/soapysdr-0.8.1-py38hbd9d945_0.tar.bz2#01b41d08cbf7f0db631c307f0f94afae
 https://conda.anaconda.org/conda-forge/win-64/tornado-6.1-py38h294d835_1.tar.bz2#e2d72b0e2e40b6b444617c079d4cfb75
 https://conda.anaconda.org/conda-forge/noarch/traitlets-5.0.5-py_0.tar.bz2#99618ee9ab1323e40f231acdab92fe60
 https://conda.anaconda.org/conda-forge/win-64/win_inet_pton-1.1.0-py38haa244fe_2.tar.bz2#6ebb62fd7f9ad919a8e43548e1163130
@@ -142,6 +146,8 @@ https://conda.anaconda.org/conda-forge/win-64/pynacl-1.4.0-py38h31c79cd_2.tar.bz
 https://conda.anaconda.org/conda-forge/win-64/pyqt-impl-5.12.3-py38h885f38d_7.tar.bz2#439f4ecf93875a95a3912ec6fda4a14d
 https://conda.anaconda.org/conda-forge/win-64/pysocks-1.7.1-py38haa244fe_3.tar.bz2#8fac4219dff4b3204e424f219660565c
 https://conda.anaconda.org/conda-forge/win-64/setuptools-49.6.0-py38haa244fe_3.tar.bz2#c104ed0b1f9f55efcf872c4af2a6036a
+https://conda.anaconda.org/conda-forge/win-64/soapysdr-module-airspy-0.2.0-h23704b7_0.tar.bz2#438df427a47086858b8e020ae4cb5500
+https://conda.anaconda.org/conda-forge/win-64/soapysdr-module-airspyhf-0.2.0-h23704b7_0.tar.bz2#a6681b932193fa3964d97d7b6fbe3a30
 https://conda.anaconda.org/conda-forge/win-64/soapysdr-module-lms7-20.10.0-heea76a6_1.tar.bz2#1114a6676ea22a5605b74d25f109781e
 https://conda.anaconda.org/conda-forge/win-64/soapysdr-module-remote-0.5.2-h23704b7_2.tar.bz2#d591decb33cd0c3ad25aa0e3b207df89
 https://conda.anaconda.org/conda-forge/win-64/soapysdr-module-rtlsdr-0.3.0-h23704b7_1.tar.bz2#0dc3975258339ecfc06f2b1405516cc7
@@ -154,8 +160,8 @@ https://conda.anaconda.org/conda-forge/win-64/h5py-3.3.0-nompi_py38he6c2248_100.
 https://conda.anaconda.org/conda-forge/win-64/harfbuzz-2.8.2-hc601d6f_0.tar.bz2#4113a7ffc7784bfb3907b37d4ac2e06a
 https://conda.anaconda.org/conda-forge/win-64/libad9361-iio-0.2-h3326528_2.tar.bz2#7afc5b289736609b37b9db865a6c2b88
 https://conda.anaconda.org/conda-forge/win-64/matplotlib-base-3.4.2-py38heae8d8c_0.tar.bz2#0745bf70b02e67d4bd5f1f8df1281fdd
-https://conda.anaconda.org/conda-forge/win-64/pandas-1.3.0-py38h60cbd38_0.tar.bz2#55a02a493245986d6a7c7262179874f3
-https://conda.anaconda.org/conda-forge/noarch/pip-21.1.3-pyhd8ed1ab_0.tar.bz2#231bd0af116f55ca4d17ea0869415fdf
+https://conda.anaconda.org/conda-forge/win-64/pandas-1.3.1-py38h60cbd38_0.tar.bz2#4d0ab454bcd5f3254e2344193b19eb22
+https://conda.anaconda.org/conda-forge/noarch/pip-21.2.1-pyhd8ed1ab_0.tar.bz2#155f04d007b5676c917e8287f9aee3d2
 https://conda.anaconda.org/conda-forge/win-64/pycairo-1.20.1-py38h979ce04_0.tar.bz2#ed9562755d32b93832fd5cddd898ee87
 https://conda.anaconda.org/conda-forge/noarch/pygments-2.9.0-pyhd8ed1ab_0.tar.bz2#a2d9bba43c9b80a42b0ccb9afd7223c2
 https://conda.anaconda.org/conda-forge/noarch/pyopenssl-20.0.1-pyhd8ed1ab_0.tar.bz2#92371c25994d0f5d28a01c1fb75ebf86
