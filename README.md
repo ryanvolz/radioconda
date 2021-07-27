@@ -11,17 +11,19 @@ This repository holds cross-platform installers for a collection of open source 
 
 and support for the following SDR devices and device libraries:
 
-|      Device      |             Library              |
-| :--------------: | :------------------------------: |
-| [ADALM-PLUTO][1] | libiio ([setup](#iio-pluto-sdr)) |
-| [Ettus USRPs][2] |  UHD ([setup](#uhd-ettus-usrp))  |
-|   [LimeSDR][3]   |  Lime Suite ([setup](#limesdr))  |
-|   [RTL-SDR][4]   |   rtl-sdr ([setup](#rtl-sdr))    |
+|         Device          |                    Library                    |
+| :---------------------: | :-------------------------------------------: |
+|    [ADALM-PLUTO][1]     |       libiio ([setup](#iio-pluto-sdr))        |
+| [Airspy R2/Mini/HF+][2] | airspy/airspyhf ([setup](#airspy-r2-mini-hf)) |
+|    [Ettus USRPs][3]     |        UHD ([setup](#uhd-ettus-usrp))         |
+|      [LimeSDR][4]       |        Lime Suite ([setup](#limesdr))         |
+|      [RTL-SDR][5]       |          rtl-sdr ([setup](#rtl-sdr))          |
 
 [1]: https://www.analog.com/en/design-center/evaluation-hardware-and-software/evaluation-boards-kits/adalm-pluto.html
-[2]: https://www.ettus.com/products/
-[3]: https://limemicro.com/products/boards/
-[4]: https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/
+[2]: https://airspy.com/
+[3]: https://www.ettus.com/products/
+[4]: https://limemicro.com/products/boards/
+[5]: https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/
 
 The complete list of packages can be found [here](https://github.com/ryanvolz/radioconda/blob/master/radioconda.yaml).
 
@@ -160,6 +162,29 @@ Install a udev rule by creating a link into your radioconda installation:
 ##### All users
 
 Once you can talk to the hardware (by following the instructions below), you may want to perform the post-install steps detailed on the [Pluto users wiki](https://wiki.analog.com/university/tools/pluto/users).
+
+### Airspy (R2, Mini, HF+)
+
+##### Windows users
+
+The WinUSB driver for your device will most likely be installed automatically, and in that case there is no additional setup. If for some reason the driver is not installed and the device is not recognized, [install the WinUSB driver with Zadig](#installing-the-winusb-driver-with-zadig), selecting your Airspy device.
+
+##### Linux users
+
+Install a udev rule by creating a link into your radioconda installation:
+
+    # run the next line only for the Airspy R2 or Mini
+    sudo ln -s $CONDA_PREFIX/lib/udev/rules.d/52-airspy.rules /etc/udev/rules.d/52-radioconda-airspy.rules
+    # run the next line only for the Airspy HF+
+    sudo ln -s $CONDA_PREFIX/lib/udev/rules.d/52-airspyhf.rules /etc/udev/rules.d/52-radioconda-airspyhf.rules
+    sudo udevadm control --reload
+    sudo udevadm trigger
+
+Then, make sure your user account belongs to the plugdev group in order to be able to access your device:
+
+    sudo usermod -a -G plugdev <user>
+
+You may have to restart for this change to take effect.
 
 ### LimeSDR
 
