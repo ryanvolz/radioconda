@@ -11,17 +11,19 @@ This repository holds cross-platform installers for a collection of open source 
 
 and support for the following SDR devices and device libraries:
 
-|      Device      |             Library              |
-| :--------------: | :------------------------------: |
-| [ADALM-PLUTO][1] | libiio ([setup](#iio-pluto-sdr)) |
-| [Ettus USRPs][2] |  UHD ([setup](#uhd-ettus-usrp))  |
-|   [LimeSDR][3]   |  Lime Suite ([setup](#limesdr))  |
-|   [RTL-SDR][4]   |   rtl-sdr ([setup](#rtl-sdr))    |
+|         Device          |                    Library                    |
+| :---------------------: | :-------------------------------------------: |
+|    [ADALM-PLUTO][1]     |       libiio ([setup](#iio-pluto-sdr))        |
+| [Airspy R2/Mini/HF+][2] | airspy/airspyhf ([setup](#airspy-r2-mini-hf)) |
+|    [Ettus USRPs][3]     |        UHD ([setup](#uhd-ettus-usrp))         |
+|      [LimeSDR][4]       |        Lime Suite ([setup](#limesdr))         |
+|      [RTL-SDR][5]       |          rtl-sdr ([setup](#rtl-sdr))          |
 
 [1]: https://www.analog.com/en/design-center/evaluation-hardware-and-software/evaluation-boards-kits/adalm-pluto.html
-[2]: https://www.ettus.com/products/
-[3]: https://limemicro.com/products/boards/
-[4]: https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/
+[2]: https://airspy.com/
+[3]: https://www.ettus.com/products/
+[4]: https://limemicro.com/products/boards/
+[5]: https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/
 
 The complete list of packages can be found [here](https://github.com/ryanvolz/radioconda/blob/master/radioconda.yaml).
 
@@ -47,6 +49,10 @@ For a command line install, download the installer and run:
     bash radioconda-*-Linux-x86_64.sh   # or similar for other installers for unix platforms
 
 For a graphical install, download the installer and double-click it.
+
+If you already have conda/mamba, you can skip the installer and create a new environment with all of the radioconda packages by running:
+
+    conda create -n radioconda -c conda-forge -c ryanvolz --only-deps radioconda
 
 See [below](#additional-installation-for-device-support) for additional installation steps for particular software radio devices.
 
@@ -96,13 +102,15 @@ Once you have radioconda installed, you can stay up to date for all packages wit
 
 To install the latest release in particular, run
 
-    mamba upgrade -c ryanvolz radioconda
+    mamba install -c ryanvolz --only-deps radioconda python
+
+(You need to add `python` to the package list so that it can be upgraded if necessary.)
 
 ### Install a particular release
 
 To install a particular release version, substitute the desired version number and run
 
-    mamba install -c ryanvolz radioconda=20NN.NN.NN
+    mamba install -c ryanvolz --only-deps radioconda=20NN.NN.NN python
 
 ### Install from environment lock file
 
@@ -154,6 +162,29 @@ Install a udev rule by creating a link into your radioconda installation:
 ##### All users
 
 Once you can talk to the hardware (by following the instructions below), you may want to perform the post-install steps detailed on the [Pluto users wiki](https://wiki.analog.com/university/tools/pluto/users).
+
+### Airspy (R2, Mini, HF+)
+
+##### Windows users
+
+The WinUSB driver for your device will most likely be installed automatically, and in that case there is no additional setup. If for some reason the driver is not installed and the device is not recognized, [install the WinUSB driver with Zadig](#installing-the-winusb-driver-with-zadig), selecting your Airspy device.
+
+##### Linux users
+
+Install a udev rule by creating a link into your radioconda installation:
+
+    # run the next line only for the Airspy R2 or Mini
+    sudo ln -s $CONDA_PREFIX/lib/udev/rules.d/52-airspy.rules /etc/udev/rules.d/52-radioconda-airspy.rules
+    # run the next line only for the Airspy HF+
+    sudo ln -s $CONDA_PREFIX/lib/udev/rules.d/52-airspyhf.rules /etc/udev/rules.d/52-radioconda-airspyhf.rules
+    sudo udevadm control --reload
+    sudo udevadm trigger
+
+Then, make sure your user account belongs to the plugdev group in order to be able to access your device:
+
+    sudo usermod -a -G plugdev <user>
+
+You may have to restart for this change to take effect.
 
 ### LimeSDR
 
