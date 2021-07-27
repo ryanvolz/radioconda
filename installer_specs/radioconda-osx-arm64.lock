@@ -1,5 +1,5 @@
 # platform: osx-arm64
-# env_hash: 45f0020e854a9760881ace784ec92cbf8cd00f92daaefe786bb80f4091c6df6f
+# env_hash: a880c8f512e1c27939712abac5da9bdffe8aa2637a0325f08a5a37827de8be1a
 @EXPLICIT
 https://conda.anaconda.org/conda-forge/osx-arm64/bzip2-1.0.8-h3422bc3_4.tar.bz2#fc76ace7b94fb1f694988ab1b14dd248
 https://conda.anaconda.org/conda-forge/osx-arm64/c-ares-1.17.1-h27ca646_1.tar.bz2#f16dd6211c296fd5c71c9ce17ae06088
@@ -24,7 +24,7 @@ https://conda.anaconda.org/conda-forge/osx-arm64/libopus-1.3.1-h27ca646_1.tar.bz
 https://conda.anaconda.org/conda-forge/osx-arm64/libsodium-1.0.18-h27ca646_1.tar.bz2#90859688dbca4735b74c02af14c4c793
 https://conda.anaconda.org/conda-forge/osx-arm64/libusb-1.0.24-h3422bc3_4.tar.bz2#d53c73f258ac513b9845c630f540b9fd
 https://conda.anaconda.org/conda-forge/osx-arm64/libwebp-base-1.2.0-h27ca646_2.tar.bz2#bffbc9f8436ae0164769c5308e57b016
-https://conda.anaconda.org/conda-forge/osx-arm64/llvm-openmp-12.0.1-hf3c4609_0.tar.bz2#047713aa71d0dd2294d8cd5f502b23b8
+https://conda.anaconda.org/conda-forge/osx-arm64/llvm-openmp-12.0.1-hf3c4609_1.tar.bz2#99d8ad7f938fc5b730ec1c610851f1ba
 https://conda.anaconda.org/conda-forge/osx-arm64/ncurses-6.2-h9aa5885_4.tar.bz2#8a4aa25a5741e65f2338204f8a45d8d8
 https://conda.anaconda.org/conda-forge/osx-arm64/pixman-0.40.0-h27ca646_0.tar.bz2#0cedfe37c9aee28f5e926a870965466a
 https://conda.anaconda.org/conda-forge/osx-arm64/pthread-stubs-0.4-h27ca646_1001.tar.bz2#d3f26c6494d4105d4ecb85203d687102
@@ -44,6 +44,8 @@ https://conda.anaconda.org/conda-forge/osx-arm64/gmp-6.2.1-h9f76cd9_0.tar.bz2#f8
 https://conda.anaconda.org/conda-forge/osx-arm64/graphite2-1.3.13-h9f76cd9_1001.tar.bz2#288b591645cb9cb9c0af7309ac1114f5
 https://conda.anaconda.org/conda-forge/osx-arm64/icu-68.1-h17758a7_0.tar.bz2#ed46550fd3a222318044a2aab5642aad
 https://conda.anaconda.org/conda-forge/osx-arm64/lerc-2.2.1-h9f76cd9_0.tar.bz2#977b76d8475157da92bfb6ee6b45cb59
+https://conda.anaconda.org/conda-forge/osx-arm64/libairspy-1.0.10-h3422bc3_0.tar.bz2#292b931a0bb3b0ef53668caa7b2306e5
+https://conda.anaconda.org/conda-forge/osx-arm64/libairspyhf-1.6.8-h3422bc3_0.tar.bz2#3dab7eb103a9ae00eceb5f070ed954ca
 https://conda.anaconda.org/conda-forge/osx-arm64/libedit-3.1.20191231-hc8eb9b7_2.tar.bz2#30e4362988a2623e9eb34337b83e01f9
 https://conda.anaconda.org/conda-forge/osx-arm64/libffi-3.3-h9f76cd9_2.tar.bz2#1b0a3e283ef04b308e0b0cdeb2d65cbc
 https://conda.anaconda.org/conda-forge/osx-arm64/libgfortran5-11.0.1.dev0-hf114ba7_22.tar.bz2#89e886bb35405e59b75cd41416c53543
@@ -60,6 +62,8 @@ https://conda.anaconda.org/conda-forge/osx-arm64/rtl-sdr-0.6.0-h3422bc3_2.tar.bz
 https://conda.anaconda.org/conda-forge/osx-arm64/tk-8.6.10-hf7e6567_1.tar.bz2#42c39bbf010ef4fa5839c61a19535980
 https://conda.anaconda.org/conda-forge/osx-arm64/volk-2.5.0-hbdafb3b_0.tar.bz2#6e2402c2e2c5fade87cb0a3ef9a868aa
 https://conda.anaconda.org/conda-forge/osx-arm64/zeromq-4.3.4-h9f76cd9_0.tar.bz2#602aea97916e7e8798898382d255c042
+https://conda.anaconda.org/conda-forge/osx-arm64/airspy-1.0.10-h3422bc3_0.tar.bz2#0fda367c4b6fdb30b647f58536441f52
+https://conda.anaconda.org/conda-forge/osx-arm64/airspyhf-1.6.8-h3422bc3_0.tar.bz2#884033788eb06726f5be734389b44c4d
 https://conda.anaconda.org/conda-forge/noarch/fonts-conda-ecosystem-1-0.tar.bz2#fee5683a3f04bd15cbd8318b096a27ab
 https://conda.anaconda.org/conda-forge/osx-arm64/freetype-2.10.4-h17b34a0_1.tar.bz2#c34e8d42b8dcb72cad14b45a4132e9c7
 https://conda.anaconda.org/conda-forge/osx-arm64/gettext-0.19.8.1-hea66d9f_1005.tar.bz2#ef9753f71d168d632e3276f111aec4e3
@@ -75,7 +79,7 @@ https://conda.anaconda.org/conda-forge/osx-arm64/zstd-1.5.0-h861e0a7_0.tar.bz2#3
 https://conda.anaconda.org/conda-forge/osx-arm64/boost-cpp-1.74.0-h32e41df_4.tar.bz2#42a03a9c9e37a2e8c7e7fab263d32743
 https://conda.anaconda.org/conda-forge/osx-arm64/fftw-3.3.9-nompi_h4173cc6_101.tar.bz2#38e4a84b28cb7ce9efed0edbb718a148
 https://conda.anaconda.org/conda-forge/osx-arm64/fontconfig-2.13.1-heb65262_1005.tar.bz2#878aa172323a35de2509645b84d8a76d
-https://conda.anaconda.org/conda-forge/osx-arm64/libcurl-7.77.0-h8fe1914_0.tar.bz2#b79aeb2d6d1fe5277321173a604ede2c
+https://conda.anaconda.org/conda-forge/osx-arm64/libcurl-7.78.0-h8fe1914_0.tar.bz2#bbff814ac785c28cefd2ad4f379be1f8
 https://conda.anaconda.org/conda-forge/osx-arm64/libflac-1.3.3-h9f76cd9_1.tar.bz2#ee181b72399f6c2a60cb9650162e260f
 https://conda.anaconda.org/conda-forge/osx-arm64/libglib-2.68.3-h6c200e4_0.tar.bz2#5f9d24f7333303a1fcc621210937c027
 https://conda.anaconda.org/conda-forge/osx-arm64/libiio-c-0.21-h3188beb_6.tar.bz2#3aae2d78f2a781b2670f3f36a95781b1
@@ -144,7 +148,7 @@ https://conda.anaconda.org/conda-forge/noarch/python-dateutil-2.8.2-pyhd8ed1ab_0
 https://conda.anaconda.org/conda-forge/osx-arm64/pyyaml-5.4.1-py39h46acfd9_0.tar.bz2#9d200b6c1b2d539ea23046a2154b0f7d
 https://conda.anaconda.org/conda-forge/osx-arm64/pyzmq-22.1.0-py39h02c6a76_0.tar.bz2#ffd677495d87e2f1c2732ffdf089cfdd
 https://conda.anaconda.org/conda-forge/osx-arm64/ruamel.yaml.clib-0.2.2-py39h46acfd9_2.tar.bz2#6f4c4bcc794d7c637e8c14e5544f7264
-https://conda.anaconda.org/conda-forge/osx-arm64/soapysdr-0.8.0-py39h4d2d688_0.tar.bz2#9ec698deabf68199896a6ea700cca723
+https://conda.anaconda.org/conda-forge/osx-arm64/soapysdr-0.8.1-py39h4d2d688_0.tar.bz2#d984fcd2981a6f1c0d7bb135614b297d
 https://conda.anaconda.org/conda-forge/osx-arm64/thrift-0.13.0-py39h93dc1e2_2.tar.bz2#e7a703d66657e5a9c46c7f44f44ca631
 https://conda.anaconda.org/conda-forge/osx-arm64/tornado-6.1-py39h5161555_1.tar.bz2#c9399fdba56c3d315c055e3a2e539201
 https://conda.anaconda.org/conda-forge/noarch/traitlets-5.0.5-py_0.tar.bz2#99618ee9ab1323e40f231acdab92fe60
@@ -160,6 +164,8 @@ https://conda.anaconda.org/conda-forge/osx-arm64/pango-1.48.7-h10c22ef_0.tar.bz2
 https://conda.anaconda.org/conda-forge/osx-arm64/pygobject-3.40.1-py39h485ebc0_1.tar.bz2#fe6ff30446689a26129e8282df861912
 https://conda.anaconda.org/conda-forge/osx-arm64/pynacl-1.4.0-py39h5161555_2.tar.bz2#b63d171b45740d7ed85a561f68659ea9
 https://conda.anaconda.org/conda-forge/osx-arm64/setuptools-49.6.0-py39h2804cbe_3.tar.bz2#b2268b9c73391e6199dc6936da31cddf
+https://conda.anaconda.org/conda-forge/osx-arm64/soapysdr-module-airspy-0.2.0-h4306ade_0.tar.bz2#718454fcd0364ede5ea5f4711601830d
+https://conda.anaconda.org/conda-forge/osx-arm64/soapysdr-module-airspyhf-0.2.0-h4306ade_0.tar.bz2#58e9064bfe34a66c96ba5b7ffc11fd3a
 https://conda.anaconda.org/conda-forge/osx-arm64/soapysdr-module-lms7-20.10.0-h1576d20_1.tar.bz2#12640966fc6caec55a5a0741496d67ee
 https://conda.anaconda.org/conda-forge/osx-arm64/soapysdr-module-remote-0.5.2-h4306ade_2.tar.bz2#2a80ff3672c59b7e15f87c206a1923c2
 https://conda.anaconda.org/conda-forge/osx-arm64/soapysdr-module-rtlsdr-0.3.0-h4306ade_1.tar.bz2#fb02a919dab3c37d783849102ee62f0c
@@ -171,8 +177,8 @@ https://conda.anaconda.org/conda-forge/osx-arm64/h5py-3.3.0-nompi_py39h0a83918_1
 https://conda.anaconda.org/conda-forge/osx-arm64/librsvg-2.50.7-h957afdb_0.tar.bz2#7cf6f264bc7c803fd3c6101858a43fec
 https://conda.anaconda.org/conda-forge/osx-arm64/limesuite-20.10.0-h75efa04_1.tar.bz2#9dc1fbdc4689ffa7b6f7551cb8b54922
 https://conda.anaconda.org/conda-forge/osx-arm64/matplotlib-base-3.4.2-py39h5aa4fe7_0.tar.bz2#73ead2ba16b36dae73f0a81c16f1c6bd
-https://conda.anaconda.org/conda-forge/osx-arm64/pandas-1.3.0-py39h7f752ed_0.tar.bz2#3e30f9bbc8f67360405fa08fd3264474
-https://conda.anaconda.org/conda-forge/noarch/pip-21.1.3-pyhd8ed1ab_0.tar.bz2#231bd0af116f55ca4d17ea0869415fdf
+https://conda.anaconda.org/conda-forge/osx-arm64/pandas-1.3.1-py39h7f752ed_0.tar.bz2#015851eeb3ba168938c74cd29c25c0db
+https://conda.anaconda.org/conda-forge/noarch/pip-21.2.1-pyhd8ed1ab_0.tar.bz2#155f04d007b5676c917e8287f9aee3d2
 https://conda.anaconda.org/conda-forge/noarch/pygments-2.9.0-pyhd8ed1ab_0.tar.bz2#a2d9bba43c9b80a42b0ccb9afd7223c2
 https://conda.anaconda.org/conda-forge/noarch/pyopenssl-20.0.1-pyhd8ed1ab_0.tar.bz2#92371c25994d0f5d28a01c1fb75ebf86
 https://conda.anaconda.org/conda-forge/osx-arm64/ruamel.yaml-0.17.10-py39h5161555_0.tar.bz2#a6790454d398a4aa23a1f190850eb917

@@ -2,6 +2,8 @@ channels:
 - conda-forge
 dependencies:
 - adwaita-icon-theme=40.1.1=h694c41f_1
+- airspy=1.0.10=h0d85af4_0
+- airspyhf=1.6.8=h0d85af4_0
 - appdirs=1.4.4=pyh9f0ad1d_0
 - appnope=0.1.2=py39h6e9494a_1
 - argh=0.26.2=pyh9f0ad1d_1002
@@ -82,10 +84,12 @@ dependencies:
 - lcms2=2.12=h577c468_0
 - lerc=2.2.1=h046ec9c_0
 - libad9361-iio=0.2=hd953885_2
+- libairspy=1.0.10=h0d85af4_0
+- libairspyhf=1.6.8=h0d85af4_0
 - libblas=3.9.0=9_openblas
 - libcblas=3.9.0=9_openblas
 - libclang=11.1.0=default_he082bbe_1
-- libcurl=7.77.0=hf45b732_0
+- libcurl=7.78.0=hf45b732_0
 - libcxx=12.0.1=habf9029_0
 - libdeflate=1.7=h35c211d_5
 - libedit=3.1.20191231=h0678c8f_2
@@ -122,7 +126,7 @@ dependencies:
 - libxml2=2.9.12=h93ec3fd_0
 - libxslt=1.1.33=h5739fc3_2
 - limesuite=20.10.0=h1ad935b_1
-- llvm-openmp=12.0.1=hda6cdc1_0
+- llvm-openmp=12.0.1=hda6cdc1_1
 - log4cpp=1.1.3=he49afe7_1002
 - lxml=4.6.3=py39hf41e7f8_0
 - lz4-c=1.9.3=h046ec9c_0
@@ -141,7 +145,7 @@ dependencies:
 - openjpeg=2.4.0=h6e7aa92_1
 - openssl=1.1.1k=h0d85af4_0
 - packaging=21.0=pyhd8ed1ab_0
-- pandas=1.3.0=py39h4d6be9b_0
+- pandas=1.3.1=py39h4d6be9b_0
 - pango=1.48.7=ha05cd14_0
 - paramiko=2.7.2=pyh9f0ad1d_0
 - parso=0.8.2=pyhd8ed1ab_0
@@ -150,7 +154,7 @@ dependencies:
 - pexpect=4.8.0=pyh9f0ad1d_2
 - pickleshare=0.7.5=py39hde42818_1002
 - pillow=8.3.1=py39he9bb72f_0
-- pip=21.1.3=pyhd8ed1ab_0
+- pip=21.2.1=pyhd8ed1ab_0
 - pixman=0.40.0=hbcb3906_0
 - prompt-toolkit=3.0.19=pyha770c72_0
 - pthread-stubs=0.4=hc929b4f_1001
@@ -188,12 +192,14 @@ dependencies:
 - sdl=1.2.15=he49afe7_1
 - setuptools=49.6.0=py39h6e9494a_3
 - six=1.16.0=pyh6c4a22f_0
+- soapysdr-module-airspy=0.2.0=ha64c28d_0
+- soapysdr-module-airspyhf=0.2.0=ha64c28d_0
 - soapysdr-module-lms7=20.10.0=h01fb3c3_1
 - soapysdr-module-plutosdr=0.2.1=h665823e_2
 - soapysdr-module-remote=0.5.2=ha64c28d_2
 - soapysdr-module-rtlsdr=0.3.0=ha64c28d_1
 - soapysdr-module-uhd=0.4.1=h769adbc_3
-- soapysdr=0.8.0=py39hf018cea_0
+- soapysdr=0.8.1=py39hf018cea_0
 - sqlite=3.36.0=h23a322b_0
 - thrift=0.13.0=py39h9fcab8e_2
 - tk=8.6.10=h0419947_1
@@ -220,4 +226,4 @@ dependencies:
 - zstd=1.5.0=h582d3a0_0
 name: radioconda
 platform: osx-64
-version: 2021.07.23.dev
+version: 2021.07.27.dev
