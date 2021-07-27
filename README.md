@@ -52,7 +52,7 @@ For a graphical install, download the installer and double-click it.
 
 If you already have conda/mamba, you can skip the installer and create a new environment with all of the radioconda packages by running:
 
-    conda create -n radioconda -c conda-forge -c ryanvolz radioconda
+    conda create -n radioconda -c conda-forge -c ryanvolz --only-deps radioconda
 
 See [below](#additional-installation-for-device-support) for additional installation steps for particular software radio devices.
 
@@ -102,7 +102,7 @@ Once you have radioconda installed, you can stay up to date for all packages wit
 
 To install the latest release in particular, run
 
-    mamba install -c ryanvolz radioconda python
+    mamba install -c ryanvolz --only-deps radioconda python
 
 (You need to add `python` to the package list so that it can be upgraded if necessary.)
 
@@ -110,7 +110,7 @@ To install the latest release in particular, run
 
 To install a particular release version, substitute the desired version number and run
 
-    mamba install -c ryanvolz radioconda=20NN.NN.NN python
+    mamba install -c ryanvolz --only-deps radioconda=20NN.NN.NN python
 
 ### Install from environment lock file
 
