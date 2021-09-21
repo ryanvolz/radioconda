@@ -12,6 +12,7 @@ dependencies:
   - airspy
   - airspyhf
   - digital_rf
+  - codec2
   - gnuradio
   - gnuradio-osmosdr
   - gnuradio-satellites
