@@ -1,5 +1,5 @@
 # platform: linux-aarch64
-# env_hash: 5fdfa36504fcfb34c4500aafa513215f57d0f3cce3951c92947913d820543a8e
+# env_hash: c8bdd8f6fc7e5bdcc95a8f3a4cd3dfe68a0b5299476196421d8d1c5e0df62061
 @EXPLICIT
 https://conda.anaconda.org/conda-forge/linux-aarch64/ca-certificates-2021.5.30-h4fd8a4c_0.tar.bz2#c4a645310ce12912c3118dd409bca321
 https://conda.anaconda.org/conda-forge/noarch/font-ttf-dejavu-sans-mono-2.37-hab24e00_0.tar.bz2#0c96522c6bdaed4b1566d11387caaf45
@@ -72,6 +72,7 @@ https://conda.anaconda.org/conda-forge/linux-aarch64/xorg-xproto-7.0.31-h3557bc0
 https://conda.anaconda.org/conda-forge/linux-aarch64/xz-5.2.5-h6dd45c4_1.tar.bz2#9da6f161d0f47f8a29fa708cda8deda2
 https://conda.anaconda.org/conda-forge/linux-aarch64/yaml-0.2.5-h516909a_0.tar.bz2#2f7b51117290b7e95d61e6ff9abd7a3a
 https://conda.anaconda.org/conda-forge/linux-aarch64/zlib-1.2.11-h516909a_1009.tar.bz2#8f012adadf82e1440ff1249634fdf6b4
+https://conda.anaconda.org/conda-forge/linux-aarch64/codec2-1.0.0-hf897c2e_0.tar.bz2#3e6bc9c0565a264be3f23c93b3b6dedf
 https://conda.anaconda.org/conda-forge/linux-aarch64/gettext-0.19.8.1-h6edf1e2_1006.tar.bz2#41a5699eac00233a2f26c9f450c1716e
 https://conda.anaconda.org/conda-forge/linux-aarch64/gnutls-3.6.13-h5fb5790_1.tar.bz2#0cc7c84099a354d5e11124b98db9e154
 https://conda.anaconda.org/conda-forge/linux-aarch64/libblas-3.9.0-11_linuxaarch64_openblas.tar.bz2#357bed9b95df17c67b1e422a14bc64b8

@@ -1,5 +1,5 @@
 # platform: linux-ppc64le
-# env_hash: 0d39a526fd4244b4da828fcbbf49997bba3abff4e30309b98014e94a0af35e8a
+# env_hash: f1e987d5f4304e2f34b8cb25ee83a5051a97d541fadd068bf883b35a6e98209d
 @EXPLICIT
 https://conda.anaconda.org/conda-forge/linux-ppc64le/_libgcc_mutex-0.1-conda_forge.tar.bz2#e96f48755dc7c9f86c4aecf4cac40477
 https://conda.anaconda.org/conda-forge/linux-ppc64le/ca-certificates-2021.5.30-h1084571_0.tar.bz2#c4d536eee4344dc5492a29de9c2beb7a
@@ -71,6 +71,7 @@ https://conda.anaconda.org/conda-forge/linux-ppc64le/xorg-xproto-7.0.31-h4e0d66e
 https://conda.anaconda.org/conda-forge/linux-ppc64le/xz-5.2.5-h6eb9509_1.tar.bz2#6d26cf2167b7d04c9db849cfdabe7431
 https://conda.anaconda.org/conda-forge/linux-ppc64le/yaml-0.2.5-h6eb9509_0.tar.bz2#98b522b3a7a11e53397961288f0b4277
 https://conda.anaconda.org/conda-forge/linux-ppc64le/zlib-1.2.11-h6eb9509_1010.tar.bz2#f1163952db9976915c79cf1dd03ea6ef
+https://conda.anaconda.org/conda-forge/linux-ppc64le/codec2-1.0.0-h4e0d66e_0.tar.bz2#0bff6176180301143c00588616876d2b
 https://conda.anaconda.org/conda-forge/linux-ppc64le/gettext-0.19.8.1-hf23c357_1005.tar.bz2#d8a451f07602be0a546737993879603e
 https://conda.anaconda.org/conda-forge/linux-ppc64le/gnutls-3.6.13-hb04485b_1.tar.bz2#3960b3c1038028511d4e5ed2cc577dc2
 https://conda.anaconda.org/conda-forge/linux-ppc64le/libblas-3.9.0-11_linuxppc64le_openblas.tar.bz2#90dfa124f3af43243aebc14dee068c5a

@@ -1,5 +1,5 @@
 # platform: osx-arm64
-# env_hash: 5eccf44e0e544605799263cac15532023a99cf750c6ceea232aaf4f442c3c9f2
+# env_hash: 808d8c7ba138f801659e089301e08498711fef32a3757267bf084de12e394533
 @EXPLICIT
 https://conda.anaconda.org/conda-forge/osx-arm64/bzip2-1.0.8-h3422bc3_4.tar.bz2#fc76ace7b94fb1f694988ab1b14dd248
 https://conda.anaconda.org/conda-forge/osx-arm64/c-ares-1.17.2-h3422bc3_0.tar.bz2#fa5855e83922d75d126f40f47be3c92c
@@ -38,6 +38,7 @@ https://conda.anaconda.org/conda-forge/osx-arm64/xorg-xproto-7.0.31-h27ca646_100
 https://conda.anaconda.org/conda-forge/osx-arm64/xz-5.2.5-h642e427_1.tar.bz2#9ab2316785cb81c464ab9a99512dae71
 https://conda.anaconda.org/conda-forge/osx-arm64/yaml-0.2.5-h642e427_0.tar.bz2#143549bda61a8b9e3a223328cdddc811
 https://conda.anaconda.org/conda-forge/osx-arm64/zlib-1.2.11-h31e879b_1009.tar.bz2#96796f31644a5e13e12dc194284f7681
+https://conda.anaconda.org/conda-forge/osx-arm64/codec2-1.0.0-h3422bc3_0.tar.bz2#9ea81fb1e8796e786f59241ea77ff639
 https://conda.anaconda.org/conda-forge/noarch/fonts-conda-forge-1-0.tar.bz2#f766549260d6815b0c52253f1fb1bb29
 https://conda.anaconda.org/conda-forge/osx-arm64/glew-2.1.0-h9f76cd9_2.tar.bz2#ec67d4b810ad567618722a2772e9755c
 https://conda.anaconda.org/conda-forge/osx-arm64/gmp-6.2.1-h9f76cd9_0.tar.bz2#f8140773b6ca51bf32feec9b4290a8c5

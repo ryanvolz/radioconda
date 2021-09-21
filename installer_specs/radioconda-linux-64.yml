@@ -31,6 +31,7 @@ dependencies:
 - charset-normalizer=2.0.0=pyhd8ed1ab_0
 - click-plugins=1.1.1=py_0
 - click=8.0.1=py39hf3d152e_0
+- codec2=1.0.0=h7f98852_0
 - construct=2.10.67=pyhd8ed1ab_0
 - cryptography=3.4.7=py39hbca0aa6_0
 - cycler=0.10.0=py_2

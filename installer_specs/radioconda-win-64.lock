@@ -1,5 +1,5 @@
 # platform: win-64
-# env_hash: b2985a54084ed3d98a1aad014f504486c6a933684072ab549a7915fe0ca7425d
+# env_hash: 321649aaafc559ed829095c4b824597fbe4ed90cc346c95f6a654683d5cd86cd
 @EXPLICIT
 https://conda.anaconda.org/conda-forge/win-64/ca-certificates-2021.5.30-h5b45459_0.tar.bz2#cfb6380d41af681ad323403f02755a15
 https://conda.anaconda.org/conda-forge/noarch/font-ttf-dejavu-sans-mono-2.37-hab24e00_0.tar.bz2#0c96522c6bdaed4b1566d11387caaf45
@@ -107,6 +107,7 @@ https://conda.anaconda.org/conda-forge/win-64/certifi-2021.5.30-py38haa244fe_0.t
 https://conda.anaconda.org/conda-forge/win-64/cffi-1.14.6-py38hd8c33c5_1.tar.bz2#6832e25bd0e11016c46c1f9c0f6651aa
 https://conda.anaconda.org/conda-forge/win-64/chardet-4.0.0-py38haa244fe_1.tar.bz2#9bbdbfa107dd56c65935bc1843dcce87
 https://conda.anaconda.org/conda-forge/win-64/click-8.0.1-py38haa244fe_0.tar.bz2#d973392ec7160efcac0300a13a65103a
+https://conda.anaconda.org/conda-forge/win-64/codec2-1.0.0-hcd874cb_0.tar.bz2#4b10418acaedb7e4c26c486438826957
 https://conda.anaconda.org/conda-forge/noarch/cycler-0.10.0-py_2.tar.bz2#f6d7c7e6d8f42cbbec7e07a8d879f91c
 https://conda.anaconda.org/conda-forge/win-64/fontconfig-2.13.1-h1989441_1005.tar.bz2#96153d6d40aa79431c5b36484ceccfea
 https://conda.anaconda.org/conda-forge/win-64/gdk-pixbuf-2.42.6-h1c5aac7_0.tar.bz2#3b3c1e14c8781b6de03e208730e4b808

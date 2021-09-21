@@ -1,5 +1,5 @@
 # platform: linux-64
-# env_hash: 967e552d9b43e54d697377dca5d9aca98384274c274ebf20e71fcaf3288f87e9
+# env_hash: d18f80fa53b87bfdc32320e7d37d372611032a87fda8ed894cc086ef939f0b46
 @EXPLICIT
 https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2#d7c89558ba9fa0495403155b64376d81
 https://conda.anaconda.org/conda-forge/linux-64/ca-certificates-2021.5.30-ha878542_0.tar.bz2#6a777890e94194dc94a29a76d2a7e721
@@ -74,6 +74,7 @@ https://conda.anaconda.org/conda-forge/linux-64/xorg-xproto-7.0.31-h7f98852_1007
 https://conda.anaconda.org/conda-forge/linux-64/xz-5.2.5-h516909a_1.tar.bz2#33f601066901f3e1a85af3522a8113f9
 https://conda.anaconda.org/conda-forge/linux-64/yaml-0.2.5-h516909a_0.tar.bz2#03a530e925414902547cf48da7756db8
 https://conda.anaconda.org/conda-forge/linux-64/zlib-1.2.11-h516909a_1010.tar.bz2#339cc5584e6d26bc73a875ba900028c3
+https://conda.anaconda.org/conda-forge/linux-64/codec2-1.0.0-h7f98852_0.tar.bz2#95c56018f814e70a6fd3fd9385fa451c
 https://conda.anaconda.org/conda-forge/linux-64/gettext-0.19.8.1-h73d1719_1006.tar.bz2#58e06d8c5cd5267bba8160dfbaaf9dfe
 https://conda.anaconda.org/conda-forge/linux-64/libblas-3.9.0-11_linux64_openblas.tar.bz2#b8a498e2cac5746b808d5961cb584a13
 https://conda.anaconda.org/conda-forge/linux-64/libcap-2.48-h7f98852_0.tar.bz2#dc1b88651d18d0270218b1c8644e073d

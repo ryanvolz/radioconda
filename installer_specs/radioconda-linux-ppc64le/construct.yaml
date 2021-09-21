@@ -11,6 +11,7 @@ register_python_default: false
 specs:
 - airspy=1.0.10=h4e0d66e_0
 - airspyhf=1.6.8=h4e0d66e_0
+- codec2=1.0.0=h4e0d66e_0
 - digital_rf=2.6.7=py39h071fbee_0
 - gnuradio-osmosdr=0.2.3=py39heb696ae_10
 - gnuradio-satellites=4.3.1=py39h7eae2c0_0

@@ -24,6 +24,7 @@ dependencies:
 - charset-normalizer=2.0.0=pyhd8ed1ab_0
 - click-plugins=1.1.1=py_0
 - click=8.0.1=py38haa244fe_0
+- codec2=1.0.0=hcd874cb_0
 - colorama=0.4.4=pyh9f0ad1d_0
 - construct=2.10.67=pyhd8ed1ab_0
 - cryptography=3.4.7=py38hd7da0ea_0
