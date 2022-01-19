@@ -7,6 +7,7 @@ This repository holds cross-platform installers for a collection of open source 
 - Digital RF
 - GNU Radio
 - gqrx
+- gr-iridium
 - gr-satellites
 
 and support for the following SDR devices and device libraries:
