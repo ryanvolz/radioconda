@@ -27,6 +27,7 @@ def lock_env_spec(
         specs=sorted(locked_specs),
         channels=lock_spec.channels,
         platform=lock_spec.platform,
+        virtual_package_repo=conda_lock.virtual_package.default_virtual_package_repodata(),
     )
 
     return locked_env_spec
@@ -61,7 +62,7 @@ def write_lock_file(
     conda_exe: str,
 ):
     lockfile_contents = conda_lock.conda_lock.create_lockfile_from_spec(
-        channels=lock_spec.channels, conda=conda_exe, spec=lock_spec
+        conda=conda_exe, spec=lock_spec, kind="explicit"
     )
 
     def sanitize_lockfile_line(line):

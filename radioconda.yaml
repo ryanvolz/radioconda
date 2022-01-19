@@ -9,11 +9,13 @@ platforms:
   - osx-arm64
   - win-64
 dependencies:
+  - alsa-plugins # [linux64]
   - airspy
   - airspyhf
   - digital_rf
   - codec2
   - gnuradio
+  - gnuradio-iridium
   - gnuradio-osmosdr
   - gnuradio-satellites
   - gqrx # [linux64]

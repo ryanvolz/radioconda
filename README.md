@@ -7,6 +7,7 @@ This repository holds cross-platform installers for a collection of open source 
 - Digital RF
 - GNU Radio
 - gqrx
+- gr-iridium
 - gr-satellites
 
 and support for the following SDR devices and device libraries:
@@ -25,7 +26,7 @@ and support for the following SDR devices and device libraries:
 [4]: https://limemicro.com/products/boards/
 [5]: https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/
 
-The complete list of packages can be found [here](https://github.com/ryanvolz/radioconda/blob/master/radioconda.yaml).
+The complete list of packages can be found [here](https://github.com/ryanvolz/radioconda/blob/master/radioconda.yaml). You can [**suggest additional software to include**](https://github.com/ryanvolz/radioconda/issues) by filing an [issue](https://github.com/ryanvolz/radioconda/issues). If you've built additional software from source on top of radioconda, [**document your results**](https://github.com/ryanvolz/radioconda/issues) in an [issue](https://github.com/ryanvolz/radioconda/issues) to help others (and help me in packaging it!).
 
 Once installed, you will have a fully functional conda distribution/environment, meaning that you can use the `conda` or `mamba` commands to install additional packages (if available through [conda-forge](https://conda-forge.org/feedstock-outputs)) or upgrade to the latest versions. Think of radioconda as an alternative to [Anaconda](https://www.anaconda.com/products/individual) or [Miniforge](https://github.com/conda-forge/miniforge), but specialized for software radio.
 
