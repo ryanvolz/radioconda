@@ -120,7 +120,16 @@ def render_constructor(
     # write the post_install scripts referenced in the construct dict
     if platform.startswith("win"):
         with (constructor_dir / "post_install.bat").open("w") as f:
-            f.write("\n".join((r"del /q %PREFIX%\pkgs\*.tar.bz2", "exit 0", "")))
+            f.write(
+                "\n".join(
+                    (
+                        r'echo {"env_vars": {"GR_PREFIX": "", "GRC_BLOCKS_PATH": "", "UHD_PKG_PATH": "", "VOLK_PREFIX": ""}}>%PREFIX%\conda-meta\state',
+                        r"del /q %PREFIX%\pkgs\*.tar.bz2",
+                        "exit 0",
+                        "",
+                    )
+                )
+            )
     else:
         with (constructor_dir / "post_install.sh").open("w") as f:
             f.write(
