@@ -17,7 +17,7 @@ dependencies:
 - backports=1.0=py_2
 - bcrypt=3.2.0=py310h7cee911_2
 - black=22.1.0=pyhd8ed1ab_0
-- boost-cpp=1.74.0=h8f740d6_5
+- boost-cpp=1.74.0=h0980f12_7
 - brotli-bin=1.0.9=hf897c2e_6
 - brotli=1.0.9=hf897c2e_6
 - brotlipy=0.7.0=py310h7cee911_1003
@@ -57,12 +57,13 @@ dependencies:
 - fs=2.0.11=py_0
 - gdk-pixbuf=2.42.6=h689071a_0
 - gettext=0.19.8.1=h6edf1e2_1008
+- giflib=5.2.1=hb9de7d4_2
 - glew=2.1.0=h01db608_2
-- glib-tools=2.70.2=h469bdbd_1
+- glib-tools=2.70.2=h469bdbd_2
 - gmp=6.2.1=h7fd3ca4_0
 - gnuradio-core=3.9.5.0=py310hcca113a_0
 - gnuradio-grc=3.9.5.0=py310h5819451_0
-- gnuradio-iridium=2021.09.26.gr3.9=py310hc10a49f_3
+- gnuradio-iridium=2022.02.02.gr3.9=py310hc10a49f_0
 - gnuradio-osmosdr=0.2.3=py310h0a561f8_15
 - gnuradio-qtgui=3.9.5.0=py310h196bf23_0
 - gnuradio-satellites=4.4.0=py310hf73c9cb_3
@@ -102,7 +103,7 @@ dependencies:
 - libbrotlidec=1.0.9=hf897c2e_6
 - libbrotlienc=1.0.9=hf897c2e_6
 - libcblas=3.9.0=13_linuxaarch64_openblas
-- libclang=13.0.0=default_hf9dac01_0
+- libclang=13.0.1=default_hf9dac01_0
 - libcodec2=1.0.1=hf897c2e_1
 - libcups=2.3.3=h5ca083f_1
 - libcurl=7.81.0=hcafe9da_0
@@ -116,7 +117,7 @@ dependencies:
 - libgfortran-ng=11.2.0=he9431aa_12
 - libgfortran5=11.2.0=h440fb59_12
 - libgirepository=1.70.0=heb0669a_1
-- libglib=2.70.2=hde3fb6c_1
+- libglib=2.70.2=hde3fb6c_2
 - libglu=9.0.0=he1b5a44_1001
 - libgomp=11.2.0=hf1cc4e7_12
 - libhackrf0=2021.03.1=hdb429d0_0
@@ -125,7 +126,7 @@ dependencies:
 - libiio=0.23=h8af1aa0_0
 - liblapack=3.9.0=13_linuxaarch64_openblas
 - liblimesuite=20.10.0=h01db608_1
-- libllvm13=13.0.0=h6293a0b_0
+- libllvm13=13.0.1=h6293a0b_0
 - libm2k=0.5.0=py310h0c2382d_3
 - libnghttp2=1.46.0=h097699d_0
 - libnsl=2.0.0=hf897c2e_0
@@ -142,10 +143,11 @@ dependencies:
 - libthrift=0.15.0=hb5cdc64_1
 - libtiff=4.3.0=h58d83a1_2
 - libudev1=249=hf897c2e_1
-- libusb=1.0.24=hdb429d0_105
+- libusb=1.0.25=hdb429d0_100
 - libuuid=2.32.1=hf897c2e_1000
 - libvorbis=1.3.7=h01db608_0
 - libwebp-base=1.2.2=hf897c2e_1
+- libwebp=1.2.2=h21830e5_0
 - libxcb=1.13=h3557bc0_1004
 - libxkbcommon=1.0.3=he09c752_0
 - libxml2=2.9.12=h1e2ce75_1
@@ -167,8 +169,7 @@ dependencies:
 - ncurses=6.3=h01db608_0
 - nspr=4.32=h01db608_0
 - nss=3.74=hdd3d7a4_0
-- numpy=1.22.1=py310ha311ffb_0
-- olefile=0.46=pyh9f0ad1d_1
+- numpy=1.22.2=py310ha311ffb_0
 - openjpeg=2.4.0=h45037e0_1
 - openssl=1.1.1l=hf897c2e_0
 - packaging=21.3=pyhd8ed1ab_0
@@ -180,10 +181,10 @@ dependencies:
 - pcre=8.45=h01db608_0
 - pexpect=4.8.0=pyh9f0ad1d_2
 - pickleshare=0.7.5=py_1003
-- pillow=8.4.0=py310h0f803b8_0
-- pip=22.0.2=pyhd8ed1ab_0
+- pillow=9.0.1=py310h7bfeb00_0
+- pip=22.0.3=pyhd8ed1ab_0
 - pixman=0.40.0=hb9de7d4_0
-- platformdirs=2.3.0=pyhd8ed1ab_0
+- platformdirs=2.4.1=pyhd8ed1ab_1
 - portaudio=19.6.0=h04411df_4
 - prompt-toolkit=3.0.26=pyha770c72_0
 - pthread-stubs=0.4=hb9de7d4_1001
@@ -206,7 +207,7 @@ dependencies:
 - pyqtwebengine=5.12.1=py310h291d0e5_8
 - pysocks=1.7.1=py310hbbe02a8_4
 - python-dateutil=2.8.2=pyhd8ed1ab_0
-- python=3.10.2=he7f7bba_2_cpython
+- python=3.10.2=he7f7bba_3_cpython
 - python_abi=3.10=2_cp310
 - pytz=2021.3=pyhd8ed1ab_0
 - pyyaml=6.0=py310h7cee911_3
@@ -218,9 +219,9 @@ dependencies:
 - rtl-sdr=0.6.0=hdb429d0_2
 - ruamel.yaml.clib=0.2.6=py310hf5841e9_0
 - ruamel.yaml=0.17.19=py310hf5841e9_0
-- scipy=1.7.3=py310hc5918d8_0
+- scipy=1.8.0=py310hc5918d8_0
 - sdl=1.2.15=h01db608_1
-- setuptools=60.6.0=py310hbbe02a8_0
+- setuptools=60.7.1=py310hbbe02a8_0
 - six=1.16.0=pyh6c4a22f_0
 - soapysdr-module-airspy=0.2.0=he88f3d8_0
 - soapysdr-module-airspyhf=0.2.0=he88f3d8_0
@@ -248,7 +249,7 @@ dependencies:
 - watchdog=2.1.6=py310hbbe02a8_1
 - wcwidth=0.2.5=pyh9f0ad1d_2
 - wheel=0.37.1=pyhd8ed1ab_0
-- wxwidgets=3.1.3=h792651f_5
+- wxwidgets=3.1.5=h792651f_0
 - xorg-fixesproto=5.0=h3557bc0_1002
 - xorg-inputproto=2.3.2=h3557bc0_1002
 - xorg-kbproto=1.0.7=h3557bc0_1002
@@ -273,4 +274,4 @@ dependencies:
 - zstd=1.5.2=h41fb7a4_0
 name: radioconda
 platform: linux-aarch64
-version: 2022.02.01
+version: 2022.02.07

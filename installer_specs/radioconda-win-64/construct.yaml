@@ -14,7 +14,7 @@ specs:
 - airspyhf=1.6.8=h8ffe710_0
 - codec2=1.0.1=hcd874cb_1
 - digital_rf=2.6.7=py38hbc51265_2
-- gnuradio-iridium=2021.09.26.gr3.9=py38hde580d7_3
+- gnuradio-iridium=2022.02.02.gr3.9=py38hde580d7_0
 - gnuradio-osmosdr=0.2.3=py38ha10366a_15
 - gnuradio-satellites=4.4.0=py38h25402d6_3
 - gnuradio=3.9.5.0=py38hbbbac86_0
@@ -26,13 +26,13 @@ specs:
 - limesuite=20.10.0=hbaad480_1
 - mamba=0.20.0=py38hecfeebb_0
 - matplotlib=3.5.1=py38haa244fe_0
-- numpy=1.22.1=py38hcf66579_0
+- numpy=1.22.2=py38hcf66579_0
 - pandas=1.4.0=py38h5d928e2_0
 - pyadi-iio=0.0.11=pyhd8ed1ab_0
 - python=3.8.12=h7840368_2_cpython
 - radioconda_console_shortcut=1.0=0
 - rtl-sdr=0.6.0=h8ffe710_2
-- scipy=1.7.3=py38ha1292f7_0
+- scipy=1.8.0=py38ha1292f7_0
 - soapysdr-module-airspy=0.2.0=h23704b7_0
 - soapysdr-module-airspyhf=0.2.0=h23704b7_0
 - soapysdr-module-hackrf=0.3.4=h23704b7_0
@@ -43,5 +43,5 @@ specs:
 - soapysdr-module-uhd=0.4.1=hc64767c_3
 - soapysdr=0.8.1=py38hbd9d945_1
 - uhd=4.1.0.5=py38h74a7321_1
-version: 2022.02.01
+version: 2022.02.07
 write_condarc: true
