@@ -38,6 +38,7 @@ def write_env_file(
     file_path: pathlib.Path,
     name: Optional[str] = None,
     version: Optional[str] = None,
+    variables: Optional[dict] = None,
 ):
     env_dict = dict(
         name=name,
@@ -50,6 +51,8 @@ def write_env_file(
         env_dict["name"] = name
     if version:
         env_dict["version"] = version
+    if variables:
+        env_dict["variables"] = variables
     with file_path.open("w") as f:
         yaml.safe_dump(env_dict, stream=f)
 
@@ -186,12 +189,20 @@ def render_platforms(
         # lock the full environment specification to specific versions and builds
         locked_env_spec = lock_env_spec(env_spec, conda_exe)
 
+        if platform.startswith("win"):
+            variables = dict(
+                GR_PREFIX="", GRC_BLOCKS_PATH="", UHD_PKG_PATH="", VOLK_PREFIX=""
+            )
+        else:
+            variables = None
+
         # write the full environment specification to a yaml file (to build metapackage)
         locked_env_dict = write_env_file(
             env_spec=locked_env_spec,
             file_path=output_dir / f"{output_name}.yml",
             name=env_name,
             version=version,
+            variables=variables,
         )
 
         # write the full environment specification to a lock file (to install from file)

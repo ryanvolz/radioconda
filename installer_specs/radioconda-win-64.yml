@@ -238,4 +238,9 @@ dependencies:
 - zstd=1.5.2=h6255e5f_0
 name: radioconda
 platform: win-64
+variables:
+  GRC_BLOCKS_PATH: ''
+  GR_PREFIX: ''
+  UHD_PKG_PATH: ''
+  VOLK_PREFIX: ''
 version: 2022.02.07
