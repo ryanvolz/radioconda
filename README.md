@@ -105,25 +105,35 @@ Once you have radioconda installed, you can stay up to date for all packages wit
 
 To install the latest release in particular, run
 
-    mamba install -c ryanvolz --only-deps radioconda python
-
-(You need to add `python` to the package list so that it can be upgraded if necessary.)
-
-### Install a particular release
-
-To install a particular release version, substitute the desired version number and run
-
-    mamba install -c ryanvolz --only-deps radioconda=20NN.NN.NN python
-
-### Install from environment lock file
-
-You can also install from the released environment lock file (on Windows):
+(on Windows):
 
     mamba install --file https://github.com/ryanvolz/radioconda/releases/latest/download/radioconda-win-64.lock
 
 (on Linux/macOS):
 
     mamba install --file https://github.com/ryanvolz/radioconda/releases/latest/download/radioconda-$(conda info | sed -n -e 's/^.*platform : //p').lock
+
+### Install a particular release
+
+To install a particular release version, substitute the desired version number and run
+
+(on Windows):
+
+    mamba install --file https://github.com/ryanvolz/radioconda/releases/download/20NN.NN.NN/radioconda-win-64.lock
+
+(on Linux/macOS):
+
+    mamba install --file https://github.com/ryanvolz/radioconda/releases/download/20NN.NN.NN/radioconda-$(conda info | sed -n -e 's/^.*platform : //p').lock
+
+### Install from radioconda metapackage
+
+If you're starting with a fresh environment or are comfortable dealing with package conflicts, you can install the latest release using the `radioconda` metapackage from the `ryanvolz` channel:
+
+    mamba install -c ryanvolz --only-deps radioconda
+
+To install a particular release version, substitute the desired version number and run
+
+    mamba install -c ryanvolz --only-deps radioconda=20NN.NN.NN
 
 ## Additional Installation for Device Support
 
