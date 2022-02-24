@@ -21,6 +21,7 @@ dependencies:
   - gqrx # [linux64]
   - gqrx # [osx64]
   - gqrx # [win64]
+  - hackrf
   - ipython
   - libiio
   - libm2k
@@ -37,6 +38,7 @@ dependencies:
   - soapysdr
   - soapysdr-module-airspy
   - soapysdr-module-airspyhf
+  - soapysdr-module-hackrf
   - soapysdr-module-lms7
   - soapysdr-module-plutosdr
   - soapysdr-module-remote

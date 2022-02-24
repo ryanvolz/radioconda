@@ -17,6 +17,7 @@ specs:
 - gnuradio-osmosdr=0.2.3=py310hef37bb6_17
 - gnuradio-satellites=4.5.0=py310h10b79ae_0
 - gnuradio=3.10.1.1=py310h81c55d6_0
+- hackrf=2021.03.1=h4f2b1ef_0
 - ipython=8.0.1=py310h4c7bcd0_2
 - libiio=0.23=h8af1aa0_0
 - libm2k=0.5.0=py310h0c2382d_3
@@ -31,6 +32,7 @@ specs:
 - scipy=1.8.0=py310hc5918d8_1
 - soapysdr-module-airspy=0.2.0=he88f3d8_0
 - soapysdr-module-airspyhf=0.2.0=he88f3d8_0
+- soapysdr-module-hackrf=0.3.4=he88f3d8_0
 - soapysdr-module-lms7=20.10.0=hd71efff_1
 - soapysdr-module-plutosdr=0.2.1=h872020c_3
 - soapysdr-module-remote=0.5.2=he88f3d8_2

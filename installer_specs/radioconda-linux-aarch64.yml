@@ -80,6 +80,7 @@ dependencies:
 - gstreamer=1.18.5=h01406a2_3
 - gtk3=3.24.31=ha4297e9_3
 - h5py=3.6.0=nompi_py310hd005ad3_100
+- hackrf=2021.03.1=h4f2b1ef_0
 - harfbuzz=3.4.0=h046a1c0_0
 - hdf5=1.12.1=nompi_h774d4d8_103
 - hicolor-icon-theme=0.17=h8af1aa0_2
@@ -224,6 +225,7 @@ dependencies:
 - six=1.16.0=pyh6c4a22f_0
 - soapysdr-module-airspy=0.2.0=he88f3d8_0
 - soapysdr-module-airspyhf=0.2.0=he88f3d8_0
+- soapysdr-module-hackrf=0.3.4=he88f3d8_0
 - soapysdr-module-lms7=20.10.0=hd71efff_1
 - soapysdr-module-plutosdr=0.2.1=h872020c_3
 - soapysdr-module-remote=0.5.2=he88f3d8_2
