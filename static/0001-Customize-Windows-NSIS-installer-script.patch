@@ -1,0 +1,41 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Ryan Volz <ryan.volz@gmail.com>
+Date: Wed, 23 Feb 2022 18:11:22 -0500
+Subject: [PATCH] Customize Windows NSIS installer script.
+
+1. Never clear the full pkg dir
+2. Delete environment variables set in registry by PothosSDR
+---
+ constructor/nsis/main.nsi.tmpl | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+diff --git a/constructor/nsis/main.nsi.tmpl b/constructor/nsis/main.nsi.tmpl
+index 2426248..9ea05cf 100644
+--- a/constructor/nsis/main.nsi.tmpl
++++ b/constructor/nsis/main.nsi.tmpl
+@@ -933,7 +933,7 @@ Section "Install"
+ 
+     ${If} $Ana_ClearPkgCache_State = ${BST_CHECKED}
+         DetailPrint "Clearing package cache..."
+-        push '"$INSTDIR\_conda.exe" clean --all --force-pkgs-dirs --yes'
++        push '"$INSTDIR\_conda.exe" clean --all --yes'
+         push 'Failed to clear package cache'
+         call AbortRetryNSExecWait
+     ${EndIf}
+@@ -964,6 +964,13 @@ Section "Install"
+     ${EndIf}
+ 
+     ${If} $ARGV_NoRegistry == "0"
++        # Delete registry entries for environment variables set by PothosSDR
++        DeleteRegValue HKEY_LOCAL_MACHINE "System\CurrentControlSet\Control\Session Manager\Environment" "GR_PREFIX"
++        DeleteRegValue HKEY_LOCAL_MACHINE "System\CurrentControlSet\Control\Session Manager\Environment" "GRC_BLOCKS_PATH"
++        DeleteRegValue HKEY_LOCAL_MACHINE "System\CurrentControlSet\Control\Session Manager\Environment" "UHD_PKG_PATH"
++        DeleteRegValue HKEY_LOCAL_MACHINE "System\CurrentControlSet\Control\Session Manager\Environment" "VOLK_PREFIX"
++        ClearErrors
++
+         # Registry uninstall info
+         WriteRegStr SHCTX "${UNINSTREG}" "DisplayName" "${UNINSTALL_NAME}"
+         WriteRegStr SHCTX "${UNINSTREG}" "DisplayVersion" "${VERSION}"
+-- 
+2.35.0
+

@@ -109,6 +109,8 @@ def render_constructor(
     )
     if platform.startswith("win"):
         construct_dict["post_install"] = "post_install.bat"
+        # point to template that we generate at build time with a patch over default
+        construct_dict["nsis_template"] = "main.nsi.tmpl"
     else:
         construct_dict["post_install"] = "post_install.sh"
 
