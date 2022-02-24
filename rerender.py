@@ -38,6 +38,7 @@ def write_env_file(
     file_path: pathlib.Path,
     name: Optional[str] = None,
     version: Optional[str] = None,
+    variables: Optional[dict] = None,
 ):
     env_dict = dict(
         name=name,
@@ -50,6 +51,8 @@ def write_env_file(
         env_dict["name"] = name
     if version:
         env_dict["version"] = version
+    if variables:
+        env_dict["variables"] = variables
     with file_path.open("w") as f:
         yaml.safe_dump(env_dict, stream=f)
 
@@ -106,6 +109,8 @@ def render_constructor(
     )
     if platform.startswith("win"):
         construct_dict["post_install"] = "post_install.bat"
+        # point to template that we generate at build time with a patch over default
+        construct_dict["nsis_template"] = "main.nsi.tmpl"
     else:
         construct_dict["post_install"] = "post_install.sh"
 
@@ -120,7 +125,16 @@ def render_constructor(
     # write the post_install scripts referenced in the construct dict
     if platform.startswith("win"):
         with (constructor_dir / "post_install.bat").open("w") as f:
-            f.write("\n".join((r"del /q %PREFIX%\pkgs\*.tar.bz2", "exit 0", "")))
+            f.write(
+                "\n".join(
+                    (
+                        r'echo {"env_vars": {"GR_PREFIX": "", "GRC_BLOCKS_PATH": "", "UHD_PKG_PATH": "", "VOLK_PREFIX": ""}}>%PREFIX%\conda-meta\state',
+                        r"del /q %PREFIX%\pkgs\*.tar.bz2",
+                        "exit 0",
+                        "",
+                    )
+                )
+            )
     else:
         with (constructor_dir / "post_install.sh").open("w") as f:
             f.write(
@@ -177,12 +191,20 @@ def render_platforms(
         # lock the full environment specification to specific versions and builds
         locked_env_spec = lock_env_spec(env_spec, conda_exe)
 
+        if platform.startswith("win"):
+            variables = dict(
+                GR_PREFIX="", GRC_BLOCKS_PATH="", UHD_PKG_PATH="", VOLK_PREFIX=""
+            )
+        else:
+            variables = None
+
         # write the full environment specification to a yaml file (to build metapackage)
         locked_env_dict = write_env_file(
             env_spec=locked_env_spec,
             file_path=output_dir / f"{output_name}.yml",
             name=env_name,
             version=version,
+            variables=variables,
         )
 
         # write the full environment specification to a lock file (to install from file)

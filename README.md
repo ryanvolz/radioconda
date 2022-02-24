@@ -17,14 +17,16 @@ and support for the following SDR devices and device libraries:
 |    [ADALM-PLUTO][1]     |       libiio ([setup](#iio-pluto-sdr))        |
 | [Airspy R2/Mini/HF+][2] | airspy/airspyhf ([setup](#airspy-r2-mini-hf)) |
 |    [Ettus USRPs][3]     |        UHD ([setup](#uhd-ettus-usrp))         |
+|       [HackRF][4]       |           HackRF ([setup](#hackrf))           |
 |      [LimeSDR][4]       |        Lime Suite ([setup](#limesdr))         |
 |      [RTL-SDR][5]       |          rtl-sdr ([setup](#rtl-sdr))          |
 
 [1]: https://www.analog.com/en/design-center/evaluation-hardware-and-software/evaluation-boards-kits/adalm-pluto.html
 [2]: https://airspy.com/
 [3]: https://www.ettus.com/products/
-[4]: https://limemicro.com/products/boards/
-[5]: https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/
+[4]: https://greatscottgadgets.com/hackrf/
+[5]: https://limemicro.com/products/boards/
+[6]: https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/
 
 The complete list of packages can be found [here](https://github.com/ryanvolz/radioconda/blob/master/radioconda.yaml). You can [**suggest additional software to include**](https://github.com/ryanvolz/radioconda/issues) by filing an [issue](https://github.com/ryanvolz/radioconda/issues). If you've built additional software from source on top of radioconda, [**document your results**](https://github.com/ryanvolz/radioconda/issues) in an [issue](https://github.com/ryanvolz/radioconda/issues) to help others (and help me in packaging it!).
 
@@ -103,25 +105,35 @@ Once you have radioconda installed, you can stay up to date for all packages wit
 
 To install the latest release in particular, run
 
-    mamba install -c ryanvolz --only-deps radioconda python
-
-(You need to add `python` to the package list so that it can be upgraded if necessary.)
-
-### Install a particular release
-
-To install a particular release version, substitute the desired version number and run
-
-    mamba install -c ryanvolz --only-deps radioconda=20NN.NN.NN python
-
-### Install from environment lock file
-
-You can also install from the released environment lock file (on Windows):
+(on Windows):
 
     mamba install --file https://github.com/ryanvolz/radioconda/releases/latest/download/radioconda-win-64.lock
 
 (on Linux/macOS):
 
     mamba install --file https://github.com/ryanvolz/radioconda/releases/latest/download/radioconda-$(conda info | sed -n -e 's/^.*platform : //p').lock
+
+### Install a particular release
+
+To install a particular release version, substitute the desired version number and run
+
+(on Windows):
+
+    mamba install --file https://github.com/ryanvolz/radioconda/releases/download/20NN.NN.NN/radioconda-win-64.lock
+
+(on Linux/macOS):
+
+    mamba install --file https://github.com/ryanvolz/radioconda/releases/download/20NN.NN.NN/radioconda-$(conda info | sed -n -e 's/^.*platform : //p').lock
+
+### Install from radioconda metapackage
+
+If you're starting with a fresh environment or are comfortable dealing with package conflicts, you can install the latest release using the `radioconda` metapackage from the `ryanvolz` channel:
+
+    mamba install -c ryanvolz --only-deps radioconda
+
+To install a particular release version, substitute the desired version number and run
+
+    mamba install -c ryanvolz --only-deps radioconda=20NN.NN.NN
 
 ## Additional Installation for Device Support
 
@@ -178,6 +190,26 @@ Install a udev rule by creating a link into your radioconda installation:
     sudo ln -s $CONDA_PREFIX/lib/udev/rules.d/52-airspy.rules /etc/udev/rules.d/52-radioconda-airspy.rules
     # run the next line only for the Airspy HF+
     sudo ln -s $CONDA_PREFIX/lib/udev/rules.d/52-airspyhf.rules /etc/udev/rules.d/52-radioconda-airspyhf.rules
+    sudo udevadm control --reload
+    sudo udevadm trigger
+
+Then, make sure your user account belongs to the plugdev group in order to be able to access your device:
+
+    sudo usermod -a -G plugdev <user>
+
+You may have to restart for this change to take effect.
+
+### HackRF
+
+##### Windows users
+
+[Install the WinUSB driver with Zadig](#installing-the-winusb-driver-with-zadig), selecting your HackRF device.
+
+##### Linux users
+
+Install a udev rule by creating a link into your radioconda installation:
+
+    sudo ln -s $CONDA_PREFIX/lib/udev/rules.d/53-hackrf.rules /etc/udev/rules.d/53-radioconda-hackrf.rules
     sudo udevadm control --reload
     sudo udevadm trigger
 

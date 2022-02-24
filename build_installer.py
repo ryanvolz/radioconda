@@ -70,6 +70,19 @@ if __name__ == "__main__":
 
     platform = spec_dir_extract_platform(args.installer_spec_dir)
 
+    if platform.startswith("win"):
+        # patch constructor's nsis template
+        import patch
+
+        pset = patch.fromfile(
+            "static/0001-Customize-Windows-NSIS-installer-script.patch"
+        )
+        pset.write_hunks(
+            pathlib.Path(constructor_main.__file__).parent / "nsis" / "main.nsi.tmpl",
+            args.installer_spec_dir / "main.nsi.tmpl",
+            pset.items[0].hunks,
+        )
+
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
     constructor_cmdline = [
