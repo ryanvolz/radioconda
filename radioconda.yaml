@@ -15,12 +15,12 @@ dependencies:
   - digital_rf
   - codec2
   - gnuradio
-  #   - gnuradio-iridium
-  #   - gnuradio-osmosdr
-  #   - gnuradio-satellites
-  #   - gqrx # [linux64]
-  #   - gqrx # [osx64]
-  #   - gqrx # [win64]
+  - gnuradio-iridium
+  - gnuradio-osmosdr
+  - gnuradio-satellites
+  - gqrx # [linux64]
+  - gqrx # [osx64]
+  - gqrx # [win64]
   - ipython
   - libiio
   - libm2k
