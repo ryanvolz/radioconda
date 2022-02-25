@@ -5,14 +5,24 @@ Subject: [PATCH] Customize Windows NSIS installer script.
 
 1. Never clear the full pkg dir
 2. Delete environment variables set in registry by PothosSDR
+3. Do not show "advanced" installation options
 ---
- constructor/nsis/main.nsi.tmpl | 9 ++++++++-
- 1 file changed, 8 insertions(+), 1 deletion(-)
+ constructor/nsis/main.nsi.tmpl | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
 
 diff --git a/constructor/nsis/main.nsi.tmpl b/constructor/nsis/main.nsi.tmpl
-index 2426248..9ea05cf 100644
+index 2426248..a7b6f1d 100644
 --- a/constructor/nsis/main.nsi.tmpl
 +++ b/constructor/nsis/main.nsi.tmpl
+@@ -118,7 +118,7 @@ Page Custom InstModePage_Create InstModePage_Leave
+ !define MUI_PAGE_CUSTOMFUNCTION_LEAVE OnDirectoryLeave
+ !insertmacro MUI_PAGE_DIRECTORY
+ # Custom options now differ depending on installation mode.
+-Page Custom mui_AnaCustomOptions_Show
++#Page Custom mui_AnaCustomOptions_Show
+ !insertmacro MUI_PAGE_INSTFILES
+ !insertmacro MUI_PAGE_FINISH
+ 
 @@ -933,7 +933,7 @@ Section "Install"
  
      ${If} $Ana_ClearPkgCache_State = ${BST_CHECKED}
@@ -27,11 +37,11 @@ index 2426248..9ea05cf 100644
  
      ${If} $ARGV_NoRegistry == "0"
 +        # Delete registry entries for environment variables set by PothosSDR
-+        DeleteRegValue HKEY_LOCAL_MACHINE "System\CurrentControlSet\Control\Session Manager\Environment" "GR_PREFIX"
-+        DeleteRegValue HKEY_LOCAL_MACHINE "System\CurrentControlSet\Control\Session Manager\Environment" "GRC_BLOCKS_PATH"
-+        DeleteRegValue HKEY_LOCAL_MACHINE "System\CurrentControlSet\Control\Session Manager\Environment" "UHD_PKG_PATH"
-+        DeleteRegValue HKEY_LOCAL_MACHINE "System\CurrentControlSet\Control\Session Manager\Environment" "VOLK_PREFIX"
-+        ClearErrors
++        DeleteRegValue HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Session Manager\Environment" "GR_PREFIX"
++        DeleteRegValue HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Session Manager\Environment" "GRC_BLOCKS_PATH"
++        DeleteRegValue HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Session Manager\Environment" "UHD_PKG_PATH"
++        DeleteRegValue HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Session Manager\Environment" "VOLK_PREFIX"
++        #ClearErrors
 +
          # Registry uninstall info
          WriteRegStr SHCTX "${UNINSTREG}" "DisplayName" "${UNINSTALL_NAME}"
