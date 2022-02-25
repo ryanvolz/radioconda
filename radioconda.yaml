@@ -14,7 +14,7 @@ dependencies:
   - airspyhf
   - digital_rf
   - codec2
-  - gnuradio
+  - gnuradio 3.9.*
   - gnuradio-iridium
   - gnuradio-osmosdr
   - gnuradio-satellites
