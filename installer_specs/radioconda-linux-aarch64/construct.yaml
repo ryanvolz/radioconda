@@ -22,7 +22,7 @@ specs:
 - libiio=0.23=h8af1aa0_0
 - libm2k=0.5.0=py310h0c2382d_3
 - limesuite=20.10.0=h1c39f02_1
-- mamba=0.21.2=py310hcf12e44_0
+- mamba=0.22.1=py310hcf12e44_0
 - matplotlib=3.5.1=py310hbbe02a8_0
 - numpy=1.22.2=py310ha311ffb_0
 - pandas=1.4.1=py310h713c908_0
@@ -40,5 +40,5 @@ specs:
 - soapysdr-module-uhd=0.4.1=hff41fed_3
 - soapysdr=0.8.1=py310hca70e4f_1
 - uhd=4.1.0.5=py310hc3f4359_1
-version: 2022.02.25
+version: 2022.02.28
 write_condarc: true

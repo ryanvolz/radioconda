@@ -44,9 +44,9 @@ dependencies:
 - decorator=5.1.1=pyhd8ed1ab_0
 - digital_rf=2.6.7=py310hba0b3ac_2
 - epoxy=1.5.9=h7f98852_0
-- executing=0.8.2=pyhd8ed1ab_0
+- executing=0.8.3=pyhd8ed1ab_0
 - expat=2.4.6=h27087fc_0
-- ffmpeg=4.3.2=h37c90e5_2
+- ffmpeg=4.3.2=h37c90e5_3
 - fftw=3.3.10=nompi_h77c792f_102
 - font-ttf-dejavu-sans-mono=2.37=hab24e00_0
 - font-ttf-inconsolata=3.000=h77eed37_0
@@ -290,4 +290,4 @@ dependencies:
 - zstd=1.5.2=ha95c52a_0
 name: radioconda
 platform: linux-64
-version: 2022.02.25
+version: 2022.02.28

@@ -36,7 +36,7 @@ dependencies:
 - decorator=5.1.1=pyhd8ed1ab_0
 - digital_rf=2.6.7=py38hbc51265_2
 - epoxy=1.5.9=h8d14728_0
-- executing=0.8.2=pyhd8ed1ab_0
+- executing=0.8.3=pyhd8ed1ab_0
 - expat=2.4.6=h39d44d4_0
 - fftw=3.3.10=nompi_h77347bd_102
 - font-ttf-dejavu-sans-mono=2.37=hab24e00_0
@@ -241,4 +241,4 @@ variables:
   GR_PREFIX: ''
   UHD_PKG_PATH: ''
   VOLK_PREFIX: ''
-version: 2022.02.25
+version: 2022.02.28

@@ -41,7 +41,7 @@ dependencies:
 - decorator=5.1.1=pyhd8ed1ab_0
 - digital_rf=2.6.7=py310h7f0195c_2
 - epoxy=1.5.9=hf897c2e_0
-- executing=0.8.2=pyhd8ed1ab_0
+- executing=0.8.3=pyhd8ed1ab_0
 - expat=2.4.6=ha18d298_0
 - fftw=3.3.10=nompi_h92e7866_102
 - font-ttf-dejavu-sans-mono=2.37=hab24e00_0
@@ -274,4 +274,4 @@ dependencies:
 - zstd=1.5.2=h41fb7a4_0
 name: radioconda
 platform: linux-aarch64
-version: 2022.02.25
+version: 2022.02.28

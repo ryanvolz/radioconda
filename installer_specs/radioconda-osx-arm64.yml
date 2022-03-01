@@ -37,7 +37,7 @@ dependencies:
 - decorator=5.1.1=pyhd8ed1ab_0
 - digital_rf=2.6.7=py310hddfa20c_2
 - epoxy=1.5.9=h3422bc3_0
-- executing=0.8.2=pyhd8ed1ab_0
+- executing=0.8.3=pyhd8ed1ab_0
 - fftw=3.3.10=nompi_h828537f_102
 - font-ttf-dejavu-sans-mono=2.37=hab24e00_0
 - font-ttf-inconsolata=3.000=h77eed37_0
@@ -232,4 +232,4 @@ dependencies:
 - zstd=1.5.2=h861e0a7_0
 name: radioconda
 platform: osx-arm64
-version: 2022.02.25
+version: 2022.02.28
