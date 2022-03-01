@@ -198,20 +198,32 @@ def render_platforms(
         else:
             variables = None
 
-        # write the full environment specification to a yaml file (to build metapackage)
-        locked_env_dict = write_env_file(
-            env_spec=locked_env_spec,
-            file_path=output_dir / f"{output_name}.yml",
-            name=env_name,
-            version=version,
-            variables=variables,
-        )
-
         # write the full environment specification to a lock file (to install from file)
         lockfile_contents = write_lock_file(
             lock_spec=locked_env_spec,
             file_path=output_dir / f"{output_name}.lock",
             conda_exe=conda_exe,
+        )
+
+        # filter the full package spec by the explicitly listed package names
+        metapackage_pkg_specs = [
+            spec
+            for spec in locked_env_spec.specs
+            if name_from_pkg_spec(spec) in env_spec.specs
+        ]
+        metapackage_spec = conda_lock.src_parser.LockSpecification(
+            specs=metapackage_pkg_specs,
+            channels=locked_env_spec.channels,
+            platform=locked_env_spec.platform,
+        )
+
+        # write the filtered environment spec to a yaml file (to build metapackage)
+        locked_env_dict = write_env_file(
+            env_spec=metapackage_spec,
+            file_path=output_dir / f"{output_name}.yml",
+            name=env_name,
+            version=version,
+            variables=variables,
         )
 
         # add installer-only (base environment) packages and lock those too
