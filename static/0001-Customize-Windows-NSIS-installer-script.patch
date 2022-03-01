@@ -7,11 +7,11 @@ Subject: [PATCH] Customize Windows NSIS installer script.
 2. Delete environment variables set in registry by PothosSDR
 3. Do not show "advanced" installation options
 ---
- constructor/nsis/main.nsi.tmpl | 11 +++++++++--
- 1 file changed, 9 insertions(+), 2 deletions(-)
+ constructor/nsis/main.nsi.tmpl | 33 +++++++++++++++++++++++++++++++--
+ 1 file changed, 31 insertions(+), 2 deletions(-)
 
 diff --git a/constructor/nsis/main.nsi.tmpl b/constructor/nsis/main.nsi.tmpl
-index 2426248..a7b6f1d 100644
+index 2426248..95c94c2 100644
 --- a/constructor/nsis/main.nsi.tmpl
 +++ b/constructor/nsis/main.nsi.tmpl
 @@ -118,7 +118,7 @@ Page Custom InstModePage_Create InstModePage_Leave
@@ -32,20 +32,49 @@ index 2426248..a7b6f1d 100644
          push 'Failed to clear package cache'
          call AbortRetryNSExecWait
      ${EndIf}
-@@ -964,6 +964,13 @@ Section "Install"
+@@ -964,6 +964,26 @@ Section "Install"
      ${EndIf}
  
      ${If} $ARGV_NoRegistry == "0"
 +        # Delete registry entries for environment variables set by PothosSDR
-+        DeleteRegValue HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Session Manager\Environment" "GR_PREFIX"
-+        DeleteRegValue HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Session Manager\Environment" "GRC_BLOCKS_PATH"
-+        DeleteRegValue HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Session Manager\Environment" "UHD_PKG_PATH"
-+        DeleteRegValue HKEY_LOCAL_MACHINE "SYSTEM\CurrentControlSet\Control\Session Manager\Environment" "VOLK_PREFIX"
-+        #ClearErrors
++        # With admin rights, we can delete them
++        ${If} ${UAC_IsAdmin}
++            DetailPrint "Deleting PothosSDR registry environment variables..."
++            !define env_hklm 'HKLM "SYSTEM\CurrentControlSet\Control\Session Manager\Environment"'
++            DeleteRegValue ${env_hklm} "GR_PREFIX"
++            DeleteRegValue ${env_hklm} "GRC_BLOCKS_PATH"
++            DeleteRegValue ${env_hklm} "UHD_PKG_PATH"
++            DeleteRegValue ${env_hklm} "VOLK_PREFIX"
++        # Without admin rights, we have to shadow them with empty values set for the user
++        ${Else}
++            DetailPrint "Overriding PothosSDR registry environment variables for user..."
++            !define env_hkcu 'HKCU "Environment"'
++            WriteRegExpandStr ${env_hkcu} "GR_PREFIX" ""
++            WriteRegExpandStr ${env_hkcu} "GRC_BLOCKS_PATH" ""
++            WriteRegExpandStr ${env_hkcu} "UHD_PKG_PATH" ""
++            WriteRegExpandStr ${env_hkcu} "VOLK_PREFIX" ""
++        ${EndIf}
++        SendMessage ${HWND_BROADCAST} ${WM_WININICHANGE} 0 "STR:Environment" /TIMEOUT=5000
 +
          # Registry uninstall info
          WriteRegStr SHCTX "${UNINSTREG}" "DisplayName" "${UNINSTALL_NAME}"
          WriteRegStr SHCTX "${UNINSTREG}" "DisplayVersion" "${VERSION}"
+@@ -1014,6 +1034,15 @@ Section "Uninstall"
+     # In case the last command fails, run the slow method to remove leftover
+     RMDir /r /REBOOTOK "$INSTDIR"
+ 
++    # Delete user environment variables that we set during installation
++    ${IfNot} ${UAC_IsAdmin}
++        DeleteRegValue ${env_hkcu} "GR_PREFIX"
++        DeleteRegValue ${env_hkcu} "GRC_BLOCKS_PATH"
++        DeleteRegValue ${env_hkcu} "UHD_PKG_PATH"
++        DeleteRegValue ${env_hkcu} "VOLK_PREFIX"
++        SendMessage ${HWND_BROADCAST} ${WM_WININICHANGE} 0 "STR:Environment" /TIMEOUT=5000
++    ${EndIf}
++
+     DeleteRegKey SHCTX "${UNINSTREG}"
+     # If Anaconda was registered as the official Python for this version,
+     # remove it from the registry
 -- 
 2.35.0
 
