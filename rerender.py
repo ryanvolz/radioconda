@@ -187,6 +187,7 @@ def render_platforms(
         env_spec = conda_lock.conda_lock.parse_environment_file(
             environment_file=environment_file, platform=platform
         )
+        env_pkg_names = [name_from_pkg_spec(spec) for spec in env_spec.specs]
 
         # lock the full environment specification to specific versions and builds
         locked_env_spec = lock_env_spec(env_spec, conda_exe)
@@ -209,7 +210,7 @@ def render_platforms(
         metapackage_pkg_specs = [
             spec
             for spec in locked_env_spec.specs
-            if name_from_pkg_spec(spec) in env_spec.specs
+            if name_from_pkg_spec(spec) in env_pkg_names
         ]
         metapackage_spec = conda_lock.src_parser.LockSpecification(
             specs=metapackage_pkg_specs,
