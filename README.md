@@ -7,7 +7,9 @@ This repository holds cross-platform installers for a collection of open source 
 - Digital RF
 - GNU Radio
 - gqrx
+- gr-inspector
 - gr-iridium
+- gr-paint
 - gr-satellites
 
 and support for the following SDR devices and device libraries:
@@ -16,17 +18,19 @@ and support for the following SDR devices and device libraries:
 | :---------------------: | :-------------------------------------------: |
 |    [ADALM-PLUTO][1]     |       libiio ([setup](#iio-pluto-sdr))        |
 | [Airspy R2/Mini/HF+][2] | airspy/airspyhf ([setup](#airspy-r2-mini-hf)) |
-|    [Ettus USRPs][3]     |        UHD ([setup](#uhd-ettus-usrp))         |
-|       [HackRF][4]       |           HackRF ([setup](#hackrf))           |
-|      [LimeSDR][4]       |        Lime Suite ([setup](#limesdr))         |
-|      [RTL-SDR][5]       |          rtl-sdr ([setup](#rtl-sdr))          |
+|      [BladeRF][3]       |          bladeRF ([setup](#bladerf))          |
+|    [Ettus USRPs][4]     |        UHD ([setup](#uhd-ettus-usrp))         |
+|       [HackRF][5]       |           HackRF ([setup](#hackrf))           |
+|      [LimeSDR][6]       |        Lime Suite ([setup](#limesdr))         |
+|      [RTL-SDR][7]       |          rtl-sdr ([setup](#rtl-sdr))          |
 
 [1]: https://www.analog.com/en/design-center/evaluation-hardware-and-software/evaluation-boards-kits/adalm-pluto.html
 [2]: https://airspy.com/
-[3]: https://www.ettus.com/products/
-[4]: https://greatscottgadgets.com/hackrf/
-[5]: https://limemicro.com/products/boards/
-[6]: https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/
+[3]: https://www.nuand.com/
+[4]: https://www.ettus.com/products/
+[5]: https://greatscottgadgets.com/hackrf/
+[6]: https://limemicro.com/products/boards/
+[7]: https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/
 
 The complete list of packages can be found [here](https://github.com/ryanvolz/radioconda/blob/master/radioconda.yaml). You can [**suggest additional software to include**](https://github.com/ryanvolz/radioconda/issues) by filing an [issue](https://github.com/ryanvolz/radioconda/issues). If you've built additional software from source on top of radioconda, [**document your results**](https://github.com/ryanvolz/radioconda/issues) in an [issue](https://github.com/ryanvolz/radioconda/issues) to help others (and help me in packaging it!).
 
@@ -210,6 +214,28 @@ You may have to restart for this change to take effect.
 Install a udev rule by creating a link into your radioconda installation:
 
     sudo ln -s $CONDA_PREFIX/lib/udev/rules.d/53-hackrf.rules /etc/udev/rules.d/53-radioconda-hackrf.rules
+    sudo udevadm control --reload
+    sudo udevadm trigger
+
+Then, make sure your user account belongs to the plugdev group in order to be able to access your device:
+
+    sudo usermod -a -G plugdev <user>
+
+You may have to restart for this change to take effect.
+
+### BladeRF
+
+##### Windows users
+
+[Install the WinUSB driver with Zadig](#installing-the-winusb-driver-with-zadig), selecting your BladeRF device.
+
+##### Linux users
+
+Install a udev rule by creating a link into your radioconda installation:
+
+    sudo ln -s $CONDA_PREFIX/lib/udev/rules.d/88-nuand-bladerf1.rules /etc/udev/rules.d/88-radioconda-nuand-bladerf1.rules
+    sudo ln -s $CONDA_PREFIX/lib/udev/rules.d/88-nuand-bladerf2.rules /etc/udev/rules.d/88-radioconda-nuand-bladerf2.rules
+    sudo ln -s $CONDA_PREFIX/lib/udev/rules.d/88-nuand-bootloader.rules /etc/udev/rules.d/88-radioconda-nuand-bootloader.rules
     sudo udevadm control --reload
     sudo udevadm trigger
 
