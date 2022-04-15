@@ -1,6 +1,7 @@
 name: radioconda
 channels:
   - conda-forge
+  - ryanvolz
 platforms:
   - linux-64
   - linux-aarch64
@@ -9,14 +10,19 @@ platforms:
   - osx-arm64
   - win-64
 dependencies:
-  - alsa-plugins # [linux64]
   - airspy
   - airspyhf
+  - alsa-plugins # [linux64]
+  - bladerf
   - digital_rf
   - codec2
-  - gnuradio 3.9.*
+  - gnuradio 3.10.*
+  - gnuradio-inspector # [linux64]
+  - gnuradio-inspector # [osx64]
+  - gnuradio-inspector # [win64]
   - gnuradio-iridium
   - gnuradio-osmosdr
+  - gnuradio-paint
   - gnuradio-satellites
   - gqrx # [linux64]
   - gqrx # [osx64]
@@ -31,13 +37,12 @@ dependencies:
   - pandas
   - pyadi-iio
   - python
-  # restrict to python 3.8 on Windows for Windows 7 compatibility
-  - python 3.8.* # [win]
   - rtl-sdr
   - scipy
   - soapysdr
   - soapysdr-module-airspy
   - soapysdr-module-airspyhf
+  - soapysdr-module-bladerf
   - soapysdr-module-hackrf
   - soapysdr-module-lms7
   - soapysdr-module-plutosdr
