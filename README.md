@@ -133,11 +133,13 @@ To install a particular release version, substitute the desired version number a
 
 If you're starting with a fresh environment or are comfortable dealing with package conflicts, you can install the latest release using the `radioconda` metapackage from the `ryanvolz` channel:
 
-    mamba install -c ryanvolz --only-deps radioconda
+    mamba install -c conda-forge -c ryanvolz --only-deps radioconda
+
+(It is necessary to specify the `conda-forge` channel first, even if it is your default channel, so that the `ryanvolz` channel does not take priority.)
 
 To install a particular release version, substitute the desired version number and run
 
-    mamba install -c ryanvolz --only-deps radioconda=20NN.NN.NN
+    mamba install -c conda-forge -c ryanvolz --only-deps radioconda=20NN.NN.NN
 
 ## Additional Installation for Device Support
 
