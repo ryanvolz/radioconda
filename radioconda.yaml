@@ -17,13 +17,16 @@ dependencies:
   - digital_rf
   - codec2
   - gnuradio 3.10.*
+  - gnuradio-inspector # [arm64]
   - gnuradio-inspector # [linux64]
   - gnuradio-inspector # [osx64]
   - gnuradio-inspector # [win64]
   - gnuradio-iridium
+  - gnuradio-leo
   - gnuradio-osmosdr
   - gnuradio-paint
   - gnuradio-satellites
+  - gqrx # [arm64]
   - gqrx # [linux64]
   - gqrx # [osx64]
   - gqrx # [win64]
