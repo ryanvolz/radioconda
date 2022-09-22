@@ -12,11 +12,12 @@ platforms:
 dependencies:
   - airspy
   - airspyhf
-  - alsa-plugins # [linux64]
+  - alsa-plugins # [linux]
   - bladerf
   - digital_rf
   - codec2
   - gnuradio 3.10.*
+  - gnuradio-inspector # [aarch64]
   - gnuradio-inspector # [arm64]
   - gnuradio-inspector # [linux64]
   - gnuradio-inspector # [osx64]
@@ -26,6 +27,7 @@ dependencies:
   - gnuradio-osmosdr
   - gnuradio-paint
   - gnuradio-satellites
+  - gqrx # [aarch64]
   - gqrx # [arm64]
   - gqrx # [linux64]
   - gqrx # [osx64]
