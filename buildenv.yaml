@@ -6,3 +6,4 @@ dependencies:
   - conda-build
   - constructor
   - python-patch
+  - requests
