@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 import pathlib
 import re
+import tarfile
+
+import requests
 
 platform_re = re.compile("^.*-(?P<platform>[(?:linux)(?:osx)(?:win)].*)$")
 
@@ -16,6 +19,35 @@ def spec_dir_extract_platform(installer_spec_dir: pathlib.Path) -> str:
         raise ValueError(
             f"Could not identify platform from directory name: {spec_dir_name}"
         )
+
+
+def get_micromamba(cache_dir, platform, version=None):
+    if not version:
+        version = "latest"
+    tarfile_path = cache_dir / f"micromamba-{platform}-{version}.bz2"
+    tarfile_path.parent.mkdir(parents=True, exist_ok=True)
+    micromamba_url = f"https://micro.mamba.pm/api/micromamba/{platform}/{version}"
+
+    if not tarfile_path.exists():
+        print("Downloading micromamba for bundling into installer...")
+        response = requests.get(url=micromamba_url, stream=True)
+
+        with open(tarfile_path, "wb") as micromamba_tarfile:
+            for chunk in response.iter_content(chunk_size=1024):
+                if chunk:
+                    micromamba_tarfile.write(chunk)
+        print("...download finished!")
+
+    extract_path = tarfile_path.parent / tarfile_path.stem
+    if platform.startswith("win"):
+        micromamba_path = extract_path / "Library" / "bin" / "micromamba.exe"
+    else:
+        micromamba_path = extract_path / "bin" / "micromamba"
+    if not micromamba_path.exists():
+        tarfile_obj = tarfile.open(tarfile_path, mode="r")
+        tarfile_obj.extractall(extract_path)
+
+    return micromamba_path
 
 
 if __name__ == "__main__":
@@ -59,6 +91,14 @@ if __name__ == "__main__":
             " (default: %(default)s)"
         ),
     )
+    parser.add_argument(
+        "--micromamba_version",
+        default="0.24.0",
+        help=(
+            "Version of micromamba to download and bundle into the installer."
+            " (default: %(default)s)"
+        ),
+    )
 
     # allow a delimiter to separate constructor arguments
     argv = sys.argv[1:]
@@ -85,11 +125,21 @@ if __name__ == "__main__":
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
+    conda_exe_path = get_micromamba(
+        cache_dir=args.output_dir / "tmp",
+        platform=platform,
+        version=args.micromamba_version,
+    )
+    if not conda_exe_path.exists():
+        raise RuntimeError(f"Failed to download/extract micromamba to {conda_exe_path}")
+
     constructor_cmdline = [
         "constructor",
         args.installer_spec_dir,
         "--platform",
         platform,
+        "--conda-exe",
+        conda_exe_path,
         "--output-dir",
         args.output_dir,
     ] + constructor_args
