@@ -111,6 +111,7 @@ jobs:
           distro: ${{ matrix.EMU_DISTRO }}
           dockerRunArgs: --volume "${PWD}:/workdir"
           env: |
+            DISTNAME: ${{ env.DISTNAME }}
             OS_NAME: ${{ matrix.OS_NAME }}
             ARCH: ${{ matrix.ARCH }}
             INSTALL_PATH: /workdir/test_installation
