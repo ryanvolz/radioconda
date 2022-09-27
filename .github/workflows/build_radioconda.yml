@@ -30,10 +30,14 @@ jobs:
             PLATFORM: linux-aarch64
             OS_NAME: Linux
             ARCH: aarch64
+            EMU_ARCH: aarch64
+            EMU_DISTRO: ubuntu_latest
           - os: ubuntu-latest
             PLATFORM: linux-ppc64le
             OS_NAME: Linux
             ARCH: ppc64le
+            EMU_ARCH: ppc64le
+            EMU_DISTRO: ubuntu_latest
           - os: macos-latest
             PLATFORM: osx-64
             OS_NAME: MacOSX
@@ -86,8 +90,8 @@ jobs:
           cp installer_specs/$DISTNAME-$PLATFORM.lock dist/
           ls -lhR dist
 
-      - name: Test installer (sh)
-        if: contains(matrix.OS_NAME, 'Linux') || contains(matrix.OS_NAME, 'MacOSX')
+      - name: Test installer (sh native)
+        if: (contains(matrix.OS_NAME, 'Linux') || contains(matrix.PLATFORM, 'osx-64')) && matrix.EMU_ARCH == null
         shell: bash
         env:
           OS_NAME: ${{ matrix.OS_NAME }}
@@ -99,8 +103,25 @@ jobs:
           conda info
           conda list
 
+      - name: Test installer (sh emulated)
+        if: (contains(matrix.OS_NAME, 'Linux') || contains(matrix.OS_NAME, 'MacOSX')) && matrix.EMU_ARCH != null
+        uses: uraimo/run-on-arch-action@v2
+        with:
+          arch: ${{ matrix.EMU_ARCH }}
+          distro: ${{ matrix.EMU_DISTRO }}
+          dockerRunArgs: --volume "${PWD}:/workdir"
+          env: |
+            OS_NAME: ${{ matrix.OS_NAME }}
+            ARCH: ${{ matrix.ARCH }}
+            INSTALL_PATH: /workdir/test_installation
+          run: |
+            bash dist/$DISTNAME-*-$OS_NAME-$ARCH.sh -b -p $INSTALL_PATH
+            eval "$($INSTALL_PATH/bin/conda shell.bash hook)"
+            conda info
+            conda list
+
       - name: Test installer (pkg)
-        if: contains(matrix.OS_NAME, 'MacOSX')
+        if: contains(matrix.PLATFORM, 'osx-64')
         shell: bash
         env:
           OS_NAME: ${{ matrix.OS_NAME }}
