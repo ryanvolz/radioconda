@@ -42,12 +42,18 @@ Once installed, you will have a fully functional conda distribution/environment,
 
 Radioconda installers are available here: https://github.com/ryanvolz/radioconda/releases.
 
-| OS      | Architecture | Installer Type | Download                                                                                                   |
-| ------- | ------------ | -------------- | ---------------------------------------------------------------------------------------------------------- |
-| Linux   | x86_64       | Command-line   | [radioconda-Linux-x86_64.sh](https://glare.now.sh/ryanvolz/radioconda/radioconda-.*-Linux-x86_64.sh)       |
-| macOS   | x86_64       | Command-line   | [radioconda-MacOSX-x86_64.sh](https://glare.now.sh/ryanvolz/radioconda/radioconda-.*-MacOSX-x86_64.sh)     |
-| macOS   | x86_64       | Graphical      | [radioconda-MacOSX-x86_64.pkg](https://glare.now.sh/ryanvolz/radioconda/radioconda-.*-MacOSX-x86_64.pkg)   |
-| Windows | x86_64       | Graphical      | [radioconda-Windows-x86_64.exe](https://glare.now.sh/ryanvolz/radioconda/radioconda-.*-Windows-x86_64.exe) |
+| OS      | Architecture              | Installer Type | Download                                                                                                   |
+| ------- | ------------------------- | -------------- | ---------------------------------------------------------------------------------------------------------- |
+| Linux   | x86_64 (amd64)            | Command-line   | [radioconda-Linux-x86_64.sh](https://glare.now.sh/ryanvolz/radioconda/radioconda-.*-Linux-x86_64.sh)       |
+| Linux   | aarch64 (arm64)           | Command-line   | [radioconda-Linux-aarch64.sh](https://glare.now.sh/ryanvolz/radioconda/radioconda-.*-Linux-aarch64.sh)     |
+| Linux   | ppc64le (POWER8/9)        | Command-line   | [radioconda-Linux-ppc64le.sh](https://glare.now.sh/ryanvolz/radioconda/radioconda-.*-Linux-ppc64le.sh)     |
+| macOS   | x86_64 (Intel)            | Command-line   | [radioconda-MacOSX-x86_64.sh](https://glare.now.sh/ryanvolz/radioconda/radioconda-.*-MacOSX-x86_64.sh)     |
+| macOS   | x86_64 (Intel)            | Graphical      | [radioconda-MacOSX-x86_64.pkg](https://glare.now.sh/ryanvolz/radioconda/radioconda-.*-MacOSX-x86_64.pkg)   |
+| macOS   | arm64 (Apple Silicon)[^1] | Command-line   | [radioconda-MacOSX-arm64.sh](https://glare.now.sh/ryanvolz/radioconda/radioconda-.*-MacOSX-arm64.sh)       |
+| macOS   | arm64 (Apple Silicon)[^1] | Graphical      | [radioconda-MacOSX-arm64.pkg](https://glare.now.sh/ryanvolz/radioconda/radioconda-.*-MacOSX-arm64.pkg)     |
+| Windows | x86_64 (amd64)            | Graphical      | [radioconda-Windows-x86_64.exe](https://glare.now.sh/ryanvolz/radioconda/radioconda-.*-Windows-x86_64.exe) |
+
+[^1]: Apple silicon builds are experimental and haven't had testing like the other platforms.
 
 ## Install
 
