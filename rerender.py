@@ -98,6 +98,10 @@ def render_constructor(
         name=name,
         version=version,
         company=company,
+        condarc=dict(
+            channels=lock_spec.channels,
+            channel_priority="strict",
+        ),
         channels=lock_spec.channels,
         specs=lock_spec.specs,
         initialize_by_default=False if platform.startswith("win") else True,
