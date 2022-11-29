@@ -24,6 +24,7 @@ dependencies:
   - gnuradio-inspector # [win64]
   - gnuradio-iridium
   - gnuradio-leo
+  - gnuradio-m2k
   - gnuradio-osmosdr
   - gnuradio-paint
   - gnuradio-satellites
@@ -38,6 +39,7 @@ dependencies:
   - libm2k
   - limesuite
   - matplotlib
+  - m17-cxx-demod
   - numpy
   - pandas
   - pyadi-iio
