@@ -17,6 +17,7 @@ dependencies:
   - digital_rf
   - codec2
   - gnuradio 3.10.*
+  - gnuradio-fosphor
   - gnuradio-inspector # [aarch64]
   - gnuradio-inspector # [arm64]
   - gnuradio-inspector # [linux64]
