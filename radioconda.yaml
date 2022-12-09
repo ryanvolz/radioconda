@@ -28,6 +28,11 @@ dependencies:
   - gnuradio-m2k
   - gnuradio-osmosdr
   - gnuradio-paint
+  - gnuradio-radar # [aarch64]
+  - gnuradio-radar # [arm64]
+  - gnuradio-radar # [linux64]
+  - gnuradio-radar # [osx64]
+  - gnuradio-radar # [win64]
   - gnuradio-satellites
   - gqrx # [aarch64]
   - gqrx # [arm64]
