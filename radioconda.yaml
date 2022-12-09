@@ -1,4 +1,5 @@
 name: radioconda
+category: main
 channels:
   - conda-forge
   - ryanvolz

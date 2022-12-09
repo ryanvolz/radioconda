@@ -1,7 +1,8 @@
 name: radioconda_installer
+category: installer
 channels:
   - conda-forge
-  - ryanvolz # [win]
+  - ryanvolz
 dependencies:
   - mamba
   - radioconda_console_shortcut # [win]
