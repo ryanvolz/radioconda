@@ -41,6 +41,11 @@ dependencies:
   - gqrx # [osx64]
   - gqrx # [win64]
   - hackrf
+  - inspectrum # [aarch64]
+  - inspectrum # [arm64]
+  - inspectrum # [linux64]
+  - inspectrum # [osx64]
+  - inspectrum # [win64]
   - ipython
   - libiio
   - libm2k
@@ -56,11 +61,15 @@ dependencies:
   - soapysdr
   - soapysdr-module-airspy
   - soapysdr-module-airspyhf
+  - soapysdr-module-audio
   - soapysdr-module-bladerf
   - soapysdr-module-hackrf
+  - soapysdr-module-netsdr
   - soapysdr-module-lms7
   - soapysdr-module-plutosdr
+  - soapysdr-module-redpitaya
   - soapysdr-module-remote
   - soapysdr-module-rtlsdr
   - soapysdr-module-uhd
+  - soapysdr-module-volk-converters
   - uhd
