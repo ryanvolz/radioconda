@@ -5,24 +5,24 @@
 This repository holds cross-platform installers for a collection of open source **software radio** packages bundled with the [conda](https://conda.io/) package manager, including
 
 - Digital RF
-- GNU Radio
+- GNU Radio (including an increasing list of out-of-tree modules)
 - gqrx
-- gr-inspector
-- gr-iridium
-- gr-paint
-- gr-satellites
+- inspectrum
 
 and support for the following SDR devices and device libraries:
 
-|         Device          |                    Library                    |
-| :---------------------: | :-------------------------------------------: |
-|    [ADALM-PLUTO][1]     |       libiio ([setup](#iio-pluto-sdr))        |
-| [Airspy R2/Mini/HF+][2] | airspy/airspyhf ([setup](#airspy-r2-mini-hf)) |
-|      [BladeRF][3]       |          bladeRF ([setup](#bladerf))          |
-|    [Ettus USRPs][4]     |        UHD ([setup](#uhd-ettus-usrp))         |
-|       [HackRF][5]       |           HackRF ([setup](#hackrf))           |
-|      [LimeSDR][6]       |        Lime Suite ([setup](#limesdr))         |
-|      [RTL-SDR][7]       |          rtl-sdr ([setup](#rtl-sdr))          |
+|            Device            |                    Library                    |
+| :--------------------------: | :-------------------------------------------: |
+|       [ADALM-PLUTO][1]       |       libiio ([setup](#iio-pluto-sdr))        |
+|   [Airspy R2/Mini/HF+][2]    | airspy/airspyhf ([setup](#airspy-r2-mini-hf)) |
+|         [BladeRF][3]         |          bladeRF ([setup](#bladerf))          |
+|       [Ettus USRPs][4]       |        UHD ([setup](#uhd-ettus-usrp))         |
+|         [HackRF][5]          |           HackRF ([setup](#hackrf))           |
+|         [LimeSDR][6]         |        Lime Suite ([setup](#limesdr))         |
+|       [Red Pitaya][7]        |                SoapyRedPitaya                 |
+| [RFSpace/NetSDR/CloudSDR][8] |                  SoapyNetSDR                  |
+|         [RTL-SDR][9]         |          rtl-sdr ([setup](#rtl-sdr))          |
+|  Sound Card / Audio devices  |                  SoapyAudio                   |
 
 [1]: https://www.analog.com/en/design-center/evaluation-hardware-and-software/evaluation-boards-kits/adalm-pluto.html
 [2]: https://airspy.com/
@@ -30,7 +30,9 @@ and support for the following SDR devices and device libraries:
 [4]: https://www.ettus.com/products/
 [5]: https://greatscottgadgets.com/hackrf/
 [6]: https://limemicro.com/products/boards/
-[7]: https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/
+[7]: https://redpitaya.com/
+[8]: http://www.rfspace.com/RFSPACE/Home.html
+[9]: https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/
 
 The complete list of packages can be found [here](https://github.com/ryanvolz/radioconda/blob/master/radioconda.yaml). You can [**suggest additional software to include**](https://github.com/ryanvolz/radioconda/issues) by filing an [issue](https://github.com/ryanvolz/radioconda/issues). If you've built additional software from source on top of radioconda, [**document your results**](https://github.com/ryanvolz/radioconda/issues) in an [issue](https://github.com/ryanvolz/radioconda/issues) to help others (and help me in packaging it!).
 
