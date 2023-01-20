@@ -152,6 +152,7 @@ if __name__ == "__main__":
         + constructor_args
     )
 
+    print(" ".join(map(str, constructor_cmdline)))
     proc = subprocess.run(constructor_cmdline)
 
     try:
