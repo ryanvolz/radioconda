@@ -21,7 +21,7 @@ def spec_dir_extract_platform(installer_spec_dir: pathlib.Path) -> str:
         )
 
 
-def get_micromamba(cache_dir, platform, version=None):
+def get_micromamba(cache_dir, platform, version=None) -> pathlib.Path:
     if not version:
         version = "latest"
     tarfile_path = cache_dir / f"micromamba-{platform}-{version}.bz2"
@@ -125,24 +125,32 @@ if __name__ == "__main__":
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
-    conda_exe_path = get_micromamba(
-        cache_dir=args.output_dir / "tmp",
-        platform=platform,
-        version=args.micromamba_version,
-    )
-    if not conda_exe_path.exists():
-        raise RuntimeError(f"Failed to download/extract micromamba to {conda_exe_path}")
+    if not platform.startswith("win"):
+        conda_exe_path = get_micromamba(
+            cache_dir=args.output_dir / "tmp",
+            platform=platform,
+            version=args.micromamba_version,
+        )
+        if not conda_exe_path.exists():
+            raise RuntimeError(
+                f"Failed to download/extract micromamba to {conda_exe_path}"
+            )
+        conda_exe_args = ["--conda-exe", conda_exe_path]
+    else:
+        conda_exe_args = []
 
-    constructor_cmdline = [
-        "constructor",
-        args.installer_spec_dir,
-        "--platform",
-        platform,
-        "--conda-exe",
-        conda_exe_path,
-        "--output-dir",
-        args.output_dir,
-    ] + constructor_args
+    constructor_cmdline = (
+        [
+            "constructor",
+            args.installer_spec_dir,
+            "--platform",
+            platform,
+            "--output-dir",
+            args.output_dir,
+        ]
+        + conda_exe_args
+        + constructor_args
+    )
 
     proc = subprocess.run(constructor_cmdline)
 
