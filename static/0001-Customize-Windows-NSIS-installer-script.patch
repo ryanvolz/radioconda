@@ -11,28 +11,28 @@ Subject: [PATCH] Customize Windows NSIS installer script.
  1 file changed, 31 insertions(+), 2 deletions(-)
 
 diff --git a/constructor/nsis/main.nsi.tmpl b/constructor/nsis/main.nsi.tmpl
-index 2426248..95c94c2 100644
+index 6f5c8ae..df85d27 100644
 --- a/constructor/nsis/main.nsi.tmpl
 +++ b/constructor/nsis/main.nsi.tmpl
-@@ -118,7 +118,7 @@ Page Custom InstModePage_Create InstModePage_Leave
+@@ -151,7 +151,7 @@ Page Custom InstModePage_Create InstModePage_Leave
  !define MUI_PAGE_CUSTOMFUNCTION_LEAVE OnDirectoryLeave
  !insertmacro MUI_PAGE_DIRECTORY
  # Custom options now differ depending on installation mode.
 -Page Custom mui_AnaCustomOptions_Show
 +#Page Custom mui_AnaCustomOptions_Show
  !insertmacro MUI_PAGE_INSTFILES
- !insertmacro MUI_PAGE_FINISH
- 
-@@ -933,7 +933,7 @@ Section "Install"
+ #if with_conclusion_text is True
+ !define MUI_FINISHPAGE_TITLE __CONCLUSION_TITLE__
+@@ -1087,7 +1087,7 @@ Section "Install"
  
      ${If} $Ana_ClearPkgCache_State = ${BST_CHECKED}
          DetailPrint "Clearing package cache..."
 -        push '"$INSTDIR\_conda.exe" clean --all --force-pkgs-dirs --yes'
 +        push '"$INSTDIR\_conda.exe" clean --all --yes'
          push 'Failed to clear package cache'
+         push 'WithLog'
          call AbortRetryNSExecWait
-     ${EndIf}
-@@ -964,6 +964,26 @@ Section "Install"
+@@ -1120,6 +1120,26 @@ Section "Install"
      ${EndIf}
  
      ${If} $ARGV_NoRegistry == "0"
@@ -59,7 +59,7 @@ index 2426248..95c94c2 100644
          # Registry uninstall info
          WriteRegStr SHCTX "${UNINSTREG}" "DisplayName" "${UNINSTALL_NAME}"
          WriteRegStr SHCTX "${UNINSTREG}" "DisplayVersion" "${VERSION}"
-@@ -1014,6 +1034,15 @@ Section "Uninstall"
+@@ -1202,6 +1222,15 @@ Section "Uninstall"
      # In case the last command fails, run the slow method to remove leftover
      RMDir /r /REBOOTOK "$INSTDIR"
  
@@ -76,5 +76,5 @@ index 2426248..95c94c2 100644
      # If Anaconda was registered as the official Python for this version,
      # remove it from the registry
 -- 
-2.35.0
+2.39.2
 
