@@ -4,6 +4,6 @@ channels:
 dependencies:
   - anaconda-client
   - conda-build
-  - constructor
+  - constructor <3.4
   - python-patch
   - requests
