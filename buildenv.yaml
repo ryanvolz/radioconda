@@ -5,5 +5,5 @@ dependencies:
   - anaconda-client
   - conda-build
   - constructor
-  - python-patch
+  - patch-ng
   - requests

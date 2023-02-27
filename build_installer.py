@@ -112,9 +112,9 @@ if __name__ == "__main__":
 
     if platform.startswith("win"):
         # patch constructor's nsis template
-        import patch
+        import patch_ng
 
-        pset = patch.fromfile(
+        pset = patch_ng.fromfile(
             "static/0001-Customize-Windows-NSIS-installer-script.patch"
         )
         pset.write_hunks(
