@@ -19,6 +19,7 @@ dependencies:
   - codec2
   - gnuradio 3.10.*
   - gnuradio-fosphor
+  - gnuradio-gpredict-doppler
   - gnuradio-inspector # [aarch64]
   - gnuradio-inspector # [arm64]
   - gnuradio-inspector # [linux64]
