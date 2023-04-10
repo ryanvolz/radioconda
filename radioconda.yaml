@@ -20,6 +20,7 @@ dependencies:
   - gnuradio 3.10.*
   - gnuradio-fosphor
   - gnuradio-gpredict-doppler
+  - gnuradio-hermeslite2 # [unix]
   - gnuradio-inspector # [aarch64]
   - gnuradio-inspector # [arm64]
   - gnuradio-inspector # [linux64]
