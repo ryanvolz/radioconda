@@ -22,33 +22,17 @@ dependencies:
   - gnuradio-fosphor
   - gnuradio-gpredict-doppler
   - gnuradio-hermeslite2 # [unix]
-  - gnuradio-inspector # [aarch64]
-  - gnuradio-inspector # [arm64]
-  - gnuradio-inspector # [linux64]
-  - gnuradio-inspector # [osx64]
-  - gnuradio-inspector # [win64]
+  - gnuradio-inspector
   - gnuradio-iridium
   - gnuradio-leo
   - gnuradio-m2k
   - gnuradio-osmosdr
   - gnuradio-paint
-  - gnuradio-radar # [aarch64]
-  - gnuradio-radar # [arm64]
-  - gnuradio-radar # [linux64]
-  - gnuradio-radar # [osx64]
-  - gnuradio-radar # [win64]
+  - gnuradio-radar
   - gnuradio-satellites
-  - gqrx # [aarch64]
-  - gqrx # [arm64]
-  - gqrx # [linux64]
-  - gqrx # [osx64]
-  - gqrx # [win64]
+  - gqrx
   - hackrf
-  - inspectrum # [aarch64]
-  - inspectrum # [arm64]
-  - inspectrum # [linux64]
-  - inspectrum # [osx64]
-  - inspectrum # [win64]
+  - inspectrum
   - ipython
   - libiio
   - libm2k
