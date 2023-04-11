@@ -26,6 +26,7 @@ dependencies:
   - gnuradio-inspector
   - gnuradio-iridium
   - gnuradio-leo
+  - gnuradio-lora_sdr
   - gnuradio-m2k
   - gnuradio-osmosdr
   - gnuradio-paint
