@@ -93,7 +93,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--micromamba_version",
-        default="0.24.0",
+        default="1.3.1",
         help=(
             "Version of micromamba to download and bundle into the installer."
             " (default: %(default)s)"
