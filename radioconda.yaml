@@ -20,9 +20,12 @@ dependencies:
   - gnuradio 3.10.*
   - gnuradio-adsb
   - gnuradio-filerepeater
+  - gnuradio-foo
   - gnuradio-fosphor
   - gnuradio-gpredict-doppler
   - gnuradio-hermeslite2 # [unix]
+  - gnuradio-ieee802_11
+  - gnuradio-ieee802_15_4
   - gnuradio-inspector
   - gnuradio-iridium
   - gnuradio-leo
