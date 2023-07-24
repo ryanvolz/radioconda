@@ -19,6 +19,7 @@ dependencies:
   - codec2
   - gnuradio 3.10.*
   - gnuradio-adsb
+  - gnuradio-dect2
   - gnuradio-filerepeater
   - gnuradio-foo
   - gnuradio-fosphor
