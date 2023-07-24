@@ -25,6 +25,7 @@ dependencies:
   - gnuradio-fosphor
   - gnuradio-gpredict-doppler
   - gnuradio-hermeslite2 # [unix]
+  - gnuradio-hpsdr # [unix]
   - gnuradio-ieee802_11
   - gnuradio-ieee802_15_4
   - gnuradio-inspector
