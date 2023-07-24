@@ -35,6 +35,7 @@ dependencies:
   - gnuradio-osmosdr
   - gnuradio-paint
   - gnuradio-radar
+  - gnuradio-rds
   - gnuradio-satellites
   - gqrx
   - hackrf
