@@ -159,12 +159,10 @@ jobs:
           ARCH: ${{ matrix.ARCH }}
           INSTALL_PATH_W: ${{ github.workspace }}\test_installation
         run: |
-          set -x
           INSTALL_PATH=$(cygpath -u $INSTALL_PATH_W)
           INSTALLER_EXE="dist/$DISTNAME-*-$OS_NAME-$ARCH.exe"
           INSTALLER_EXE_W=$(cygpath -w $INSTALLER_EXE)
           echo "start /wait \"\" $INSTALLER_EXE_W /InstallationType=JustMe /RegisterPython=0 /S /D=$INSTALL_PATH_W" > install.bat
-          cat install.bat
           cmd.exe /c install.bat
           eval "$($INSTALL_PATH/Scripts/conda.exe shell.bash hook)"
           conda info
