@@ -11,10 +11,10 @@ Subject: [PATCH] Customize Windows NSIS installer script.
  1 file changed, 31 insertions(+), 2 deletions(-)
 
 diff --git a/constructor/nsis/main.nsi.tmpl b/constructor/nsis/main.nsi.tmpl
-index 6f5c8ae..df85d27 100644
+index 865ebb3..2e84269 100644
 --- a/constructor/nsis/main.nsi.tmpl
 +++ b/constructor/nsis/main.nsi.tmpl
-@@ -151,7 +151,7 @@ Page Custom InstModePage_Create InstModePage_Leave
+@@ -153,7 +153,7 @@ Page Custom InstModePage_Create InstModePage_Leave
  !define MUI_PAGE_CUSTOMFUNCTION_LEAVE OnDirectoryLeave
  !insertmacro MUI_PAGE_DIRECTORY
  # Custom options now differ depending on installation mode.
@@ -23,7 +23,7 @@ index 6f5c8ae..df85d27 100644
  !insertmacro MUI_PAGE_INSTFILES
  #if with_conclusion_text is True
  !define MUI_FINISHPAGE_TITLE __CONCLUSION_TITLE__
-@@ -1087,7 +1087,7 @@ Section "Install"
+@@ -1185,7 +1185,7 @@ Section "Install"
  
      ${If} $Ana_ClearPkgCache_State = ${BST_CHECKED}
          DetailPrint "Clearing package cache..."
@@ -32,7 +32,7 @@ index 6f5c8ae..df85d27 100644
          push 'Failed to clear package cache'
          push 'WithLog'
          call AbortRetryNSExecWait
-@@ -1120,6 +1120,26 @@ Section "Install"
+@@ -1218,6 +1218,26 @@ Section "Install"
      ${EndIf}
  
      ${If} $ARGV_NoRegistry == "0"
@@ -59,7 +59,7 @@ index 6f5c8ae..df85d27 100644
          # Registry uninstall info
          WriteRegStr SHCTX "${UNINSTREG}" "DisplayName" "${UNINSTALL_NAME}"
          WriteRegStr SHCTX "${UNINSTREG}" "DisplayVersion" "${VERSION}"
-@@ -1202,6 +1222,15 @@ Section "Uninstall"
+@@ -1326,6 +1346,15 @@ Section "Uninstall"
      # In case the last command fails, run the slow method to remove leftover
      RMDir /r /REBOOTOK "$INSTDIR"
  
@@ -72,9 +72,9 @@ index 6f5c8ae..df85d27 100644
 +        SendMessage ${HWND_BROADCAST} ${WM_WININICHANGE} 0 "STR:Environment" /TIMEOUT=5000
 +    ${EndIf}
 +
-     DeleteRegKey SHCTX "${UNINSTREG}"
-     # If Anaconda was registered as the official Python for this version,
-     # remove it from the registry
+     ${If} $INSTALLER_NAME_FULL != ""
+         DeleteRegKey SHCTX "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$INSTALLER_NAME_FULL"
+     ${EndIf}
 -- 
-2.39.2
+2.40.0
 
