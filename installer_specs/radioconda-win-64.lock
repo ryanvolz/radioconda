@@ -17,6 +17,7 @@ https://conda.anaconda.org/conda-forge/noarch/tzdata-2023c-h71feb2d_0.conda#939e
 https://conda.anaconda.org/conda-forge/win-64/ucrt-10.0.22621.0-h57928b3_0.tar.bz2#72608f6cd3e5898229c3ea16deb1ac43
 https://conda.anaconda.org/conda-forge/win-64/expat-2.5.0-h63175ca_1.conda#87c77fe1b445aedb5c6d207dd236fa3e
 https://conda.anaconda.org/conda-forge/noarch/fonts-conda-forge-1-0.tar.bz2#f766549260d6815b0c52253f1fb1bb29
+https://conda.anaconda.org/ryanvolz/noarch/gnuradio-leo-data-1.0.0.post93+138c953-win_0.tar.bz2#4bfdc139ab8786e2a13c033dd8c74891
 https://conda.anaconda.org/conda-forge/win-64/m2w64-gmp-6.1.0-2.tar.bz2#53a1c73e1e3d185516d7e3af177596d9
 https://conda.anaconda.org/conda-forge/win-64/m2w64-libwinpthread-git-5.0.0.4634.697f757-2.tar.bz2#774130a326dee16f1ceb05cc687ee4f0
 https://conda.anaconda.org/conda-forge/win-64/vc14_runtime-14.36.32532-hfdfe4a8_17.conda#91c1ecaf3996889532fc0456178b1058
@@ -228,7 +229,7 @@ https://conda.anaconda.org/conda-forge/win-64/mkl-2022.1.0-h6a75c08_874.tar.bz2#
 https://conda.anaconda.org/conda-forge/win-64/pillow-10.0.0-py310hb653ca7_0.conda#413d2afa89b5362d25f6c243510833e0
 https://conda.anaconda.org/conda-forge/noarch/platformdirs-3.9.1-pyhd8ed1ab_0.conda#044e7a1e0ad42c4e67110bd078150a63
 https://conda.anaconda.org/conda-forge/win-64/pynacl-1.5.0-py310h635b8f1_2.tar.bz2#3f7426d271ffb8dc1335a670263612f1
-https://conda.anaconda.org/conda-forge/win-64/pyqt5-sip-12.11.0-py310h00ffb61_3.conda#a4c757150f616bae079bc08cea956138
+https://conda.anaconda.org/conda-forge/win-64/pyqt5-sip-12.12.2-py310h00ffb61_4.conda#571fa855e337706187fd018e1ba49fcd
 https://conda.anaconda.org/conda-forge/noarch/python-socketio-5.8.0-pyhd8ed1ab_0.conda#637e5e25bc12817eccb75555bbf1174c
 https://conda.anaconda.org/conda-forge/win-64/soapysdr-module-plutosdr-0.2.1-h3cbcf99_3.tar.bz2#558438d010adc81c34142834b358305c
 https://conda.anaconda.org/conda-forge/noarch/stack_data-0.6.2-pyhd8ed1ab_0.conda#e7df0fdd404616638df5ece6e69ba7af
@@ -267,7 +268,7 @@ https://conda.anaconda.org/conda-forge/win-64/h5py-3.9.0-nompi_py310h1cf69ec_101
 https://conda.anaconda.org/conda-forge/win-64/inspectrum-0.2.3-hfd82842_2.conda#56dbb3e292447f15aaa1867ebf703986
 https://conda.anaconda.org/conda-forge/win-64/pandas-2.0.3-py310h1c4a608_1.conda#9fb6d4a7414daf2aa66ddfa14d568fd0
 https://conda.anaconda.org/conda-forge/noarch/pyadi-iio-0.0.15-pyhd8ed1ab_0.conda#e6a6253d99f73fb995e5b2f9c4fe95b5
-https://conda.anaconda.org/conda-forge/win-64/pyqt-5.15.7-py310h1fd54f2_3.conda#4012c5ed74c63b82c344e38cf3e68a26
+https://conda.anaconda.org/conda-forge/win-64/pyqt-5.15.9-py310h1fd54f2_4.conda#bf76044f5e0ac24513f386ea728862e6
 https://conda.anaconda.org/conda-forge/noarch/pyqtgraph-0.13.3-pyhd8ed1ab_0.conda#18b52b876e7071d9c612a3e2e3384e37
 https://conda.anaconda.org/conda-forge/win-64/qwt-6.2.0-h07be427_6.conda#1342676223cd7a0d49d554c533c29a84
 https://conda.anaconda.org/conda-forge/win-64/scipy-1.11.1-py310h578b7cb_0.conda#fb85b2c96db5aff50625fea18794c929
@@ -285,7 +286,7 @@ https://conda.anaconda.org/ryanvolz/noarch/gnuradio-gpredict-doppler-0.0.0.20230
 https://conda.anaconda.org/conda-forge/win-64/gnuradio-grc-3.10.7.0-py310h07e2dfc_1.conda#95a05a10159bed3b20f13986369f8da4
 https://conda.anaconda.org/conda-forge/win-64/gnuradio-iio-3.10.7.0-py310h1c09eee_1.conda#203e475d6a7e97d98c4260f86a0b8351
 https://conda.anaconda.org/conda-forge/win-64/gnuradio-iridium-1!1.0.0-py310h17277bc_5.conda#ab342365169363a8ef6d8f115b0f1731
-https://conda.anaconda.org/ryanvolz/win-64/gnuradio-leo-1.0.0.post89+9806f65-py310ha169c35_0.tar.bz2#af4c1849e588da59dd4cac39282e688d
+https://conda.anaconda.org/ryanvolz/win-64/gnuradio-leo-1.0.0.post93+138c953-py310h37ae010_0.tar.bz2#9a616caee1c1baaa06e71f585462d85a
 https://conda.anaconda.org/ryanvolz/win-64/gnuradio-lora_sdr-0.0.0.20230720.dev+g734d2ee71-py310h37ae010_0.tar.bz2#ef1930253d06bca486797ba41a26878a
 https://conda.anaconda.org/conda-forge/win-64/gnuradio-m2k-1.0.0-py310hfde0b42_5.conda#b6abf0085062c8fa151aa0d68ba083c8
 https://conda.anaconda.org/ryanvolz/win-64/gnuradio-paint-0.0.0.20230721.dev+g851daac-py310h37ae010_0.tar.bz2#9032ae99dfb80cdc26a05adc9d48071f

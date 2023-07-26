@@ -49,7 +49,7 @@ specs:
 - colorama=0.4.6=pyhd8ed1ab_0
 - conda-package-handling=2.0.2=pyh38be061_0
 - conda-package-streaming=0.8.0=pyhd8ed1ab_0
-- conda=23.5.2=py310h2ec42d9_0
+- conda=23.7.0=py310h2ec42d9_0
 - construct=2.10.68=pyhd8ed1ab_0
 - contourpy=1.1.0=py310h88cfcbd_0
 - cryptography=41.0.2=py310ha1817de_0
@@ -99,7 +99,8 @@ specs:
 - gnuradio-iio=3.10.7.0=py310hb237721_1
 - gnuradio-inspector=0.0.0.20230721.dev+gdee563b=py310h5a7b220_0
 - gnuradio-iridium=1!1.0.0=py310ha61664e_5
-- gnuradio-leo=1.0.0.post89+9806f65=py310h791d3f1_0
+- gnuradio-leo-data=1.0.0.post93+138c953=unix_0
+- gnuradio-leo=1.0.0.post93+138c953=py310h47aa161_0
 - gnuradio-lora_sdr=0.0.0.20230720.dev+g734d2ee71=py310h47aa161_0
 - gnuradio-m2k=1.0.0=py310hd4a9733_5
 - gnuradio-osmosdr=0.2.4=py310h80503a3_4
@@ -202,7 +203,7 @@ specs:
 - libthrift=0.18.1=h88b220a_2
 - libtiff=4.5.1=hf955e92_0
 - libusb=1.0.26=hc2f2c32_100
-- libuv=1.44.2=hac89ed1_0
+- libuv=1.44.2=h0dc2134_1
 - libvorbis=1.3.7=h046ec9c_0
 - libwebp-base=1.3.1=h0dc2134_0
 - libxcb=1.15=hb7f2c08_0
@@ -266,8 +267,8 @@ specs:
 - pyopengl=3.1.6=pyhd8ed1ab_1
 - pyopenssl=23.2.0=pyhd8ed1ab_1
 - pyparsing=3.0.9=pyhd8ed1ab_0
-- pyqt5-sip=12.11.0=py310h415000c_3
-- pyqt=5.15.7=py310hdd03f62_3
+- pyqt5-sip=12.12.2=py310h018f80b_4
+- pyqt=5.15.9=py310hecc045f_4
 - pyqtgraph=0.13.3=pyhd8ed1ab_0
 - pysocks=1.7.1=pyha2e5f31_6
 - python-dateutil=2.8.2=pyhd8ed1ab_0
@@ -402,5 +403,5 @@ user_requested_specs:
 - soapysdr-module-uhd
 - soapysdr-module-volk-converters
 - uhd
-version: 2023.07.24
+version: 2023.07.26
 write_condarc: true

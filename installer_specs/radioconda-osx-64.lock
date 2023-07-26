@@ -29,7 +29,7 @@ https://conda.anaconda.org/conda-forge/osx-64/libjpeg-turbo-2.1.5.1-hb7f2c08_0.c
 https://conda.anaconda.org/conda-forge/osx-64/libogg-1.3.4-h35c211d_1.tar.bz2#a7ab4b53ef18c598ffaa597230bc3ba1
 https://conda.anaconda.org/conda-forge/osx-64/libopus-1.3.1-hc929b4f_1.tar.bz2#380b9ea5f6a7a277e6c1ac27d034369b
 https://conda.anaconda.org/conda-forge/osx-64/libsodium-1.0.18-hbcb3906_1.tar.bz2#24632c09ed931af617fe6d5292919cab
-https://conda.anaconda.org/conda-forge/osx-64/libuv-1.44.2-hac89ed1_0.tar.bz2#958fa9add5701462a6c91e3774425ea1
+https://conda.anaconda.org/conda-forge/osx-64/libuv-1.44.2-h0dc2134_1.conda#850901f879c13361e0f767c3b3449b8d
 https://conda.anaconda.org/conda-forge/osx-64/libwebp-base-1.3.1-h0dc2134_0.conda#a25a41b5be3fed4b671a58b998dcf89b
 https://conda.anaconda.org/conda-forge/osx-64/libzlib-1.2.13-h8a1eda9_5.conda#4a3ad23f6e16f99c04e166767193d700
 https://conda.anaconda.org/conda-forge/osx-64/llvm-openmp-16.0.6-hff08bdf_0.conda#39a5227d906f75102bf8586741690128
@@ -50,6 +50,7 @@ https://conda.anaconda.org/conda-forge/noarch/fonts-conda-forge-1-0.tar.bz2#f766
 https://conda.anaconda.org/conda-forge/osx-64/gettext-0.21.1-h8a4c099_0.tar.bz2#1e3aff29ce703d421c43f371ad676cc5
 https://conda.anaconda.org/conda-forge/osx-64/glew-2.1.0-h046ec9c_2.tar.bz2#6b753c8c7e4c46a8eb17b6f1781f958a
 https://conda.anaconda.org/conda-forge/osx-64/gmp-6.2.1-h2e338ed_0.tar.bz2#dedc96914428dae572a39e69ee2a392f
+https://conda.anaconda.org/ryanvolz/noarch/gnuradio-leo-data-1.0.0.post93+138c953-unix_0.tar.bz2#cfe92f3ead4223e37446f711557cef6d
 https://conda.anaconda.org/conda-forge/osx-64/graphite2-1.3.13-h2e338ed_1001.tar.bz2#5f6e7f98caddd0fc2d345b207531814c
 https://conda.anaconda.org/conda-forge/osx-64/lerc-4.0.0-hb486fe8_0.tar.bz2#f9d6a4c82889d5ecedec1d90eb673c55
 https://conda.anaconda.org/conda-forge/osx-64/libaec-1.0.6-hf0c8a7f_1.conda#7c0f82f435ab4c48d65dc9b28db2ad9e
@@ -242,7 +243,7 @@ https://conda.anaconda.org/conda-forge/noarch/mako-1.2.4-pyhd8ed1ab_0.tar.bz2#0d
 https://conda.anaconda.org/conda-forge/noarch/platformdirs-3.9.1-pyhd8ed1ab_0.conda#044e7a1e0ad42c4e67110bd078150a63
 https://conda.anaconda.org/conda-forge/osx-64/pycairo-1.24.0-py310h0b97775_0.conda#7dc4a0a3b2406f12bb239914c67266c8
 https://conda.anaconda.org/conda-forge/osx-64/pynacl-1.5.0-py310h90acd4f_2.tar.bz2#5426effd66a812cfc4620007e0a3cd93
-https://conda.anaconda.org/conda-forge/osx-64/pyqt5-sip-12.11.0-py310h415000c_3.conda#6c56916bf99c55b1f57a53ed689f2561
+https://conda.anaconda.org/conda-forge/osx-64/pyqt5-sip-12.12.2-py310h018f80b_4.conda#1b383c6ab90e71d5429104a1573d25f3
 https://conda.anaconda.org/conda-forge/noarch/python-socketio-5.8.0-pyhd8ed1ab_0.conda#637e5e25bc12817eccb75555bbf1174c
 https://conda.anaconda.org/conda-forge/noarch/requests-2.31.0-pyhd8ed1ab_0.conda#a30144e4156cdbb236f99ebb49828f8b
 https://conda.anaconda.org/conda-forge/noarch/stack_data-0.6.2-pyhd8ed1ab_0.conda#e7df0fdd404616638df5ece6e69ba7af
@@ -278,7 +279,7 @@ https://conda.anaconda.org/conda-forge/osx-64/gnuradio-core-3.10.7.0-py310h7c2c7
 https://conda.anaconda.org/conda-forge/osx-64/inspectrum-0.2.3-h71b3e54_2.conda#866255ba2fc4bfaf9e2aecff4a93ada6
 https://conda.anaconda.org/conda-forge/noarch/ipython-8.14.0-pyhd1c38e8_0.conda#f56fab4cea853c2248105b6cd7d79bf0
 https://conda.anaconda.org/conda-forge/osx-64/matplotlib-base-3.7.2-py310h475a17b_0.conda#ffc8dbf00f18c1ca9d3c02854cb72aee
-https://conda.anaconda.org/conda-forge/osx-64/pyqt-5.15.7-py310hdd03f62_3.conda#c652959992036327b71a2d5ff593cf72
+https://conda.anaconda.org/conda-forge/osx-64/pyqt-5.15.9-py310hecc045f_4.conda#eba55c15090ca812a17cf393ef61ba7c
 https://conda.anaconda.org/conda-forge/osx-64/qwt-6.2.0-hed3eaa1_6.conda#90cd03985dabec3fd55e7722739a32cd
 https://conda.anaconda.org/conda-forge/osx-64/soapysdr-module-uhd-0.4.1-h14c3ef5_7.conda#84cbb5957476b867301f94b3be2d0f8e
 https://conda.anaconda.org/ryanvolz/noarch/gnuradio-adsb-0.0.0.20230411.dev+g32bcb616f-unix_pyh139f5c4_0.tar.bz2#d453cbb0cd099931bbf9be68790dcb83
@@ -292,7 +293,7 @@ https://conda.anaconda.org/ryanvolz/osx-64/gnuradio-hermeslite2-v1.0.0.0.post9+6
 https://conda.anaconda.org/ryanvolz/osx-64/gnuradio-hpsdr-0.0.0.20230724.dev+g3adf748-py310h3a7906d_0.tar.bz2#52908f7edcd0529a9b9f0607fd8b83e6
 https://conda.anaconda.org/conda-forge/osx-64/gnuradio-iio-3.10.7.0-py310hb237721_1.conda#11f4ba10d223163af4987701d2bdde47
 https://conda.anaconda.org/conda-forge/osx-64/gnuradio-iridium-1!1.0.0-py310ha61664e_5.conda#f565c92b01513853c8eb826188bf1b41
-https://conda.anaconda.org/ryanvolz/osx-64/gnuradio-leo-1.0.0.post89+9806f65-py310h791d3f1_0.tar.bz2#f73951c573b717694548226cd5d889a9
+https://conda.anaconda.org/ryanvolz/osx-64/gnuradio-leo-1.0.0.post93+138c953-py310h47aa161_0.tar.bz2#d890a34906836941b8c192e848deb1c1
 https://conda.anaconda.org/ryanvolz/osx-64/gnuradio-lora_sdr-0.0.0.20230720.dev+g734d2ee71-py310h47aa161_0.tar.bz2#0c7b623df0c56aaf3a3f57a9dcd8b468
 https://conda.anaconda.org/conda-forge/osx-64/gnuradio-m2k-1.0.0-py310hd4a9733_5.conda#27d89edb387914db43e34de436771e96
 https://conda.anaconda.org/ryanvolz/osx-64/gnuradio-paint-0.0.0.20230721.dev+g851daac-py310h47aa161_0.tar.bz2#afb70ee4087ed5d4455932cf5be02678

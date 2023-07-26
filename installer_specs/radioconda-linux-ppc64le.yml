@@ -20,7 +20,7 @@ dependencies:
 - gnuradio-ieee802_15_4=3.6.post122+g285a13a=py310h1cd05fe_0
 - gnuradio-inspector=0.0.0.20230721.dev+gdee563b=py310h68ea840_0
 - gnuradio-iridium=1!1.0.0=py310hfb5346f_5
-- gnuradio-leo=1.0.0.post89+9806f65=py310h7c159dd_0
+- gnuradio-leo=1.0.0.post93+138c953=py310h10ea853_0
 - gnuradio-lora_sdr=0.0.0.20230720.dev+g734d2ee71=py310h10ea853_0
 - gnuradio-m2k=1.0.0=py310h784c1f9_5
 - gnuradio-osmosdr=0.2.4=py310he93cd39_4
@@ -61,4 +61,4 @@ dependencies:
 - uhd=4.4.0.0=py310h7732062_0
 name: radioconda
 platform: linux-ppc64le
-version: 2023.07.24
+version: 2023.07.26

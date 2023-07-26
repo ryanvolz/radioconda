@@ -17,7 +17,7 @@ dependencies:
 - gnuradio-ieee802_15_4=3.6.post122+g285a13a=py310ha169c35_0
 - gnuradio-inspector=0.0.0.20230721.dev+gdee563b=py310h2ccc8b9_0
 - gnuradio-iridium=1!1.0.0=py310h17277bc_5
-- gnuradio-leo=1.0.0.post89+9806f65=py310ha169c35_0
+- gnuradio-leo=1.0.0.post93+138c953=py310h37ae010_0
 - gnuradio-lora_sdr=0.0.0.20230720.dev+g734d2ee71=py310h37ae010_0
 - gnuradio-m2k=1.0.0=py310hfde0b42_5
 - gnuradio-osmosdr=0.2.4=py310h9917f83_4
@@ -63,4 +63,4 @@ variables:
   GR_PREFIX: ''
   UHD_PKG_PATH: ''
   VOLK_PREFIX: ''
-version: 2023.07.24
+version: 2023.07.26
