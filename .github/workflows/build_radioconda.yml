@@ -53,16 +53,17 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install coreutils for macOS
         if: runner.os == 'macOS'
         run: brew install coreutils
 
       - name: Install python environment
-        uses: mamba-org/provision-with-micromamba@main
+        uses: mamba-org/setup-micromamba@v1
         with:
-          environment-file: buildenv.yaml
+          environment-file: installer_specs/buildenv.conda-lock.yml
+          environment-name: buildenv
 
       - name: Build installer
         shell: bash -l {0}
@@ -183,7 +184,7 @@ jobs:
 
       - name: Upload to Github artifact
         if: ${{ (success() || failure()) && !startsWith(github.ref, 'refs/tags/') }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           path: dist/*
           name: ${{ matrix.OS_NAME }}-${{ matrix.ARCH }}

@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
+import contextlib
 import pathlib
 import shutil
 from typing import Any, Dict, Optional
 
 import conda_lock
+from conda_package_streaming.package_streaming import stream_conda_component
+from conda_package_streaming.url import conda_reader_for_url
+import diff_match_patch
 import yaml
 
 
@@ -93,9 +97,19 @@ def render_constructors(
     company: str,
     license_file: pathlib.Path,
     output_dir: pathlib.Path,
+    builder_lockfile_path: pathlib.Path,
 ) -> None:
     lock_content = conda_lock.conda_lock.parse_conda_lock_file(lockfile_path)
     lock_work_dir = lockfile_path.parent
+
+    builder_lock_content = conda_lock.conda_lock.parse_conda_lock_file(
+        builder_lockfile_path
+    )
+    constructor_lockdeps = [
+        lockdep
+        for lockdep in builder_lock_content.package
+        if lockdep.name == "constructor"
+    ]
 
     # render main + installer env specs into environment file for creating installer
     conda_lock.conda_lock.do_render(
@@ -185,10 +199,65 @@ def render_constructors(
         with construct_yaml_path.open("w") as f:
             yaml.safe_dump(construct_dict, stream=f)
 
+        if platform.startswith("win"):
+            # patch constructor's nsis template
+            constructor_platform_lockdeps = [
+                lockdep
+                for lockdep in constructor_lockdeps
+                if lockdep.platform == platform
+            ]
+            if constructor_platform_lockdeps:
+                lockdep = constructor_platform_lockdeps[0]
+
+                # get the NSIS template that comes with the locked constructor package
+                constructor_filename, constructor_pkg = conda_reader_for_url(
+                    lockdep.url
+                )
+                with contextlib.closing(constructor_pkg):
+                    for tar, member in stream_conda_component(
+                        constructor_filename, constructor_pkg, component="pkg"
+                    ):
+                        if (
+                            member.name
+                            == "site-packages/constructor/nsis/main.nsi.tmpl"
+                        ):
+                            locked_nsi_tmpl = tar.extractfile(member).read().decode()
+                            break
+                # read the original and custom NSIS templates
+                local_constructor_nsis = pathlib.Path("constructor") / "nsis"
+                with (local_constructor_nsis / "main.nsi.tmpl.orig").open("r") as f:
+                    orig_nsi_tmpl = f.read()
+                with (local_constructor_nsis / "main.nsi.tmpl").open("r") as f:
+                    custom_nsi_tmpl = f.read()
+
+                # get patch from original NSIS template to locked version we will be
+                # building with and apply it to the custom template
+                dmp = diff_match_patch.diff_match_patch()
+                line_orig, line_locked, line_array = dmp.diff_linesToChars(
+                    orig_nsi_tmpl, locked_nsi_tmpl
+                )
+                diffs = dmp.diff_main(line_orig, line_locked, checklines=False)
+                dmp.diff_charsToLines(diffs, line_array)
+                patches = dmp.patch_make(orig_nsi_tmpl, diffs)
+                patched_nsi_tmpl, results = dmp.patch_apply(patches, custom_nsi_tmpl)
+                if not all(results):
+                    raise RuntimeError("Conflicts found when patching NSIS template")
+
+                # write patched template to constructor dir
+                with (constructor_dir / "main.nsi.tmpl").open("w") as f:
+                    f.write(patched_nsi_tmpl)
+
+                # update orig and custom with locked and patched
+                with (local_constructor_nsis / "main.nsi.tmpl.orig").open("w") as f:
+                    f.write(locked_nsi_tmpl)
+                with (local_constructor_nsis / "main.nsi.tmpl").open("w") as f:
+                    f.write(patched_nsi_tmpl)
+
 
 def render(
     environment_file: pathlib.Path,
     installer_environment_file: pathlib.Path,
+    builder_environment_file: pathlib.Path,
     version: str,
     company: str,
     license_file: pathlib.Path,
@@ -218,6 +287,17 @@ def render(
     # working dir for conda-lock outputs that we use as intermediates
     lock_work_dir = output_dir / "lockwork"
     lock_work_dir.mkdir(parents=True, exist_ok=True)
+
+    # create the locked build environment specification
+    builder_lockfile_path = output_dir / "buildenv.conda-lock.yml"
+    conda_lock.conda_lock.run_lock(
+        environment_files=[builder_environment_file],
+        conda_exe=conda_exe,
+        mamba=True,
+        micromamba=True,
+        kinds=("lock",),
+        lockfile_path=builder_lockfile_path,
+    )
 
     # read environment files and create the lock file
     lockfile_path = lock_work_dir / f"{env_name}.conda-lock.yml"
@@ -256,6 +336,7 @@ def render(
         company=company,
         license_file=license_file,
         output_dir=output_dir,
+        builder_lockfile_path=builder_lockfile_path,
     )
 
     # clean up conda-lock work dir
@@ -306,6 +387,18 @@ if __name__ == "__main__":
         help=(
             "YAML file defining additional packages for the installer, with a 'name'"
             " string and 'channels' and 'dependencies' lists."
+            " (default: %(default)s)"
+        ),
+    )
+    parser.add_argument(
+        "builder_environment_file",
+        type=pathlib.Path,
+        nargs="?",
+        default=here / "buildenv.yaml",
+        help=(
+            "YAML file defining the builder environment for running conda-constructor,"
+            " with a 'name' string and 'channels', 'platforms', and 'dependencies'"
+            " lists."
             " (default: %(default)s)"
         ),
     )
@@ -378,6 +471,7 @@ if __name__ == "__main__":
     render(
         environment_file=args.environment_file,
         installer_environment_file=args.installer_environment_file,
+        builder_environment_file=args.builder_environment_file,
         version=args.version,
         company=args.company,
         license_file=args.license_file,
