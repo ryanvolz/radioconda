@@ -60,4 +60,4 @@ dependencies:
 - uhd=4.4.0.0=py310h50d9707_0
 name: radioconda
 platform: osx-64
-version: 2023.07.26
+version: 2023.07.27

@@ -184,7 +184,7 @@ https://conda.anaconda.org/conda-forge/linux-64/kiwisolver-1.4.4-py310hbf28c38_1
 https://conda.anaconda.org/conda-forge/linux-64/lcms2-2.15-haa2dc70_1.conda#980d8aca0bc23ca73fa8caa3e7c84c28
 https://conda.anaconda.org/conda-forge/linux-64/libclang13-15.0.7-default_h9986a30_2.conda#907344cee64101d44d806bbe0fccb01d
 https://conda.anaconda.org/conda-forge/linux-64/libcups-2.3.3-h4637d8d_4.conda#d4529f4dff3057982a7617c7ac58fde3
-https://conda.anaconda.org/conda-forge/linux-64/libcurl-8.2.0-hca28451_0.conda#73d6b3c8d9a8f7f2703ef9163ab92b0e
+https://conda.anaconda.org/conda-forge/linux-64/libcurl-8.2.1-hca28451_0.conda#96aec6156d58591f5a4e67056521ce1b
 https://conda.anaconda.org/conda-forge/linux-64/libpq-15.3-hfc447b1_2.conda#118f72dfc7cd6f0054f7062ae84d1444
 https://conda.anaconda.org/conda-forge/linux-64/libsystemd0-253-h8c4010b_1.conda#9176b1e2cb8beca37a7510b0e801e38f
 https://conda.anaconda.org/conda-forge/linux-64/libusb-1.0.26-h0b4f0b6_100.tar.bz2#ecae794a044bc3c2e1a4102bb9c699a8
@@ -326,7 +326,7 @@ https://conda.anaconda.org/conda-forge/noarch/asciimatics-1.14.0-pyhd8ed1ab_2.co
 https://conda.anaconda.org/conda-forge/linux-64/at-spi2-core-2.40.3-h0630a04_0.tar.bz2#8cb2fc4cd6cc63f1369cfa318f581cc3
 https://conda.anaconda.org/conda-forge/linux-64/bladerf-2023.02-h0b41bf4_0.conda#f7cde13b9f9a7955b4335c037c100123
 https://conda.anaconda.org/conda-forge/linux-64/digital_rf-2.6.8-py310h088ca65_1.conda#28ceda26453f419d0412094906066675
-https://conda.anaconda.org/conda-forge/noarch/flask-socketio-5.3.4-pyhd8ed1ab_0.conda#b4c68f87e0cd8ca8f6627e52ee084384
+https://conda.anaconda.org/conda-forge/noarch/flask-socketio-5.3.5-pyhd8ed1ab_0.conda#bf1dbd08f6e6ae0570bf5034e37216a2
 https://conda.anaconda.org/conda-forge/noarch/gevent-websocket-0.10.1-py_0.tar.bz2#25b4b60b6ea50368cd90b75b4d00c711
 https://conda.anaconda.org/conda-forge/linux-64/gst-plugins-base-1.22.5-hf7dbed1_0.conda#ad8e8068208846032d6e9ce73d406cee
 https://conda.anaconda.org/conda-forge/noarch/jsonschema-4.18.4-pyhd8ed1ab_0.conda#7356151a32ebd9a20158d2f26d224bfa

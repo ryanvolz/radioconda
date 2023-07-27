@@ -63,4 +63,4 @@ variables:
   GR_PREFIX: ''
   UHD_PKG_PATH: ''
   VOLK_PREFIX: ''
-version: 2023.07.26
+version: 2023.07.27

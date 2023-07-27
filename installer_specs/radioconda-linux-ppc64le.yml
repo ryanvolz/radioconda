@@ -61,4 +61,4 @@ dependencies:
 - uhd=4.4.0.0=py310h7732062_0
 name: radioconda
 platform: linux-ppc64le
-version: 2023.07.26
+version: 2023.07.27

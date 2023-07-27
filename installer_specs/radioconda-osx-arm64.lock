@@ -135,7 +135,7 @@ https://conda.anaconda.org/conda-forge/osx-arm64/kiwisolver-1.4.4-py310h2887b22_
 https://conda.anaconda.org/conda-forge/osx-arm64/lcms2-2.15-hd835a16_1.conda#945a7b2d3fecee7299855bc0257f6f33
 https://conda.anaconda.org/conda-forge/osx-arm64/libad9361-iio-0.2-h5f0d74c_3.tar.bz2#39f976ce1cb5e7f88f8f37ad125f1f4a
 https://conda.anaconda.org/conda-forge/osx-arm64/libclang13-15.0.7-default_hc7183e1_2.conda#bda497fd604c09ca66bebf0e0da64240
-https://conda.anaconda.org/conda-forge/osx-arm64/libcurl-8.2.0-hc52a3a8_0.conda#ea7797f947f10ab1b0d25953799babfa
+https://conda.anaconda.org/conda-forge/osx-arm64/libcurl-8.2.1-hc52a3a8_0.conda#10cd3b7e1c73a47bb36d2cdce4504222
 https://conda.anaconda.org/conda-forge/osx-arm64/libm2k-0.7.0-py310hfeebbfc_1.tar.bz2#129c06189a2bcbd02fe133ca6318d4dc
 https://conda.anaconda.org/conda-forge/osx-arm64/libopenblas-0.3.23-openmp_hc731615_0.conda#a40b73e171a91527c79fb1c8b10e3312
 https://conda.anaconda.org/conda-forge/osx-arm64/libpq-15.3-hcea71ed_2.conda#7793e805d0672111df520bea004fd746
@@ -250,7 +250,7 @@ https://conda.anaconda.org/conda-forge/noarch/stack_data-0.6.2-pyhd8ed1ab_0.cond
 https://conda.anaconda.org/conda-forge/noarch/wcwidth-0.2.6-pyhd8ed1ab_0.conda#078979d33523cb477bd1916ce41aacc9
 https://conda.anaconda.org/conda-forge/noarch/asciimatics-1.14.0-pyhd8ed1ab_2.conda#18636b572750fa63481cb806eb2f23f3
 https://conda.anaconda.org/conda-forge/osx-arm64/bladerf-2023.02-h1a8c8d9_0.conda#913fafc2abcc54b7b7efb0dfb728003d
-https://conda.anaconda.org/conda-forge/noarch/flask-socketio-5.3.4-pyhd8ed1ab_0.conda#b4c68f87e0cd8ca8f6627e52ee084384
+https://conda.anaconda.org/conda-forge/noarch/flask-socketio-5.3.5-pyhd8ed1ab_0.conda#bf1dbd08f6e6ae0570bf5034e37216a2
 https://conda.anaconda.org/conda-forge/noarch/gevent-websocket-0.10.1-py_0.tar.bz2#25b4b60b6ea50368cd90b75b4d00c711
 https://conda.anaconda.org/conda-forge/osx-arm64/gsl-2.7-h6e638da_0.tar.bz2#2a2126a940e033e7225a5dc7215eea9a
 https://conda.anaconda.org/conda-forge/osx-arm64/gst-plugins-base-1.22.5-h27255cc_0.conda#8bd6e2d7d428a93349cc72d1b9b35e0c

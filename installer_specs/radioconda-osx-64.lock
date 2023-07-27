@@ -135,7 +135,7 @@ https://conda.anaconda.org/conda-forge/osx-64/kiwisolver-1.4.4-py310ha23aa8a_1.t
 https://conda.anaconda.org/conda-forge/osx-64/lcms2-2.15-h2dcdeff_1.conda#f1df9b0c2d9fbe985e62f4b24773a9e4
 https://conda.anaconda.org/conda-forge/osx-64/libad9361-iio-0.2-hafe1066_3.tar.bz2#9020de48dc37479ae17a33f2a38339ac
 https://conda.anaconda.org/conda-forge/osx-64/libclang13-15.0.7-default_h953c2e9_2.conda#ef1133cbc6dcdd3f2fe49549be137cc4
-https://conda.anaconda.org/conda-forge/osx-64/libcurl-8.2.0-h5f667d7_0.conda#d4a20b5cacc98af6020576836b408a82
+https://conda.anaconda.org/conda-forge/osx-64/libcurl-8.2.1-h5f667d7_0.conda#cf30b1fa9a77ededa7c1203c68a796bb
 https://conda.anaconda.org/conda-forge/osx-64/libm2k-0.7.0-py310hfba3bd2_1.tar.bz2#cfa6dbcbae3961bd0e3bd542b86e105c
 https://conda.anaconda.org/conda-forge/osx-64/libopenblas-0.3.23-openmp_h429af6e_0.conda#7000a828e29608e4f57e662b5502d2c9
 https://conda.anaconda.org/conda-forge/osx-64/libpq-15.3-h3df487d_2.conda#bea4c8a41b95d568b6e43d8edbbc9aa5
@@ -250,7 +250,7 @@ https://conda.anaconda.org/conda-forge/noarch/stack_data-0.6.2-pyhd8ed1ab_0.cond
 https://conda.anaconda.org/conda-forge/noarch/wcwidth-0.2.6-pyhd8ed1ab_0.conda#078979d33523cb477bd1916ce41aacc9
 https://conda.anaconda.org/conda-forge/noarch/asciimatics-1.14.0-pyhd8ed1ab_2.conda#18636b572750fa63481cb806eb2f23f3
 https://conda.anaconda.org/conda-forge/osx-64/bladerf-2023.02-hb7f2c08_0.conda#0d943df9fb10336eba03437030a53d9e
-https://conda.anaconda.org/conda-forge/noarch/flask-socketio-5.3.4-pyhd8ed1ab_0.conda#b4c68f87e0cd8ca8f6627e52ee084384
+https://conda.anaconda.org/conda-forge/noarch/flask-socketio-5.3.5-pyhd8ed1ab_0.conda#bf1dbd08f6e6ae0570bf5034e37216a2
 https://conda.anaconda.org/conda-forge/noarch/gevent-websocket-0.10.1-py_0.tar.bz2#25b4b60b6ea50368cd90b75b4d00c711
 https://conda.anaconda.org/conda-forge/osx-64/gsl-2.7-h93259b0_0.tar.bz2#b4942b1ee2a52fd67f446074488d774d
 https://conda.anaconda.org/conda-forge/osx-64/gst-plugins-base-1.22.5-hb5d3a86_0.conda#b352c9e0490352a101e6299daa98196b

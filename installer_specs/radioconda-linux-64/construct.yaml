@@ -56,7 +56,7 @@ specs:
 - colorama=0.4.6=pyhd8ed1ab_0
 - conda-package-handling=2.0.2=pyh38be061_0
 - conda-package-streaming=0.8.0=pyhd8ed1ab_0
-- conda=23.7.0=py310hff52083_0
+- conda=23.7.1=py310hff52083_0
 - construct=2.10.68=pyhd8ed1ab_0
 - contourpy=1.1.0=py310hd41b1e2_0
 - cryptography=41.0.2=py310h75e40e8_0
@@ -70,7 +70,7 @@ specs:
 - expat=2.5.0=hcb278e6_1
 - ffmpeg=6.0.0=gpl_hdbbbd96_103
 - fftw=3.3.10=nompi_hc118613_108
-- flask-socketio=5.3.4=pyhd8ed1ab_0
+- flask-socketio=5.3.5=pyhd8ed1ab_0
 - flask=2.3.2=pyhd8ed1ab_0
 - fmt=9.1.0=h924138e_0
 - font-ttf-dejavu-sans-mono=2.37=hab24e00_0
@@ -180,7 +180,7 @@ specs:
 - libcodec2=1.0.3=h7f98852_0
 - libcorrect=0.0.0=h0b41bf4_0
 - libcups=2.3.3=h4637d8d_4
-- libcurl=8.2.0=hca28451_0
+- libcurl=8.2.1=hca28451_0
 - libdb=6.2.32=h9c3ff4c_0
 - libdeflate=1.18=h0b41bf4_0
 - libdrm=2.4.114=h166bdaf_0
@@ -480,5 +480,5 @@ user_requested_specs:
 - soapysdr-module-uhd
 - soapysdr-module-volk-converters
 - uhd
-version: 2023.07.26
+version: 2023.07.27
 write_condarc: true

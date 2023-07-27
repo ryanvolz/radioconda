@@ -115,7 +115,7 @@ https://conda.anaconda.org/conda-forge/noarch/itsdangerous-2.1.2-pyhd8ed1ab_0.ta
 https://conda.anaconda.org/conda-forge/win-64/kiwisolver-1.4.4-py310h232114e_1.tar.bz2#c55fe943d5f212d49d27d08580f5a610
 https://conda.anaconda.org/conda-forge/win-64/libclang-15.0.7-default_h77d9078_2.conda#70188b1b3e0b1716405adab9050894d1
 https://conda.anaconda.org/conda-forge/win-64/libcodec2-1.0.3-hcd874cb_0.tar.bz2#2fa31fd5cbe57b0e672c2efe87cd1524
-https://conda.anaconda.org/conda-forge/win-64/libcurl-8.2.0-hd5e4a3a_0.conda#af51ef2e3436c62039fdbb6c8116ec7e
+https://conda.anaconda.org/conda-forge/win-64/libcurl-8.2.1-hd5e4a3a_0.conda#2f5d4a975490edc04c552a54d29018d4
 https://conda.anaconda.org/conda-forge/win-64/libglib-2.76.4-he8f3873_0.conda#8c3f24acdc0403eeb3fb42ab75e8a659
 https://conda.anaconda.org/conda-forge/win-64/libhwloc-2.9.1-nocuda_h15da153_6.conda#95b1bd8df3033d08ae5125ed69d71194
 https://conda.anaconda.org/conda-forge/win-64/libiio-c-0.24-hd007474_1.conda#0e86fbb01247c06c73ba40a8a607fad0
@@ -237,7 +237,7 @@ https://conda.anaconda.org/conda-forge/noarch/urllib3-2.0.4-pyhd8ed1ab_0.conda#1
 https://conda.anaconda.org/conda-forge/noarch/wcwidth-0.2.6-pyhd8ed1ab_0.conda#078979d33523cb477bd1916ce41aacc9
 https://conda.anaconda.org/conda-forge/noarch/asciimatics-1.14.0-pyhd8ed1ab_2.conda#18636b572750fa63481cb806eb2f23f3
 https://conda.anaconda.org/conda-forge/win-64/bladerf-2023.02-hcfcfb64_0.conda#fcb9937df5e7af6f429e70ec06dbe621
-https://conda.anaconda.org/conda-forge/noarch/flask-socketio-5.3.4-pyhd8ed1ab_0.conda#b4c68f87e0cd8ca8f6627e52ee084384
+https://conda.anaconda.org/conda-forge/noarch/flask-socketio-5.3.5-pyhd8ed1ab_0.conda#bf1dbd08f6e6ae0570bf5034e37216a2
 https://conda.anaconda.org/conda-forge/noarch/gevent-websocket-0.10.1-py_0.tar.bz2#25b4b60b6ea50368cd90b75b4d00c711
 https://conda.anaconda.org/conda-forge/win-64/gstreamer-1.22.5-hb4038d2_0.conda#489c30d6f35bdbea9a79c369cde19c6f
 https://conda.anaconda.org/conda-forge/win-64/harfbuzz-7.3.0-h196d34a_0.conda#40c65245e53d8eaa9bb9cb5f24f5f6ef

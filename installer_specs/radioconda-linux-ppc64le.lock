@@ -182,7 +182,7 @@ https://conda.anaconda.org/conda-forge/linux-ppc64le/kiwisolver-1.4.4-py310h3c3d
 https://conda.anaconda.org/conda-forge/linux-ppc64le/lcms2-2.15-h0139fb3_1.conda#b6bdc61d92ff9f9dbbe45ba3a54aaae3
 https://conda.anaconda.org/conda-forge/linux-ppc64le/libclang13-15.0.7-default_h6cf0fa1_2.conda#22940ae510f97c75520ac4c8e5906cda
 https://conda.anaconda.org/conda-forge/linux-ppc64le/libcups-2.3.3-hdb7e4ed_4.conda#f7fe4e9a636b99d2831b70683d65fafa
-https://conda.anaconda.org/conda-forge/linux-ppc64le/libcurl-8.2.0-ha571e8f_0.conda#7522e7751c1001e9318639ae3e807de9
+https://conda.anaconda.org/conda-forge/linux-ppc64le/libcurl-8.2.1-ha571e8f_0.conda#760044b75807c70bfc14449cee9cdf83
 https://conda.anaconda.org/conda-forge/linux-ppc64le/libpq-15.3-h9d99649_2.conda#911d2249466e41f0e842e124743b7187
 https://conda.anaconda.org/conda-forge/linux-ppc64le/libsystemd0-253-hb7c1f00_1.conda#cfa0d298ce86a5392b9c6fb79a65d2ea
 https://conda.anaconda.org/conda-forge/linux-ppc64le/libusb-1.0.26-hd38647f_100.tar.bz2#31be3b73fa0058e52c750a9a8444f849
@@ -323,7 +323,7 @@ https://conda.anaconda.org/conda-forge/noarch/asciimatics-1.14.0-pyhd8ed1ab_2.co
 https://conda.anaconda.org/conda-forge/linux-ppc64le/at-spi2-core-2.40.3-h633f9df_0.tar.bz2#bb5a1525186dbfdbb6f25d5cd7429375
 https://conda.anaconda.org/conda-forge/linux-ppc64le/bladerf-2023.02-h4194056_0.conda#0cca4c597f391266197290a25162b8a4
 https://conda.anaconda.org/conda-forge/linux-ppc64le/digital_rf-2.6.8-py310hbdd789a_1.conda#abef209f3a855a1e83a43abffa734a95
-https://conda.anaconda.org/conda-forge/noarch/flask-socketio-5.3.4-pyhd8ed1ab_0.conda#b4c68f87e0cd8ca8f6627e52ee084384
+https://conda.anaconda.org/conda-forge/noarch/flask-socketio-5.3.5-pyhd8ed1ab_0.conda#bf1dbd08f6e6ae0570bf5034e37216a2
 https://conda.anaconda.org/conda-forge/noarch/gevent-websocket-0.10.1-py_0.tar.bz2#25b4b60b6ea50368cd90b75b4d00c711
 https://conda.anaconda.org/conda-forge/linux-ppc64le/gst-plugins-base-1.22.5-hb6c1c46_0.conda#44b3fcabbe8b8a7f0ca7fd36e0c2e1f3
 https://conda.anaconda.org/conda-forge/noarch/jsonschema-4.18.4-pyhd8ed1ab_0.conda#7356151a32ebd9a20158d2f26d224bfa
