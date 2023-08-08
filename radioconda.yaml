@@ -50,6 +50,7 @@ dependencies:
   - numpy
   - pandas
   - pyadi-iio
+  - pyfda
   - python
   - rtl-sdr
   - scipy
