@@ -46,6 +46,7 @@ dependencies:
   - libm2k
   - limesuite
   - matplotlib
+  - mirisdr
   - m17-cxx-demod
   - numpy
   - pandas
