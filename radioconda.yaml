@@ -40,6 +40,7 @@ dependencies:
   - gnuradio-satellites
   - gqrx
   - hackrf
+  - hamlib-all
   - inspectrum
   - ipython
   - libiio
