@@ -17,6 +17,7 @@ dependencies:
   - bladerf
   - digital_rf
   - codec2
+  - gnss-sdr # [unix]
   - gnuradio 3.10.*
   - gnuradio-adsb
   - gnuradio-dect2
