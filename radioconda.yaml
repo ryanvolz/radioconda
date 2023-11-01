@@ -29,6 +29,7 @@ dependencies:
   - gnuradio-ieee802_11
   - gnuradio-ieee802_15_4
   - gnuradio-inspector
+  - gnuradio-iqbalance
   - gnuradio-iridium
   - gnuradio-leo
   - gnuradio-lora_sdr
