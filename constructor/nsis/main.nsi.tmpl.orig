@@ -161,10 +161,13 @@ Page Custom mui_AnaCustomOptions_Show
 !define MUI_FINISHPAGE_TEXT __CONCLUSION_TEXT__
 #endif
 
+#if custom_conclusion
 # Custom conclusion file(s)
 @CUSTOM_CONCLUSION_FILE@
-
+#else
 !insertmacro MUI_PAGE_FINISH
+#endif
+
 
 !insertmacro MUI_UNPAGE_WELCOME
 !define MUI_PAGE_CUSTOMFUNCTION_LEAVE un.OnDirectoryLeave
@@ -929,7 +932,7 @@ Function OnDirectoryLeave
     Pop $R9
 
     # List of characters not allowed anywhere in $INSTDIR
-    Push "^%!=,"
+    Push "^%!=,()"
     Push $INSTDIR
     Call StrCSpn
     Pop $R0
@@ -1110,6 +1113,7 @@ Section "Install"
     File /nonfatal /r __INDEX_CACHE__
     File /r __REPODATA_RECORD__
 
+    @SCRIPT_ENV_VARIABLES@
     System::Call 'kernel32::SetEnvironmentVariable(t,t)i("CONDA_SAFETY_CHECKS", "disabled").r0'
     System::Call 'kernel32::SetEnvironmentVariable(t,t)i("CONDA_EXTRA_SAFETY_CHECKS", "no").r0'
     System::Call 'kernel32::SetEnvironmentVariable(t,t)i("CONDA_PKGS_DIRS", "$INSTDIR\pkgs")".r0'
