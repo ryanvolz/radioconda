@@ -11,18 +11,19 @@ This repository holds cross-platform installers for a collection of open source 
 
 and support for the following SDR devices and device libraries:
 
-|            Device            |                    Library                    |
-| :--------------------------: | :-------------------------------------------: |
-|       [ADALM-PLUTO][1]       |       libiio ([setup](#iio-pluto-sdr))        |
-|   [Airspy R2/Mini/HF+][2]    | airspy/airspyhf ([setup](#airspy-r2-mini-hf)) |
-|         [BladeRF][3]         |          bladeRF ([setup](#bladerf))          |
-|       [Ettus USRPs][4]       |        UHD ([setup](#uhd-ettus-usrp))         |
-|         [HackRF][5]          |           HackRF ([setup](#hackrf))           |
-|         [LimeSDR][6]         |        Lime Suite ([setup](#limesdr))         |
-|       [Red Pitaya][7]        |                SoapyRedPitaya                 |
-| [RFSpace/NetSDR/CloudSDR][8] |                  SoapyNetSDR                  |
-|         [RTL-SDR][9]         |          rtl-sdr ([setup](#rtl-sdr))          |
-|  Sound Card / Audio devices  |                  SoapyAudio                   |
+|                  Device                   |                    Library                    |
+| :---------------------------------------: | :-------------------------------------------: |
+|             [ADALM-PLUTO][1]              |       libiio ([setup](#iio-pluto-sdr))        |
+|          [Airspy R2/Mini/HF+][2]          | airspy/airspyhf ([setup](#airspy-r2-mini-hf)) |
+|               [BladeRF][3]                |          bladeRF ([setup](#bladerf))          |
+|             [Ettus USRPs][4]              |        UHD ([setup](#uhd-ettus-usrp))         |
+|                [HackRF][5]                |           HackRF ([setup](#hackrf))           |
+|               [LimeSDR][6]                |        Lime Suite ([setup](#limesdr))         |
+|              [Red Pitaya][7]              |                SoapyRedPitaya                 |
+|       [RFSpace/NetSDR/CloudSDR][8]        |                  SoapyNetSDR                  |
+|               [RTL-SDR][9]                |          rtl-sdr ([setup](#rtl-sdr))          |
+| [Mirics MSi001 + MSi2500 SDR devices][10] |        libmirisdr ([setup](#mirisdr))         |
+|        Sound Card / Audio devices         |                  SoapyAudio                   |
 
 [1]: https://www.analog.com/en/design-center/evaluation-hardware-and-software/evaluation-boards-kits/adalm-pluto.html
 [2]: https://airspy.com/
@@ -33,6 +34,7 @@ and support for the following SDR devices and device libraries:
 [7]: https://redpitaya.com/
 [8]: http://www.rfspace.com/RFSPACE/Home.html
 [9]: https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/
+[10]: https://github.com/f4exb/libmirisdr-4
 
 The complete list of packages can be found [here](https://github.com/ryanvolz/radioconda/blob/master/radioconda.yaml). You can [**suggest additional software to include**](https://github.com/ryanvolz/radioconda/issues) by filing an [issue](https://github.com/ryanvolz/radioconda/issues). If you've built additional software from source on top of radioconda, [**document your results**](https://github.com/ryanvolz/radioconda/issues) in an [issue](https://github.com/ryanvolz/radioconda/issues) to help others (and help me in packaging it!).
 
@@ -44,8 +46,8 @@ Once installed, you will have a fully functional conda distribution/environment,
 
 Radioconda installers are available here: https://github.com/ryanvolz/radioconda/releases.
 
-| OS      | Architecture              | Installer Type | Download                                                                                                   |
-| ------- | ------------------------- | -------------- | ---------------------------------------------------------------------------------------------------------- |
+| OS      | Architecture              | Installer Type | Download                                                                                                             |
+| ------- | ------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------------- |
 | Linux   | x86_64 (amd64)            | Command-line   | [radioconda-Linux-x86_64.sh](https://glare-sable.vercel.app/ryanvolz/radioconda/radioconda-.*-Linux-x86_64.sh)       |
 | Linux   | aarch64 (arm64)           | Command-line   | [radioconda-Linux-aarch64.sh](https://glare-sable.vercel.app/ryanvolz/radioconda/radioconda-.*-Linux-aarch64.sh)     |
 | Linux   | ppc64le (POWER8/9)        | Command-line   | [radioconda-Linux-ppc64le.sh](https://glare-sable.vercel.app/ryanvolz/radioconda/radioconda-.*-Linux-ppc64le.sh)     |
@@ -290,6 +292,20 @@ You probably have to install a USB driver for the device. Follow the instruction
 Install a udev rule by creating a link into your radioconda installation:
 
     sudo ln -s $CONDA_PREFIX/lib/uhd/utils/uhd-usrp.rules /etc/udev/rules.d/radioconda-uhd-usrp.rules
+    sudo udevadm control --reload
+    sudo udevadm trigger
+
+### MiriSDR
+
+##### Windows users
+
+[Install the WinUSB driver with Zadig](#installing-the-winusb-driver-with-zadig), selecting your MiriSDR device.
+
+##### Linux users
+
+Install a udev rule by creating a link into your radioconda installation:
+
+    sudo ln -s $CONDA_PREFIX/lib/udev/rules.d/mirisdr.rules /etc/udev/rules.d/radioconda-mirisdr.rules
     sudo udevadm control --reload
     sudo udevadm trigger
 
