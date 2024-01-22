@@ -57,7 +57,7 @@ Unicode "true"
 !define DEFAULT_PREFIX_ALL_USERS __DEFAULT_PREFIX_ALL_USERS__
 !define PRE_INSTALL_DESC __PRE_INSTALL_DESC__
 !define POST_INSTALL_DESC __POST_INSTALL_DESC__
-!define MENU_PKGS "@MENU_PKGS@"
+!define ENABLE_SHORTCUTS __ENABLE_SHORTCUTS__
 !define SHOW_REGISTER_PYTHON __SHOW_REGISTER_PYTHON__
 !define SHOW_ADD_TO_PATH __SHOW_ADD_TO_PATH__
 !define PRODUCT_NAME "${NAME} ${VERSION} (${ARCH})"
@@ -296,14 +296,18 @@ FunctionEnd
         ${EndIf}
     ${EndIf}
 
-    ClearErrors
-    ${GetOptions} $ARGV "/NoShortcuts=" $ARGV_NoShortcuts
-    ${IfNot} ${Errors}
-        ${If} $ARGV_NoShortcuts = "1"
-            StrCpy $Ana_CreateShortcuts_State ${BST_UNCHECKED}
-        ${ElseIf} $ARGV_NoShortcuts = "0"
-            StrCpy $Ana_CreateShortcuts_State ${BST_CHECKED}
+    ${If} "${ENABLE_SHORTCUTS}" == "yes"
+        ClearErrors
+        ${GetOptions} $ARGV "/NoShortcuts=" $ARGV_NoShortcuts
+        ${IfNot} ${Errors}
+            ${If} $ARGV_NoShortcuts = "1"
+                StrCpy $Ana_CreateShortcuts_State ${BST_UNCHECKED}
+            ${ElseIf} $ARGV_NoShortcuts = "0"
+                StrCpy $Ana_CreateShortcuts_State ${BST_CHECKED}
+            ${EndIf}
         ${EndIf}
+    ${Else}
+        StrCpy $Ana_CreateShortcuts_State ${BST_UNCHECKED}
     ${EndIf}
 
     ClearErrors
@@ -1116,6 +1120,7 @@ Section "Install"
     @SCRIPT_ENV_VARIABLES@
     System::Call 'kernel32::SetEnvironmentVariable(t,t)i("CONDA_SAFETY_CHECKS", "disabled").r0'
     System::Call 'kernel32::SetEnvironmentVariable(t,t)i("CONDA_EXTRA_SAFETY_CHECKS", "no").r0'
+    System::Call 'kernel32::SetEnvironmentVariable(t,t)i("CONDA_ROOT_PREFIX", "$INSTDIR")".r0'
     System::Call 'kernel32::SetEnvironmentVariable(t,t)i("CONDA_PKGS_DIRS", "$INSTDIR\pkgs")".r0'
     # Extra info for pre and post install scripts
     # NOTE: If more vars are added, make sure to update the examples/scripts tests too
@@ -1162,14 +1167,6 @@ Section "Install"
     @WRITE_CONDARC@
 
     AddSize @SIZE@
-
-    ${If} $Ana_CreateShortcuts_State = ${BST_CHECKED}
-        DetailPrint "Creating @NAME@ menus..."
-        push '"$INSTDIR\_conda.exe" constructor --prefix "$INSTDIR" --make-menus @MENU_PKGS@'
-        push 'Failed to create menus'
-        push 'WithLog'
-        call AbortRetryNSExecWait
-    ${EndIf}
 
 #if has_conda is True
     DetailPrint "Initializing conda directories..."
@@ -1272,10 +1269,11 @@ SectionEnd
 !macroend
 
 Section "Uninstall"
-    # Remove menu items, path entries
+    ${LogSet} on
 
-    DetailPrint "Deleting @NAME@ menus..."
-    nsExec::ExecToLog '"$INSTDIR\_conda.exe" constructor --prefix "$INSTDIR" --rm-menus'
+    # Remove menu items, path entries
+    System::Call 'kernel32::SetEnvironmentVariable(t,t)i("CONDA_ROOT_PREFIX", "$INSTDIR")".r0'
+    @UNINSTALL_MENUS@
 
     # ensure that MSVC runtime DLLs are on PATH during uninstallation
     ReadEnvStr $0 PATH
