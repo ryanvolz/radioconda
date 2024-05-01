@@ -1,14 +1,35 @@
 #!/usr/bin/env python3
 import contextlib
+import math
 import pathlib
 import shutil
 from typing import Any, Dict, Optional
 
 import conda_lock
-from conda_package_streaming.package_streaming import stream_conda_component
-from conda_package_streaming.url import conda_reader_for_url
 import diff_match_patch
 import yaml
+from conda_package_streaming.package_streaming import stream_conda_component
+from conda_package_streaming.url import conda_reader_for_url
+from PIL import Image
+
+
+def resize_contain(image, size, resample=Image.LANCZOS, bg_color=(255, 255, 255, 0)):
+    """
+    Resize image according to size.
+    image:      a Pillow image instance
+    size:       a list of two integers [width, height]
+    """
+    img_format = image.format
+    img = image.copy()
+    img.thumbnail((size[0], size[1]), resample)
+    background = Image.new("RGBA", (size[0], size[1]), bg_color)
+    img_position = (
+        int(math.ceil((size[0] - img.size[0]) / 2)),
+        int(math.ceil((size[1] - img.size[1]) / 2)),
+    )
+    background.paste(img, img_position)
+    background.format = img_format
+    return background.convert("RGBA")
 
 
 def name_from_pkg_spec(spec: str):
@@ -98,6 +119,7 @@ def render_constructors(
     license_file: pathlib.Path,
     output_dir: pathlib.Path,
     builder_lockfile_path: pathlib.Path,
+    logo_path: Optional[pathlib.Path] = None,
 ) -> None:
     lock_content = conda_lock.conda_lock.parse_conda_lock_file(lockfile_path)
     lock_work_dir = lockfile_path.parent
@@ -119,9 +141,17 @@ def render_constructors(
         extras=("installer",),
     )
 
+    if logo_path is not None:
+        logo = Image.open(logo_path)
+
     for platform_env_yaml_path in lock_work_dir.glob("*.constructor.yml"):
         constructor_name = platform_env_yaml_path.name.partition(".")[0]
         platform = constructor_name.split(sep="-", maxsplit=1)[1]
+
+        constructor_dir = output_dir / constructor_name
+        if constructor_dir.exists():
+            shutil.rmtree(constructor_dir)
+        constructor_dir.mkdir(parents=True)
 
         with platform_env_yaml_path.open("r") as f:
             platform_env_dict = yaml.safe_load(f)
@@ -152,17 +182,35 @@ def render_constructors(
                 channel_priority="strict",
             ),
         )
+        if logo_path is not None:
+            if platform.startswith("win"):
+                # convert to RGB (no transparency) and set white background
+                # because constructor eventually converts to bmp without transparency
+                welcome_image = resize_contain(
+                    logo.convert("RGB"), (164, 314), bg_color=(255, 255, 255, 255)
+                )
+                header_image = resize_contain(
+                    logo.convert("RGB"), (150, 57), bg_color=(255, 255, 255, 255)
+                )
+                icon_image = resize_contain(logo, (256, 256))
+
+                welcome_image.save(constructor_dir / "welcome.png")
+                header_image.save(constructor_dir / "header.png")
+                icon_image.save(constructor_dir / "icon.png")
+
+                construct_dict["welcome_image"] = "welcome.png"
+                construct_dict["header_image"] = "header.png"
+                construct_dict["icon_image"] = "icon.png"
+            elif platform.startswith("osx"):
+                welcome_image = resize_contain(logo, (1227, 600))
+                welcome_image.save(constructor_dir / "welcome.png")
+                construct_dict["welcome_image"] = "welcome.png"
         if platform.startswith("win"):
             construct_dict["post_install"] = "post_install.bat"
             # point to template that we generate at build time with a patch over default
             construct_dict["nsis_template"] = "main.nsi.tmpl"
         else:
             construct_dict["post_install"] = "post_install.sh"
-
-        constructor_dir = output_dir / constructor_name
-        if constructor_dir.exists():
-            shutil.rmtree(constructor_dir)
-        constructor_dir.mkdir(parents=True)
 
         # copy license to the constructor directory
         shutil.copy(license_file, constructor_dir / "LICENSE")
@@ -263,6 +311,7 @@ def render(
     license_file: pathlib.Path,
     output_dir: pathlib.Path,
     conda_exe: pathlib.Path,
+    logo_path: Optional[pathlib.Path] = None,
     dirty: Optional[bool] = False,
     keep_workdir: Optional[bool] = False,
 ) -> None:
@@ -337,6 +386,7 @@ def render(
         license_file=license_file,
         output_dir=output_dir,
         builder_lockfile_path=builder_lockfile_path,
+        logo_path=logo_path,
     )
 
     # clean up conda-lock work dir
@@ -432,6 +482,16 @@ if __name__ == "__main__":
         ),
     )
     parser.add_argument(
+        "--logo",
+        dest="logo_path",
+        type=pathlib.Path,
+        default=here / "static" / f"{distname}_logo.png",
+        help=(
+            "File containing the logo image to include in the installer."
+            " (default: %(default)s)"
+        ),
+    )
+    parser.add_argument(
         "-o",
         "--output_dir",
         type=pathlib.Path,
@@ -477,6 +537,7 @@ if __name__ == "__main__":
         license_file=args.license_file,
         output_dir=args.output_dir,
         conda_exe=args.conda_exe,
+        logo_path=args.logo_path,
         dirty=args.dirty,
         keep_workdir=args.keep_workdir,
     )
