@@ -1,6 +1,4 @@
-# radioconda
-
-![Build radioconda](https://github.com/ryanvolz/radioconda/actions/workflows/build_radioconda.yml/badge.svg)
+# ![radioconda](static/radioconda_logo_web.png)
 
 This repository holds cross-platform installers for a collection of open source **software radio** packages bundled with the [conda](https://conda.io/) package manager, including
 
@@ -89,7 +87,7 @@ You will mostly use radioconda through the command line, although on Windows som
 
 ### Windows
 
-Launch a terminal by running "Conda Prompt" in the "radioconda" directory in the Start menu. From this command line, you can run `mamba` to install/upgrade packages or run any of the applications installed with radioconda. Some applications can also be launched through shortcuts added to the Start menu.
+Launch "Conda Prompt" from the Start menu (you can find it under the "radioconda" directory). From this command line, you can run `mamba` to install/upgrade packages or run any of the applications installed with radioconda. Some applications can also be launched through shortcuts added to the Start menu.
 
 ### Linux and macOS
 
@@ -323,6 +321,8 @@ Many USB devices use libusb and need a WinUSB driver installed on Windows. Follo
 4. Click "Install Driver" or "Replace Driver"
 
 ## Developers
+
+![Build radioconda](https://github.com/ryanvolz/radioconda/actions/workflows/build_radioconda.yml/badge.svg)
 
 ### Usage
 
