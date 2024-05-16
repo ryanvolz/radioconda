@@ -53,7 +53,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install coreutils for macOS
         if: runner.os == 'macOS'
@@ -184,7 +184,7 @@ jobs:
 
       - name: Upload to Github artifact
         if: ${{ (success() || failure()) && !startsWith(github.ref, 'refs/tags/') }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           path: dist/*
           name: ${{ matrix.OS_NAME }}-${{ matrix.ARCH }}
