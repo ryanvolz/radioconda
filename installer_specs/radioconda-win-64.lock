@@ -281,7 +281,7 @@ https://conda.anaconda.org/conda-forge/win-64/digital_rf-2.6.8-py311hda12615_2.c
 https://conda.anaconda.org/conda-forge/win-64/gnuradio-core-3.10.10.0-py311hf4d2179_3.conda#d28460c8590329d82781ba81f025cbb5
 https://conda.anaconda.org/conda-forge/win-64/gtk3-3.24.42-h06195f2_0.conda#4ef4724a601f2ecc6f34c95071f8fc21
 https://conda.anaconda.org/conda-forge/win-64/librsvg-2.58.0-h172eb2b_1.conda#7f1e33327f592bf1122c707bd443013d
-https://conda.anaconda.org/conda-forge/win-64/matplotlib-base-3.8.4-py311h6e989c2_0.conda#e4118e9daeb3e773c5c277065c43bedf
+https://conda.anaconda.org/conda-forge/win-64/matplotlib-base-3.8.4-py311h9b31f6e_1.conda#ded234673a12be500da7db914253c4d8
 https://conda.anaconda.org/conda-forge/noarch/python-socketio-5.11.2-pyhd8ed1ab_0.conda#08c4689825cdf902fc643a6a0934068e
 https://conda.anaconda.org/conda-forge/win-64/qt-main-5.15.8-hcef0176_21.conda#76544d3dfeff8fd52250df168cb0005b
 https://conda.anaconda.org/conda-forge/win-64/soapysdr-module-uhd-0.4.1-h497d21a_10.conda#d427bd427e5899815c68ae78bf3a04b3
@@ -315,7 +315,7 @@ https://conda.anaconda.org/conda-forge/win-64/gnuradio-qtgui-3.10.10.0-py311hcb5
 https://conda.anaconda.org/ryanvolz/win-64/gnuradio-radar-0.0.0.20240508.dev+g0b237f6-py311h91e6648_0.tar.bz2#77ccd628b39d5b51459ad0cb6a28718e
 https://conda.anaconda.org/conda-forge/win-64/gnuradio-satellites-5.5.0-py311he9fa361_2.conda#143a7b67e5c3127aa7aadcd89a72580b
 https://conda.anaconda.org/conda-forge/win-64/gnuradio-uhd-3.10.10.0-py311h5c0f5fd_3.conda#d1f2364d30cd89dde147131159d3845a
-https://conda.anaconda.org/conda-forge/win-64/matplotlib-3.8.4-py311h1ea47a8_0.conda#b6d55204863d508caf4a9a721eb6e47a
+https://conda.anaconda.org/conda-forge/win-64/matplotlib-3.8.4-py311h1ea47a8_1.conda#1e789cc5bdf085a62e5deab949d96fcd
 https://conda.anaconda.org/conda-forge/noarch/pyfda-0.8.4-pyh9208f05_0.conda#c772efaac9008abc155bbb8da0ed451d
 https://conda.anaconda.org/conda-forge/win-64/gnuradio-3.10.10.0-py311h4835986_3.conda#e9fbbf556a9e8d8cd0f7577e1530b8ff
 https://conda.anaconda.org/ryanvolz/win-64/gnuradio-inspector-0.0.0.20240507.dev+g47e47d4-py311h5089839_0.tar.bz2#17afb719ea68d354acf34f6c74ea4f0a

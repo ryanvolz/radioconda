@@ -298,9 +298,9 @@ specs:
 - mamba=1.5.8=py310hcbdc16a_0
 - markdown=3.6=pyhd8ed1ab_0
 - markupsafe=2.1.5=py310h7c1f4a2_0
-- matplotlib-base=3.8.4=py310h0a7f329_0
+- matplotlib-base=3.8.4=py310h84f21c1_1
 - matplotlib-inline=0.1.7=pyhd8ed1ab_0
-- matplotlib=3.8.4=py310hbbe02a8_0
+- matplotlib=3.8.4=py310hbbe02a8_1
 - menuinst=2.0.2=py310h4c7bcd0_0
 - mirisdr=2.0.0=h31becfc_0
 - mpg123=1.32.6=h2f0025b_0

@@ -371,7 +371,7 @@ https://conda.anaconda.org/conda-forge/linux-ppc64le/digital_rf-2.6.8-py310hc41a
 https://conda.anaconda.org/conda-forge/linux-ppc64le/ffmpeg-6.1.1-gpl_h0bfb688_111.conda#e76102b40f04225cee5a3edc1a049786
 https://conda.anaconda.org/conda-forge/linux-ppc64le/librsvg-2.58.0-hae13ae7_1.conda#7f85594300e7d0c8a6ff4ca82a0ad374
 https://conda.anaconda.org/conda-forge/linux-ppc64le/librtaudio6-5.2.0-hb51dbe7_3.conda#5f90bf2192fe91d3b7f6bc490efd8fee
-https://conda.anaconda.org/conda-forge/linux-ppc64le/matplotlib-base-3.8.4-py310hd0ab5ef_0.conda#f0836184e656b44ca2d0d2c1bc8b02e4
+https://conda.anaconda.org/conda-forge/linux-ppc64le/matplotlib-base-3.8.4-py310hd57f521_1.conda#0e1af82f0e6490cdcfb02f33cad7fe65
 https://conda.anaconda.org/conda-forge/noarch/pyadi-iio-0.0.16-pyhd8ed1ab_0.conda#667c2c87d132e2fdf0b2f42200fbfbff
 https://conda.anaconda.org/conda-forge/noarch/python-engineio-4.8.2-pyhd8ed1ab_0.conda#517918f17b050da47a8ccad8e31a91e7
 https://conda.anaconda.org/conda-forge/linux-ppc64le/qt-main-5.15.8-he1b3ad4_21.conda#370c9df3390d20ea326e82a85e119517
@@ -381,7 +381,7 @@ https://conda.anaconda.org/conda-forge/noarch/adwaita-icon-theme-46.0-unix_0.con
 https://conda.anaconda.org/conda-forge/linux-ppc64le/alsa-plugins-1.2.7.1-h7ff4fc0_10.conda#92e22e07c1d6c09757817b607617bd7d
 https://conda.anaconda.org/conda-forge/linux-ppc64le/gtk3-3.24.42-h9b9bf04_0.conda#d41222c311ba937aa1fe2259dfc7251a
 https://conda.anaconda.org/conda-forge/linux-ppc64le/inspectrum-0.3.1-hb0a1fd9_0.conda#941f34874acbf87c0b3163cb7f3979d2
-https://conda.anaconda.org/conda-forge/linux-ppc64le/matplotlib-3.8.4-py310hd032262_0.conda#50d620a627a741775db2bd842e9ef143
+https://conda.anaconda.org/conda-forge/linux-ppc64le/matplotlib-3.8.4-py310hd032262_1.conda#d549fe89a4774b09b054472d6dbfcfe3
 https://conda.anaconda.org/conda-forge/noarch/mplcursors-0.5.3-pyhd8ed1ab_0.conda#41db08c32bbbb2849d6f57fd1d1da460
 https://conda.anaconda.org/conda-forge/linux-ppc64le/pyqt-5.15.9-py310h05aca5a_5.conda#adf527872fc837f852fd0a001778d49c
 https://conda.anaconda.org/conda-forge/noarch/python-socketio-5.11.2-pyhd8ed1ab_0.conda#08c4689825cdf902fc643a6a0934068e

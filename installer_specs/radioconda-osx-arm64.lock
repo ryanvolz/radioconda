@@ -311,7 +311,7 @@ https://conda.anaconda.org/conda-forge/osx-arm64/uhd-4.6.0.0-py310h1420c5e_0.con
 https://conda.anaconda.org/conda-forge/osx-arm64/digital_rf-2.6.8-py310h7d10cab_2.conda#9e4d22bf1d6e3c6b9e18c98de98e9a11
 https://conda.anaconda.org/conda-forge/noarch/flask-socketio-5.3.6-pyhd8ed1ab_0.conda#ef521fc208ad82733c942d150199cf3e
 https://conda.anaconda.org/conda-forge/osx-arm64/gnuradio-core-3.10.10.0-py310haa06dbd_3.conda#cee8b9e13d25c8f852322afaeca7ec29
-https://conda.anaconda.org/conda-forge/osx-arm64/matplotlib-base-3.8.4-py310h2439c42_0.conda#85dbcc76ac05cb6159762d703f344150
+https://conda.anaconda.org/conda-forge/osx-arm64/matplotlib-base-3.8.4-py310hedb7998_1.conda#1405d34e45e23766b73549aa62b38652
 https://conda.anaconda.org/conda-forge/osx-arm64/soapysdr-module-uhd-0.4.1-hcfb10c7_10.conda#b7a5900e9578f7ad8b0fb122b0815345
 https://conda.anaconda.org/ryanvolz/noarch/gnuradio-adsb-0.0.0.20240508.dev+gafd7fabda-unix_pyha6c0e43_0.tar.bz2#56f998dffe40fa91563395e3cbc935b7
 https://conda.anaconda.org/ryanvolz/osx-arm64/gnuradio-dect2-0.0.0.20240502.dev+gb296af2a9-py310hf97cb1e_0.tar.bz2#f2ef55c7dbf0194025228e67c1f33e2f
@@ -336,7 +336,7 @@ https://conda.anaconda.org/conda-forge/osx-arm64/gnuradio-soapy-3.10.10.0-py310h
 https://conda.anaconda.org/conda-forge/osx-arm64/gnuradio-uhd-3.10.10.0-py310hbe4225f_3.conda#85c6367ec691c19d12c6bbb01110c686
 https://conda.anaconda.org/conda-forge/osx-arm64/gnuradio-video-sdl-3.10.10.0-py310ha0e405d_3.conda#25e589fbfa3429fbf1e73e9ad377a205
 https://conda.anaconda.org/conda-forge/osx-arm64/gnuradio-zeromq-3.10.10.0-py310hd332203_3.conda#cd91def569133af01cb811250f0b9117
-https://conda.anaconda.org/conda-forge/osx-arm64/matplotlib-3.8.4-py310hb6292c7_0.conda#21409508f096611c3a721c198032cc94
+https://conda.anaconda.org/conda-forge/osx-arm64/matplotlib-3.8.4-py310hb6292c7_1.conda#f37e01da42fe25b055f2f8205a87a3de
 https://conda.anaconda.org/conda-forge/noarch/mplcursors-0.5.3-pyhd8ed1ab_0.conda#41db08c32bbbb2849d6f57fd1d1da460
 https://conda.anaconda.org/conda-forge/osx-arm64/gnuradio-3.10.10.0-py310he46b942_3.conda#9d554e809a6032173783a2008c94776d
 https://conda.anaconda.org/ryanvolz/osx-arm64/gnuradio-ieee802_11-0.0.0.20240507.dev+g8c058d4e0-py310h9081a98_0.tar.bz2#6a1a87e621d0a3fe2053c583e216744a

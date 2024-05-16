@@ -40,7 +40,7 @@ dependencies:
 - libm2k=0.8.0=py310hb469b4f_0
 - limesuite=23.11.0=h778206f_0
 - m17-cxx-demod=2.3.3=h3700a85_3
-- matplotlib=3.8.4=py310hb6292c7_0
+- matplotlib=3.8.4=py310hb6292c7_1
 - mirisdr=2.0.0=h93a5062_0
 - numpy=1.26.4=py310hd45542a_0
 - pandas=2.2.2=py310h401b61c_0

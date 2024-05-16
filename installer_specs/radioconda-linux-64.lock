@@ -390,7 +390,7 @@ https://conda.anaconda.org/conda-forge/linux-64/digital_rf-2.6.8-py311h11dd5d7_2
 https://conda.anaconda.org/conda-forge/linux-64/ffmpeg-6.1.1-gpl_h1a7fc40_111.conda#b03dbcf678651a1e5d9a51aede828e97
 https://conda.anaconda.org/conda-forge/linux-64/librsvg-2.58.0-hadf69e7_1.conda#0e2b5bd9533043b41f9482ae9e2c16b5
 https://conda.anaconda.org/conda-forge/linux-64/librtaudio6-5.2.0-h44925b1_3.conda#d0024284058f93a4b072c8c49b51eb34
-https://conda.anaconda.org/conda-forge/linux-64/matplotlib-base-3.8.4-py311h54ef318_0.conda#150186110f111b458f86c04361351337
+https://conda.anaconda.org/conda-forge/linux-64/matplotlib-base-3.8.4-py311ha4ca890_1.conda#ed1453262337b3d07fce0c752f1a17f1
 https://conda.anaconda.org/conda-forge/noarch/pyadi-iio-0.0.16-pyhd8ed1ab_0.conda#667c2c87d132e2fdf0b2f42200fbfbff
 https://conda.anaconda.org/conda-forge/noarch/python-engineio-4.8.2-pyhd8ed1ab_0.conda#517918f17b050da47a8ccad8e31a91e7
 https://conda.anaconda.org/conda-forge/linux-64/qt-main-5.15.8-hc9dc06e_21.conda#b325046180590c868ce0dbf267b82eb8
@@ -408,7 +408,7 @@ https://conda.anaconda.org/conda-forge/linux-64/sdl-1.2.68-h293081c_0.conda#5332
 https://conda.anaconda.org/conda-forge/linux-64/soapysdr-module-audio-0.1.1-h44a8f8d_1.conda#2bba510305a3b1b24e8d9f9edf9be2f4
 https://conda.anaconda.org/conda-forge/noarch/flask-socketio-5.3.6-pyhd8ed1ab_0.conda#ef521fc208ad82733c942d150199cf3e
 https://conda.anaconda.org/conda-forge/linux-64/gnuradio-core-3.10.10.0-py311he9252ce_3.conda#c665589880300228e0b23ad08a2f9169
-https://conda.anaconda.org/conda-forge/linux-64/matplotlib-3.8.4-py311h38be061_0.conda#fd6fc4385d0eb6b00c46c4c0d28f5c48
+https://conda.anaconda.org/conda-forge/linux-64/matplotlib-3.8.4-py311h38be061_1.conda#7502039d982496d2a69bcb0f92a764b9
 https://conda.anaconda.org/conda-forge/noarch/pyfda-0.8.4-pyh9208f05_0.conda#c772efaac9008abc155bbb8da0ed451d
 https://conda.anaconda.org/conda-forge/linux-64/wxwidgets-3.2.5-h91e79f6_0.conda#451b66a57ceaeea17d7408ac080b4732
 https://conda.anaconda.org/ryanvolz/noarch/gnuradio-adsb-0.0.0.20240508.dev+gafd7fabda-unix_pyha6c0e43_0.tar.bz2#56f998dffe40fa91563395e3cbc935b7
