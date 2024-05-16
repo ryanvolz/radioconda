@@ -4,6 +4,7 @@ channels:
 platforms:
   - linux-64
   - osx-64
+  - osx-arm64
   - win-64
 dependencies:
   - anaconda-client
