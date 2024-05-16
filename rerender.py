@@ -27,7 +27,7 @@ def resize_contain(image, size, resample=Image.LANCZOS, bg_color=(255, 255, 255,
         int(math.ceil((size[0] - img.size[0]) / 2)),
         int(math.ceil((size[1] - img.size[1]) / 2)),
     )
-    background.paste(img, img_position)
+    background.alpha_composite(img, img_position)
     background.format = img_format
     return background.convert("RGBA")
 
@@ -187,11 +187,11 @@ def render_constructors(
                 # convert to RGB (no transparency) and set white background
                 # because constructor eventually converts to bmp without transparency
                 welcome_image = resize_contain(
-                    logo.convert("RGB"), (164, 314), bg_color=(255, 255, 255, 255)
-                )
+                    logo, (164, 314), bg_color=(255, 255, 255, 255)
+                ).convert("RGB")
                 header_image = resize_contain(
-                    logo.convert("RGB"), (150, 57), bg_color=(255, 255, 255, 255)
-                )
+                    logo, (150, 57), bg_color=(255, 255, 255, 255)
+                ).convert("RGB")
                 icon_image = resize_contain(logo, (256, 256))
 
                 welcome_image.save(constructor_dir / "welcome.png")
