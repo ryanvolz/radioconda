@@ -6,7 +6,7 @@ dependencies:
 - airspyhf=1.6.8=h0d85af4_0
 - bladerf=2023.02=hb7f2c08_0
 - codec2=1.0.3=h0d85af4_0
-- digital_rf=2.6.8=py311h0ae78f1_2
+- digital_rf=2.6.9=py311h4b6fc2c_0
 - ephem=4.1.5=py311he705e18_1
 - gnss-sdr=0.0.18=h1fe6a09_19
 - gnuradio-adsb=0.0.0.20240508.dev+gafd7fabda=unix_pyha6c0e43_0
@@ -19,7 +19,7 @@ dependencies:
 - gnuradio-hpsdr=0.0.0.20240507.dev+g958e157=py311h0afbd48_0
 - gnuradio-ieee802_11=0.0.0.20240507.dev+g8c058d4e0=py311hd0cdf53_0
 - gnuradio-ieee802_15_4=3.6.post133+g932c76f=py311h29adbb0_0
-- gnuradio-inspector=0.0.0.20240507.dev+g47e47d4=py311hb821223_0
+- gnuradio-inspector=0.0.0.20240525.dev+g55acca6=py311h416d156_0
 - gnuradio-iqbalance=0.38.2=py311h243ac71_3
 - gnuradio-iridium=1!1.0.0=py311he9f87ad_11
 - gnuradio-leo=1.0.0.post105+12a346f=py311h8122525_0
@@ -27,11 +27,11 @@ dependencies:
 - gnuradio-m2k=1.0.0=py311h3d3d031_9
 - gnuradio-osmosdr=0.2.4=py311h57dc4cf_16
 - gnuradio-paint=0.0.0.20240508.dev+g82696a2=py311h8122525_0
-- gnuradio-radar=0.0.0.20240508.dev+g0b237f6=py311hcf2f2e7_0
+- gnuradio-radar=0.0.0.20240525.dev+gc59350d=py311h438d3bc_0
 - gnuradio-rds=3.10.post22+g2134008=py311hee1d45a_0
 - gnuradio-satellites=5.5.0=py311h87c04f2_2
-- gnuradio=3.10.10.0=py311hfc8dd9b_3
-- gqrx=2.17.5=h7b7ca3f_3
+- gnuradio=3.10.10.0=py311hc91e5ee_6
+- gqrx=2.17.5=h8057050_4
 - hackrf=2024.02.1=hbac3817_0
 - hamlib-all=4.5.5=osx_3
 - inspectrum=0.3.1=h4507090_0
@@ -40,15 +40,15 @@ dependencies:
 - libm2k=0.8.0=py311h254a74e_0
 - limesuite=23.11.0=h56465c4_0
 - m17-cxx-demod=2.3.3=hb3aaeea_3
-- matplotlib=3.8.4=py311h6eed73b_1
+- matplotlib=3.8.4=py311h6eed73b_2
 - mirisdr=2.0.0=h10d778d_0
 - numpy=1.26.4=py311hc43a94b_0
-- pandas=2.2.2=py311h8f6166a_0
+- pandas=2.2.2=py311hfdcbad3_1
 - pyadi-iio=0.0.16=pyhd8ed1ab_0
 - pyfda=0.8.4=pyh9208f05_0
 - python=3.11.9=h657bba9_0_cpython
 - rtl-sdr=2.0.1=h10d778d_0
-- scipy=1.13.0=py311hd5d9b8d_1
+- scipy=1.13.1=py311h40a1ab3_0
 - soapysdr-module-airspy=0.2.0=ha64c28d_0
 - soapysdr-module-airspyhf=0.2.0=ha64c28d_0
 - soapysdr-module-audio=0.1.1=h4104cfc_1
@@ -66,4 +66,4 @@ dependencies:
 - uhd=4.6.0.0=py311h1202e05_0
 name: radioconda
 platform: osx-64
-version: 2024.05.16
+version: 2024.05.29

@@ -6,7 +6,7 @@ dependencies:
 - airspyhf=1.6.8=h8ffe710_0
 - bladerf=2023.02=hcfcfb64_0
 - codec2=1.0.3=hcd874cb_0
-- digital_rf=2.6.8=py311hda12615_2
+- digital_rf=2.6.9=py311hc9dfcda_0
 - ephem=4.1.5=py311ha68e1ae_1
 - gnuradio-adsb=0.0.0.20240508.dev+gafd7fabda=win_pyh0207874_0
 - gnuradio-dect2=0.0.0.20240502.dev+gb296af2a9=py311h731d093_0
@@ -16,7 +16,7 @@ dependencies:
 - gnuradio-gpredict-doppler=0.0.0.20240508.dev+gb06bc7678=win_pyh761a00b_0
 - gnuradio-ieee802_11=0.0.0.20240507.dev+g8c058d4e0=py311hc4e8945_0
 - gnuradio-ieee802_15_4=3.6.post133+g932c76f=py311h80bdee0_0
-- gnuradio-inspector=0.0.0.20240507.dev+g47e47d4=py311h5089839_0
+- gnuradio-inspector=0.0.0.20240525.dev+g55acca6=py311h66c5512_0
 - gnuradio-iqbalance=0.38.2=py311h612ad4a_3
 - gnuradio-iridium=1!1.0.0=py311h12d8b78_11
 - gnuradio-leo=1.0.0.post105+12a346f=py311h16091ff_0
@@ -24,11 +24,11 @@ dependencies:
 - gnuradio-m2k=1.0.0=py311h7960a3c_9
 - gnuradio-osmosdr=0.2.4=py311hcfe3240_16
 - gnuradio-paint=0.0.0.20240508.dev+g82696a2=py311h16091ff_0
-- gnuradio-radar=0.0.0.20240508.dev+g0b237f6=py311h91e6648_0
+- gnuradio-radar=0.0.0.20240525.dev+gc59350d=py311h94e600c_0
 - gnuradio-rds=3.10.post22+g2134008=py311haee66f7_0
 - gnuradio-satellites=5.5.0=py311he9fa361_2
-- gnuradio=3.10.10.0=py311h4835986_3
-- gqrx=2.17.5=h30ace0d_3
+- gnuradio=3.10.10.0=py311h6faf1ab_6
+- gqrx=2.17.5=h30ace0d_4
 - hackrf=2024.02.1=h9647d90_0
 - hamlib-all=4.5.5=win_3
 - inspectrum=0.3.1=hfd82842_0
@@ -37,15 +37,15 @@ dependencies:
 - libm2k=0.8.0=py311h256898b_0
 - limesuite=23.11.0=hdee86e2_0
 - m17-cxx-demod=2.3.3=hdfbca9c_3
-- matplotlib=3.8.4=py311h1ea47a8_1
+- matplotlib=3.8.4=py311h1ea47a8_2
 - mirisdr=2.0.0=hcfcfb64_0
 - numpy=1.26.4=py311h0b4df5a_0
-- pandas=2.2.2=py311hf63dbb6_0
+- pandas=2.2.2=py311hcf9f919_1
 - pyadi-iio=0.0.16=pyhd8ed1ab_0
 - pyfda=0.8.4=pyh9208f05_0
 - python=3.11.9=h631f459_0_cpython
 - rtl-sdr=2.0.1=hcfcfb64_0
-- scipy=1.13.0=py311hd4686c6_1
+- scipy=1.13.1=py311hd4686c6_0
 - soapysdr-module-airspy=0.2.0=h23704b7_0
 - soapysdr-module-airspyhf=0.2.0=h23704b7_0
 - soapysdr-module-audio=0.1.1=h78c1c11_1
@@ -68,4 +68,4 @@ variables:
   GR_PREFIX: ''
   UHD_PKG_PATH: ''
   VOLK_PREFIX: ''
-version: 2024.05.16
+version: 2024.05.29
