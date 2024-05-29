@@ -5,4 +5,4 @@ channels:
   - ryanvolz
 dependencies:
   - mamba
-  - radioconda_console_shortcut # [win]
+  - miniforge_console_shortcut # [win]
