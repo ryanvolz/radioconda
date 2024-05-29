@@ -87,7 +87,7 @@ You will mostly use radioconda through the command line, although on Windows som
 
 ### Windows
 
-Launch "Conda Prompt" from the Start menu (you can find it under the "radioconda" directory). From this command line, you can run `mamba` to install/upgrade packages or run any of the applications installed with radioconda. Some applications can also be launched through shortcuts added to the Start menu.
+Launch "radioconda Prompt" from the Start menu (you can find it under the "radioconda" directory). From this command line, you can run `mamba` to install/upgrade packages or run any of the applications installed with radioconda. Some applications can also be launched through shortcuts added to the Start menu.
 
 ### Linux and macOS
 
