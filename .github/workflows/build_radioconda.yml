@@ -99,6 +99,7 @@ jobs:
           ARCH: ${{ matrix.ARCH }}
           INSTALL_PATH: ${{ github.workspace }}/test_installation
         run: |
+          unset CONDARC
           bash dist/$DISTNAME-*-$OS_NAME-$ARCH.sh -b -p $INSTALL_PATH
           eval "$($INSTALL_PATH/bin/conda shell.bash hook)"
           conda info
