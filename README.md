@@ -15,24 +15,26 @@ and support for the following SDR devices and device libraries:
 |         [Airspy R2/Mini/HF+][2]          | airspy/airspyhf ([setup](#airspy-r2-mini-hf)) |
 |               [BladeRF][3]               |          bladeRF ([setup](#bladerf))          |
 |             [Ettus USRPs][4]             |        UHD ([setup](#uhd-ettus-usrp))         |
-|               [HackRF][5]                |           HackRF ([setup](#hackrf))           |
-|               [LimeSDR][6]               |        Lime Suite ([setup](#limesdr))         |
-| [Mirics MSi001 + MSi2500 SDR devices][7] |        libmirisdr ([setup](#mirisdr))         |
-|             [Red Pitaya][8]              |                SoapyRedPitaya                 |
-|       [RFSpace/NetSDR/CloudSDR][9]       |                  SoapyNetSDR                  |
-|              [RTL-SDR][10]               |          rtl-sdr ([setup](#rtl-sdr))          |
+|       [Funcube Dongle Pro/Pro+][5]       |            SoapyFCDPP / gr-funcube            |
+|               [HackRF][6]                |           HackRF ([setup](#hackrf))           |
+|               [LimeSDR][7]               |        Lime Suite ([setup](#limesdr))         |
+| [Mirics MSi001 + MSi2500 SDR devices][8] |        libmirisdr ([setup](#mirisdr))         |
+|             [Red Pitaya][9]              |                SoapyRedPitaya                 |
+|      [RFSpace/NetSDR/CloudSDR][10]       |                  SoapyNetSDR                  |
+|              [RTL-SDR][11]               |          rtl-sdr ([setup](#rtl-sdr))          |
 |        Sound Card / Audio devices        |                  SoapyAudio                   |
 
 [1]: https://www.analog.com/en/design-center/evaluation-hardware-and-software/evaluation-boards-kits/adalm-pluto.html
 [2]: https://airspy.com/
 [3]: https://www.nuand.com/
 [4]: https://www.ettus.com/products/
-[5]: https://greatscottgadgets.com/hackrf/
-[6]: https://limemicro.com/products/boards/
-[7]: https://github.com/f4exb/libmirisdr-4
-[8]: https://redpitaya.com/
-[9]: http://www.rfspace.com/RFSPACE/Home.html
-[10]: https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/
+[5]: https://www.funcubedongle.com/
+[6]: https://greatscottgadgets.com/hackrf/
+[7]: https://limemicro.com/products/boards/
+[8]: https://github.com/f4exb/libmirisdr-4
+[9]: https://redpitaya.com/
+[10]: http://www.rfspace.com/RFSPACE/Home.html
+[11]: https://www.rtl-sdr.com/buy-rtl-sdr-dvb-t-dongles/
 
 The complete list of packages can be found [here](https://github.com/ryanvolz/radioconda/blob/master/radioconda.yaml). You can [**suggest additional software to include**](https://github.com/ryanvolz/radioconda/issues) by filing an [issue](https://github.com/ryanvolz/radioconda/issues). If you've built additional software from source on top of radioconda, [**document your results**](https://github.com/ryanvolz/radioconda/issues) in an [issue](https://github.com/ryanvolz/radioconda/issues) to help others (and help me in packaging it!).
 
@@ -44,18 +46,16 @@ Once installed, you will have a fully functional conda distribution/environment,
 
 Radioconda installers are available here: https://github.com/ryanvolz/radioconda/releases.
 
-| OS      | Architecture              | Installer Type | Download                                                                                                             |
-| ------- | ------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------------- |
-| Linux   | x86_64 (amd64)            | Command-line   | [radioconda-Linux-x86_64.sh](https://glare-sable.vercel.app/ryanvolz/radioconda/radioconda-.*-Linux-x86_64.sh)       |
-| Linux   | aarch64 (arm64)           | Command-line   | [radioconda-Linux-aarch64.sh](https://glare-sable.vercel.app/ryanvolz/radioconda/radioconda-.*-Linux-aarch64.sh)     |
-| Linux   | ppc64le (POWER8/9)        | Command-line   | [radioconda-Linux-ppc64le.sh](https://glare-sable.vercel.app/ryanvolz/radioconda/radioconda-.*-Linux-ppc64le.sh)     |
-| macOS   | x86_64 (Intel)            | Command-line   | [radioconda-MacOSX-x86_64.sh](https://glare-sable.vercel.app/ryanvolz/radioconda/radioconda-.*-MacOSX-x86_64.sh)     |
-| macOS   | x86_64 (Intel)            | Graphical      | [radioconda-MacOSX-x86_64.pkg](https://glare-sable.vercel.app/ryanvolz/radioconda/radioconda-.*-MacOSX-x86_64.pkg)   |
-| macOS   | arm64 (Apple Silicon)[^1] | Command-line   | [radioconda-MacOSX-arm64.sh](https://glare-sable.vercel.app/ryanvolz/radioconda/radioconda-.*-MacOSX-arm64.sh)       |
-| macOS   | arm64 (Apple Silicon)[^1] | Graphical      | [radioconda-MacOSX-arm64.pkg](https://glare-sable.vercel.app/ryanvolz/radioconda/radioconda-.*-MacOSX-arm64.pkg)     |
-| Windows | x86_64 (amd64)            | Graphical      | [radioconda-Windows-x86_64.exe](https://glare-sable.vercel.app/ryanvolz/radioconda/radioconda-.*-Windows-x86_64.exe) |
-
-[^1]: Apple silicon builds are experimental and haven't had testing like the other platforms.
+| OS      | Architecture          | Installer Type | Download                                                                                                             |
+| ------- | --------------------- | -------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Linux   | x86_64 (amd64)        | Command-line   | [radioconda-Linux-x86_64.sh](https://glare-sable.vercel.app/ryanvolz/radioconda/radioconda-.*-Linux-x86_64.sh)       |
+| Linux   | aarch64 (arm64)       | Command-line   | [radioconda-Linux-aarch64.sh](https://glare-sable.vercel.app/ryanvolz/radioconda/radioconda-.*-Linux-aarch64.sh)     |
+| Linux   | ppc64le (POWER8/9)    | Command-line   | [radioconda-Linux-ppc64le.sh](https://glare-sable.vercel.app/ryanvolz/radioconda/radioconda-.*-Linux-ppc64le.sh)     |
+| macOS   | x86_64 (Intel)        | Command-line   | [radioconda-MacOSX-x86_64.sh](https://glare-sable.vercel.app/ryanvolz/radioconda/radioconda-.*-MacOSX-x86_64.sh)     |
+| macOS   | x86_64 (Intel)        | Graphical      | [radioconda-MacOSX-x86_64.pkg](https://glare-sable.vercel.app/ryanvolz/radioconda/radioconda-.*-MacOSX-x86_64.pkg)   |
+| macOS   | arm64 (Apple Silicon) | Command-line   | [radioconda-MacOSX-arm64.sh](https://glare-sable.vercel.app/ryanvolz/radioconda/radioconda-.*-MacOSX-arm64.sh)       |
+| macOS   | arm64 (Apple Silicon) | Graphical      | [radioconda-MacOSX-arm64.pkg](https://glare-sable.vercel.app/ryanvolz/radioconda/radioconda-.*-MacOSX-arm64.pkg)     |
+| Windows | x86_64 (amd64)        | Graphical      | [radioconda-Windows-x86_64.exe](https://glare-sable.vercel.app/ryanvolz/radioconda/radioconda-.*-Windows-x86_64.exe) |
 
 ## Install
 
