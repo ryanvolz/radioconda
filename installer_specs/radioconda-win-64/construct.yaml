@@ -21,6 +21,7 @@ specs:
 - airspy=1.0.10=h2466b09_1
 - airspyhf=1.6.8=h2466b09_1
 - appdirs=1.4.4=pyhd8ed1ab_1
+- archspec=0.2.5=pyhd8ed1ab_0
 - asciimatics=1.15.0=pyhd8ed1ab_1
 - asttokens=3.0.0=pyhd8ed1ab_1
 - atk-1.0=2.38.0=hb44c4ce_2
@@ -29,6 +30,7 @@ specs:
 - bidict=0.23.1=pyhd8ed1ab_1
 - bladerf=2024.05=h2466b09_2
 - blinker=1.9.0=pyhff2d567_0
+- boltons=24.0.0=pyhd8ed1ab_1
 - brotli-bin=1.1.0=h2466b09_2
 - brotli-python=1.1.0=py312h275cf98_2
 - brotli=1.1.0=h2466b09_2
@@ -43,6 +45,10 @@ specs:
 - click=8.1.8=pyh7428d3b_0
 - codec2=1.2.0=hb66ff0d_3
 - colorama=0.4.6=pyhd8ed1ab_1
+- conda-libmamba-solver=25.1.1=pyhd8ed1ab_0
+- conda-package-handling=2.4.0=pyh7900ff3_2
+- conda-package-streaming=0.11.0=pyhd8ed1ab_1
+- conda=25.1.1=py312h2e8e312_1
 - construct=2.10.70=pyhd8ed1ab_0
 - contourpy=1.3.1=py312hd5eb7cc_0
 - cpp-expected=1.1.0=h91493d7_0
@@ -50,6 +56,7 @@ specs:
 - cycler=0.12.1=pyhd8ed1ab_1
 - decorator=5.2.1=pyhd8ed1ab_0
 - digital_rf=2.6.11=py312h4ae2cae_0
+- distro=1.9.0=pyhd8ed1ab_1
 - docutils=0.21.2=pyhd8ed1ab_1
 - double-conversion=3.3.1=he0c23c2_0
 - ephem=4.2=py312h4389bb4_0
@@ -70,6 +77,7 @@ specs:
 - fonttools=4.56.0=py312h31fea79_0
 - freetype=2.12.1=hdaf720e_2
 - fribidi=1.0.10=h8d14728_0
+- frozendict=2.4.6=py312h4389bb4_0
 - fs=2.4.16=pyhd8ed1ab_0
 - future=1.0.0=pyhd8ed1ab_2
 - gdk-pixbuf=2.42.12=hed59a49_0
@@ -118,6 +126,7 @@ specs:
 - gtest=1.15.2=hc790b64_0
 - gtk3=3.24.43=h7c34e04_4
 - h11=0.14.0=pyhd8ed1ab_1
+- h2=4.2.0=pyhd8ed1ab_0
 - h5py=3.13.0=nompi_py312ha036244_100
 - hackrf=2024.02.1=hc14e81b_1
 - hamlib-all=4.6.2=win_2
@@ -128,6 +137,8 @@ specs:
 - harfbuzz=10.4.0=h9e37d49_0
 - hdf5=1.14.3=nompi_hb2c4d47_109
 - hicolor-icon-theme=0.17=h57928b3_2
+- hpack=4.1.0=pyhd8ed1ab_0
+- hyperframe=6.1.0=pyhd8ed1ab_0
 - icu=75.1=he0c23c2_0
 - idna=3.10=pyhd8ed1ab_1
 - importlib-metadata=8.6.1=pyha770c72_0
@@ -139,6 +150,8 @@ specs:
 - itsdangerous=2.2.0=pyhd8ed1ab_1
 - jedi=0.19.2=pyhd8ed1ab_1
 - jinja2=3.1.6=pyhd8ed1ab_0
+- jsonpatch=1.33=pyhd8ed1ab_1
+- jsonpointer=3.0.0=py312h2e8e312_1
 - jsonschema-specifications=2024.10.1=pyhd8ed1ab_1
 - jsonschema=4.23.0=pyhd8ed1ab_1
 - khronos-opencl-icd-loader=2024.10.24=h2466b09_1
@@ -187,7 +200,8 @@ specs:
 - libliquid1=1.6.0=h96e8fb8_2
 - liblzma=5.6.4=h2466b09_0
 - libm2k=0.9.0=py312h87514d0_1
-- libmamba=2.0.5=h630e368_2
+- libmamba=2.0.7=h630e368_0
+- libmambapy=2.0.7=py312ha92e744_0
 - libmirisdr4=2.0.0=h2466b09_1
 - libogg=1.3.5=h2466b09_0
 - libopus=1.3.1=h8ffe710_1
@@ -217,7 +231,7 @@ specs:
 - lzo=2.10=hcfcfb64_1001
 - m17-cxx-demod=2.3.3=h01e1179_5
 - mako=1.3.9=pyhd8ed1ab_0
-- mamba=2.0.5=he282079_2
+- mamba=2.0.7=he282079_0
 - markdown=3.6=pyhd8ed1ab_0
 - markupsafe=3.0.2=py312h31fea79_1
 - matplotlib-base=3.10.1=py312h90004f6_0
@@ -248,6 +262,8 @@ specs:
 - pip=25.0.1=pyh8b19718_0
 - pixman=0.44.2=had0cd8c_0
 - pkgutil-resolve-name=1.3.10=pyhd8ed1ab_2
+- platformdirs=4.3.6=pyhd8ed1ab_1
+- pluggy=1.5.0=pyhd8ed1ab_1
 - ply=3.11=pyhd8ed1ab_3
 - portaudio=19.7.0=he0c23c2_0
 - prompt-toolkit=3.0.50=pyha770c72_0
@@ -256,6 +272,7 @@ specs:
 - pyadi-iio=0.0.19=pyhd8ed1ab_0
 - pybind11-abi=4=hd8ed1ab_3
 - pycairo=1.27.0=py312h487989a_0
+- pycosat=0.6.6=py312h4389bb4_2
 - pycparser=2.22=pyh29332c3_1
 - pyfda=0.9.2=pyh9208f05_1
 - pyfiglet=0.8.post1=py_0
@@ -325,13 +342,15 @@ specs:
 - toml=0.10.2=pyhd8ed1ab_1
 - tomli=2.2.1=pyhd8ed1ab_1
 - tornado=6.4.2=py312h4389bb4_0
+- tqdm=4.67.1=pyhd8ed1ab_1
 - traitlets=5.14.3=pyhd8ed1ab_1
+- truststore=0.10.1=pyh29332c3_0
 - typing_extensions=4.12.2=pyha770c72_1
 - tzdata=2025a=h78e105d_0
 - ucrt=10.0.22621.0=h57928b3_1
 - uhd=4.8.0.0=py312h80b3061_0
 - unicodedata2=16.0.0=py312h4389bb4_0
-- urllib3=2.2.2=pyhd8ed1ab_0
+- urllib3=2.3.0=pyhd8ed1ab_0
 - vc14_runtime=14.42.34438=hfd919c2_24
 - vc=14.3=hbf610ac_24
 - volk=3.2.0=hb838788_0
@@ -352,12 +371,14 @@ specs:
 - zipp=3.21.0=pyhd8ed1ab_1
 - zope.event=5.0=pyhd8ed1ab_1
 - zope.interface=7.2=py312h4389bb4_0
-- zstd=1.5.7=hbeecb71_1
+- zstandard=0.23.0=py312h7606c53_1
+- zstd=1.5.6=h0ea2cb4_0
 user_requested_specs:
 - airspy
 - airspyhf
 - bladerf
 - codec2
+- conda
 - digital_rf
 - ephem
 - gnuradio
