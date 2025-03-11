@@ -4,5 +4,6 @@ channels:
   - conda-forge
   - ryanvolz
 dependencies:
+  - conda
   - mamba
   - miniforge_console_shortcut # [win]
