@@ -25,6 +25,7 @@ dependencies:
   - gnuradio-filerepeater
   - gnuradio-foo
   - gnuradio-fosphor
+  - gnuradio-funcube # [linux]
   - gnuradio-gpredict-doppler
   - gnuradio-hermeslite2 # [unix]
   - gnuradio-hpsdr # [unix]
@@ -64,6 +65,7 @@ dependencies:
   - soapysdr-module-airspyhf
   - soapysdr-module-audio
   - soapysdr-module-bladerf
+  - soapysdr-module-fcdpp # [linux]
   - soapysdr-module-hackrf
   - soapysdr-module-netsdr
   - soapysdr-module-lms7
