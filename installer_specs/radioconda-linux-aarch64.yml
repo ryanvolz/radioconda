@@ -59,7 +59,7 @@ dependencies:
 - soapysdr-module-hackrf=0.3.4=he88f3d8_0
 - soapysdr-module-lms7=23.11.0=hd9ae2f7_1
 - soapysdr-module-netsdr=0.2.0=hc0426f7_1
-- soapysdr-module-plutosdr=0.2.2=h901e66a_0
+- soapysdr-module-plutosdr=0.2.2=h0dffcbf_1
 - soapysdr-module-redpitaya=0.1.1=hc0426f7_0
 - soapysdr-module-remote=0.5.2=he88f3d8_2
 - soapysdr-module-rtlsdr=0.3.3=hd53839e_2
@@ -69,4 +69,4 @@ dependencies:
 - uhd=4.8.0.0=py312h0ef7e8d_0
 name: radioconda
 platform: linux-aarch64
-version: 2025.03.11
+version: 2025.03.12

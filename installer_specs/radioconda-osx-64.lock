@@ -50,7 +50,7 @@ https://conda.anaconda.org/t/*****/conda-forge/osx-64/xorg-libxau-1.0.12-h6e16a3
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/xorg-libxdmcp-1.1.5-h00291cd_0.conda#9f438e1b6f4e73fd9e6d78bfe7c36743
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/codec2-1.2.0-h6e16a3a_3.conda#f1056247f381f5fb63fac30eb2c2b481
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/expat-2.6.4-h240833e_0.conda#81ca1acbdfb112e1c8270d613c92bce4
-https://conda.anaconda.org/t/*****/conda-forge/osx-64/fmt-11.1.4-hbf61d64_0.conda#7b9452d495396cf4bb509f6dbdacaa2f
+https://conda.anaconda.org/t/*****/conda-forge/osx-64/fmt-11.0.2-h3c5361c_0.conda#e8070546e8739040383f6774e0cd4033
 https://conda.anaconda.org/t/*****/conda-forge/noarch/fonts-conda-ecosystem-1-0.tar.bz2#fee5683a3f04bd15cbd8318b096a27ab
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/gflags-2.2.2-hac325c4_1005.conda#a26de8814083a6971f14f9c8c3cb36c2
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/glew-2.1.0-h046ec9c_2.tar.bz2#6b753c8c7e4c46a8eb17b6f1781f958a
@@ -163,7 +163,6 @@ https://conda.anaconda.org/t/*****/conda-forge/noarch/idna-3.10-pyhd8ed1ab_1.con
 https://conda.anaconda.org/t/*****/conda-forge/noarch/itsdangerous-2.2.0-pyhd8ed1ab_1.conda#7ac5f795c15f288984e32add616cdc59
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/kiwisolver-1.4.8-py312h9275861_0.conda#88135d68c4ab7e6aedf52765b92acc70
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/lcms2-2.17-h72f5680_0.conda#bf210d0c63f2afb9e414a858b79f0eaa
-https://conda.anaconda.org/t/*****/conda-forge/osx-64/libad9361-iio-0.2-hafe1066_3.tar.bz2#9020de48dc37479ae17a33f2a38339ac
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/libad9361-iio-c-0.3-h9eea90d_1.conda#e3aa77c08e7ed7988e2a3a958bf44ddf
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/libclang-cpp17-17.0.6-default_h3571c67_8.conda#448cfb783b49dd497c41c75e570e220c
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/libclang13-19.1.7-default_hf2b7afa_1.conda#a05f68439c2b11e1fe74ae7fab57c84a
@@ -254,7 +253,7 @@ https://conda.anaconda.org/t/*****/conda-forge/osx-64/soapysdr-module-bladerf-0.
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/soapysdr-module-hackrf-0.3.4-ha64c28d_0.tar.bz2#e995f7c2dcdf42749638838e3c0b53da
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/soapysdr-module-lms7-23.11.0-hd56791b_1.conda#1da83b05474dac999117c0401f132908
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/soapysdr-module-netsdr-0.2.0-h7ecdfb7_1.conda#057b901107874beef0dc507365d4e226
-https://conda.anaconda.org/t/*****/conda-forge/osx-64/soapysdr-module-plutosdr-0.2.2-ha1538ea_0.conda#6e6884f1eadee06ff927f34feb1086e0
+https://conda.anaconda.org/t/*****/conda-forge/osx-64/soapysdr-module-plutosdr-0.2.2-h71197eb_1.conda#88a8b909aaf5adc0bdffcc6a3dba281b
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/soapysdr-module-redpitaya-0.1.1-h7ecdfb7_0.conda#9365abf68cbb1a315f2b42333081b14b
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/soapysdr-module-remote-0.5.2-ha64c28d_2.tar.bz2#b46013cf640ecbe5bfb5ecb01d53561c
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/soapysdr-module-rtlsdr-0.3.3-h4104cfc_2.conda#04c6e158e3d0279348317b5cceb8c365
@@ -299,7 +298,7 @@ https://conda.anaconda.org/t/*****/conda-forge/osx-64/gst-plugins-base-1.24.7-h0
 https://conda.anaconda.org/t/*****/conda-forge/noarch/jsonschema-4.23.0-pyhd8ed1ab_1.conda#a3cead9264b331b32fe8f0aabc967522
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/libsndfile-1.2.2-h9603cec_1.conda#8440dcb1adeceda826729f4244f0fd14
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/numpy-2.2.3-py312h6693b03_0.conda#19ba5fe74ffc9d196a75fbe1a3cd5fe3
-https://conda.anaconda.org/t/*****/conda-forge/osx-64/pango-1.56.1-hf94f63b_0.conda#3888a31896ccefaa6aa608ff13fd527c
+https://conda.anaconda.org/t/*****/conda-forge/osx-64/pango-1.56.2-hf94f63b_0.conda#8a9f86f40969b0e1bb6c79948f182c8e
 https://conda.anaconda.org/t/*****/conda-forge/noarch/paramiko-3.5.1-pyhd8ed1ab_0.conda#4e6bea7eee94bb9d8a599385215719f9
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/pygobject-3.50.0-py312h30111ac_1.conda#cc3539c885b6c74cf9f09f46533db930
 https://conda.anaconda.org/t/*****/conda-forge/osx-64/sdl-1.2.68-hc0cb955_1.conda#c86e5594a623e90ceef8ed75d513cc5b

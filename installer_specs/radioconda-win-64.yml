@@ -53,7 +53,7 @@ dependencies:
 - soapysdr-module-hackrf=0.3.4=h23704b7_0
 - soapysdr-module-lms7=23.11.0=hdfb3ff0_1
 - soapysdr-module-netsdr=0.2.0=h78c1c11_1
-- soapysdr-module-plutosdr=0.2.2=hfc7d00b_0
+- soapysdr-module-plutosdr=0.2.2=h18c8474_1
 - soapysdr-module-redpitaya=0.1.1=h78c1c11_0
 - soapysdr-module-remote=0.5.2=h23704b7_2
 - soapysdr-module-rtlsdr=0.3.3=h78c1c11_2
@@ -68,4 +68,4 @@ variables:
   GR_PREFIX: ''
   UHD_PKG_PATH: ''
   VOLK_PREFIX: ''
-version: 2025.03.11
+version: 2025.03.12

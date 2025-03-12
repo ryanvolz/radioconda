@@ -187,7 +187,6 @@ specs:
 - lerc=4.0.0=hbbae597_0
 - libabseil=20240722.0=cxx17_hf9f062a_4
 - libad9361-iio-c=0.3=hb4195d0_1
-- libad9361-iio=0.2=he558529_3
 - libaec=1.1.3=h46f38da_0
 - libaio=0.3.113=hb283c62_0
 - libairspy=1.0.10=h190368a_1
@@ -251,8 +250,8 @@ specs:
 - libllvm19=19.1.7=hf9c4d56_1
 - liblzma=5.6.4=h190368a_0
 - libm2k=0.9.0=py312hfad950e_1
-- libmamba=2.0.7=h9f16844_0
-- libmambapy=2.0.7=py312h590b09b_0
+- libmamba=2.0.5=h9f16844_2
+- libmambapy=2.0.5=py312h590b09b_2
 - libmatio=1.5.28=h711a493_2
 - libmicrohttpd=1.0.1=h28eaca5_1
 - libmirisdr4=2.0.0=h190368a_1
@@ -293,7 +292,7 @@ specs:
 - libwebp-base=1.5.0=h6573e2e_0
 - libxcb=1.17.0=he4e7c97_0
 - libxcrypt=4.4.36=ha17a0cc_1
-- libxkbcommon=1.8.0=h83c91fb_0
+- libxkbcommon=1.8.1=h83c91fb_0
 - libxml2=2.13.6=he91524c_0
 - libxslt=1.1.39=hfc4afe9_0
 - libzlib=1.3.1=h190368a_2
@@ -304,7 +303,7 @@ specs:
 - lzo=2.10=ha17a0cc_1001
 - m17-cxx-demod=2.3.3=hb5129e9_5
 - mako=1.3.9=pyhd8ed1ab_0
-- mamba=2.0.7=h240ceae_0
+- mamba=2.0.5=h240ceae_2
 - markdown=3.6=pyhd8ed1ab_0
 - markupsafe=3.0.2=py312h1d80cea_1
 - matplotlib-base=3.10.1=py312h5a52afb_0
@@ -414,7 +413,7 @@ specs:
 - soapysdr-module-hackrf=0.3.4=h6f8e04d_0
 - soapysdr-module-lms7=23.11.0=ha119c29_1
 - soapysdr-module-netsdr=0.2.0=he97dc58_1
-- soapysdr-module-plutosdr=0.2.2=ha6f28a8_0
+- soapysdr-module-plutosdr=0.2.2=h19da3d8_1
 - soapysdr-module-redpitaya=0.1.1=he97dc58_0
 - soapysdr-module-remote=0.5.2=h6f8e04d_2
 - soapysdr-module-rtlsdr=0.3.3=h7f3508f_2
@@ -549,5 +548,5 @@ user_requested_specs:
 - soapysdr-module-uhd
 - soapysdr-module-volk-converters
 - uhd
-version: 2025.03.11
+version: 2025.03.12
 write_condarc: true
