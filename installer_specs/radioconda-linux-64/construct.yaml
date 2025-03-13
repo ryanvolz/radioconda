@@ -31,7 +31,7 @@ specs:
 - at-spi2-core=2.40.3=h0630a04_0
 - atk-1.0=2.38.0=h04ea711_2
 - attr=2.5.1=h166bdaf_1
-- attrs=25.1.0=pyh71513ae_0
+- attrs=25.2.0=pyh71513ae_0
 - bcrypt=4.3.0=py312h12e396e_0
 - bidict=0.23.1=pyhd8ed1ab_1
 - bladerf=2024.05=hb9d3cd8_2
@@ -52,13 +52,12 @@ specs:
 - click=8.1.8=pyh707e725_0
 - codec2=1.2.0=hb9d3cd8_3
 - colorama=0.4.6=pyhd8ed1ab_1
-- conda-libmamba-solver=25.1.1=pyhd8ed1ab_0
+- conda-libmamba-solver=24.9.0=pyhd8ed1ab_0
 - conda-package-handling=2.4.0=pyh7900ff3_2
 - conda-package-streaming=0.11.0=pyhd8ed1ab_1
-- conda=25.1.1=py312h7900ff3_1
+- conda=24.11.3=py312h7900ff3_0
 - construct=2.10.70=pyhd8ed1ab_0
 - contourpy=1.3.1=py312h68727a3_0
-- cpp-expected=1.1.0=hf52228f_0
 - cryptography=44.0.2=py312hda17c39_0
 - cycler=0.12.1=pyhd8ed1ab_1
 - cyrus-sasl=2.1.27=h54b06d7_7
@@ -75,10 +74,10 @@ specs:
 - exceptiongroup=1.2.2=pyhd8ed1ab_1
 - executing=2.1.0=pyhd8ed1ab_1
 - expat=2.6.4=h5888daf_0
-- ffmpeg=7.1.1=gpl_ha1cb39d_700
+- ffmpeg=7.1.1=gpl_h24e5c1d_701
 - fftw=3.3.10=nompi_hf1063bd_110
 - flask-socketio=5.5.1=pyh29332c3_0
-- flask=3.1.0=pyhff2d567_0
+- flask=3.1.0=pyhd8ed1ab_1
 - fmt=11.0.2=h434a139_0
 - font-ttf-dejavu-sans-mono=2.37=hab24e00_0
 - font-ttf-inconsolata=3.000=h77eed37_0
@@ -88,7 +87,7 @@ specs:
 - fonts-conda-ecosystem=1=0
 - fonts-conda-forge=1=0
 - fonttools=4.56.0=py312h178313f_0
-- freetype=2.12.1=h267a509_2
+- freetype=2.13.3=h48d6fc4_0
 - fribidi=1.0.10=h36c2ea0_0
 - frozendict=2.4.6=py312h66e93f0_0
 - fs=2.4.16=pyhd8ed1ab_0
@@ -186,7 +185,7 @@ specs:
 - lcms2=2.17=h717163a_0
 - ld_impl_linux-64=2.43=h712a8e2_4
 - lerc=4.0.0=h27087fc_0
-- level-zero=1.21.1=h84d6215_0
+- level-zero=1.21.2=h84d6215_0
 - libabseil=20240722.0=cxx17_hbbce691_4
 - libad9361-iio-c=0.3=hf8c384f_1
 - libaec=1.1.3=h59595ed_0
@@ -204,7 +203,7 @@ specs:
 - libbrotlicommon=1.1.0=hb9d3cd8_2
 - libbrotlidec=1.1.0=hb9d3cd8_2
 - libbrotlienc=1.1.0=hb9d3cd8_2
-- libcap=2.71=h39aace5_0
+- libcap=2.75=h39aace5_0
 - libcblas=3.9.0=31_he106b2a_openblas
 - libclang-cpp19.1=19.1.7=default_hb5137d0_1
 - libclang13=19.1.7=default_h9c6a7e4_1
@@ -253,8 +252,8 @@ specs:
 - libllvm19=19.1.7=ha7bfdaf_1
 - liblzma=5.6.4=hb9d3cd8_0
 - libm2k=0.9.0=py312h04d462b_1
-- libmamba=2.0.7=h326b718_1
-- libmambapy=2.0.7=py312h8079299_1
+- libmamba=1.5.12=h49b8a8d_0
+- libmambapy=1.5.12=py312hbaee817_0
 - libmatio=1.5.28=hbb92ff5_2
 - libmicrohttpd=1.0.1=hbc5bc17_1
 - libmirisdr4=2.0.0=hb9d3cd8_1
@@ -293,11 +292,11 @@ specs:
 - libssh2=1.11.1=hf672d98_0
 - libstdcxx-ng=14.2.0=h4852527_2
 - libstdcxx=14.2.0=h8f9b012_2
-- libsystemd0=257.3=h3dc2cb9_0
+- libsystemd0=257.4=h4e0b6ca_1
 - libtasn1=4.20.0=hb9d3cd8_0
 - libthrift=0.21.0=h0e7cc3e_0
 - libtiff=4.7.0=hd9ff511_3
-- libudev1=257.4=h9a4d06a_0
+- libudev1=257.4=hbe16f8c_1
 - libunistring=0.9.10=h7f98852_0
 - libunwind=1.6.2=h9c3ff4c_0
 - liburing=2.9=h84d6215_0
@@ -321,14 +320,14 @@ specs:
 - lzo=2.10=hd590300_1001
 - m17-cxx-demod=2.3.3=h051f366_5
 - mako=1.3.9=pyhd8ed1ab_0
-- mamba=2.0.7=h1487362_1
+- mamba=1.5.12=py312h9460a1c_0
 - markdown=3.6=pyhd8ed1ab_0
 - markupsafe=3.0.2=py312h178313f_1
 - matplotlib-base=3.10.1=py312hd3ec401_0
 - matplotlib-inline=0.1.7=pyhd8ed1ab_1
 - matplotlib=3.10.1=py312h7900ff3_0
 - menuinst=2.2.0=py312h7900ff3_0
-- mesalib=24.3.4=h0b126fc_1
+- mesalib=25.0.1=h0b126fc_0
 - mirisdr=2.0.0=hb9d3cd8_1
 - mpg123=1.32.9=hc50e24c_0
 - mplcursors=0.6=pyhd8ed1ab_1
@@ -337,7 +336,6 @@ specs:
 - mysql-libs=9.0.1=he0572af_4
 - ncurses=6.5=h2d0b736_3
 - nettle=3.9.1=h7ab15ed_0
-- nlohmann_json=3.11.3=he02047a_1
 - nomkl=1.0=h5ca1d4c_0
 - nspr=4.36=h5888daf_0
 - nss=3.108=h159eef7_0
@@ -353,7 +351,7 @@ specs:
 - p11-kit=0.24.1=hc5aa10d_0
 - packaging=24.2=pyhd8ed1ab_2
 - pandas=2.2.3=py312hf9745cd_1
-- pango=1.56.1=h861ebed_0
+- pango=1.56.2=h861ebed_0
 - paramiko=3.5.1=pyhd8ed1ab_0
 - parso=0.8.4=pyhd8ed1ab_1
 - pcre2=10.44=hba22ea6_2
@@ -401,7 +399,7 @@ specs:
 - pytz=2024.1=pyhd8ed1ab_0
 - pywin32-on-windows=0.1.0=pyh1179c8e_3
 - pyyaml=6.0.2=py312h178313f_2
-- pyzmq=26.2.1=py312hbf22597_0
+- pyzmq=26.3.0=py312hbf22597_0
 - qdarkstyle=3.2.3=pyhd8ed1ab_1
 - qhull=2020.2=h434a139_5
 - qt-main=5.15.15=hc3cb62f_2
@@ -414,7 +412,7 @@ specs:
 - reproc=14.2.5.post0=hb9d3cd8_0
 - requests=2.32.3=pyhd8ed1ab_1
 - rpds-py=0.23.1=py312h3b7be25_0
-- rtl-sdr=2.0.2=hb9d3cd8_1
+- rtl-sdr=2.0.2=hb9d3cd8_2
 - ruamel.yaml.clib=0.2.8=py312h66e93f0_1
 - ruamel.yaml=0.18.10=py312h66e93f0_0
 - scipy=1.15.2=py312ha707e6e_0
@@ -422,7 +420,6 @@ specs:
 - sdl3=3.2.8=h3083f51_0
 - sdl=1.2.68=h9b8e6db_1
 - setuptools=75.8.2=pyhff2d567_0
-- simdjson=3.12.2=h84d6215_0
 - simple-websocket=1.1.0=pyhd8ed1ab_0
 - sip=6.7.12=py312h30efb56_0
 - six=1.17.0=pyhd8ed1ab_0
@@ -445,7 +442,7 @@ specs:
 - spdlog=1.15.1=hb29a8c4_0
 - stack_data=0.6.3=pyhd8ed1ab_1
 - superlu=5.2.2=h00795ac_0
-- svt-av1=3.0.0=h5888daf_0
+- svt-av1=3.0.1=h5888daf_0
 - tbb=2022.0.0=hceb3a55_0
 - tk=8.6.13=noxft_h4845f30_101
 - toml=0.10.2=pyhd8ed1ab_1
@@ -469,7 +466,7 @@ specs:
 - werkzeug=3.1.3=pyhd8ed1ab_1
 - wheel=0.45.1=pyhd8ed1ab_1
 - wsproto=1.2.0=pyhd8ed1ab_1
-- wxwidgets=3.2.6=h1605dd1_2
+- wxwidgets=3.2.6=hf87bdbc_3
 - x264=1!164.3095=h166bdaf_2
 - x265=3.5=h924138e_3
 - xcb-util-cursor=0.1.5=hb9d3cd8_0
@@ -504,8 +501,8 @@ specs:
 - zlib=1.3.1=hb9d3cd8_2
 - zope.event=5.0=pyhd8ed1ab_1
 - zope.interface=7.2=py312h66e93f0_0
-- zstandard=0.23.0=py312hef9b889_1
-- zstd=1.5.6=ha6fb4c9_0
+- zstandard=0.23.0=py312h66e93f0_1
+- zstd=1.5.7=hb8e6e7a_1
 user_requested_specs:
 - airspy
 - airspyhf
@@ -574,5 +571,5 @@ user_requested_specs:
 - soapysdr-module-uhd
 - soapysdr-module-volk-converters
 - uhd
-version: 2025.03.12
+version: 2025.03.13
 write_condarc: true

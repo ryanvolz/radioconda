@@ -44,7 +44,7 @@ dependencies:
 - pyadi-iio=0.0.19=pyhd8ed1ab_0
 - pyfda=0.9.2=pyh9208f05_1
 - python=3.12.9=h3f84c4b_1_cpython
-- rtl-sdr=2.0.2=h2466b09_1
+- rtl-sdr=2.0.2=h2466b09_2
 - scipy=1.15.2=py312h451d5c4_0
 - soapysdr-module-airspy=0.2.0=h23704b7_0
 - soapysdr-module-airspyhf=0.2.0=h23704b7_0
@@ -68,4 +68,4 @@ variables:
   GR_PREFIX: ''
   UHD_PKG_PATH: ''
   VOLK_PREFIX: ''
-version: 2025.03.12
+version: 2025.03.13
