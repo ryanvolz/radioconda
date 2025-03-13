@@ -5,5 +5,5 @@ channels:
   - ryanvolz
 dependencies:
   - conda
-  - mamba
+  - mamba <2
   - miniforge_console_shortcut # [win]
