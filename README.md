@@ -311,7 +311,7 @@ Install a udev rule by creating a link into your radioconda installation:
 
 Many USB devices use libusb and need a WinUSB driver installed on Windows. Follow this procedure to install the driver for your device:
 
-1. Download and run [Zadig](https://zadig.akeo.ie/)
+1. Download and run [Zadig](https://github.com/pbatard/libwdi/releases/download/v1.5.1/zadig-2.9.exe)
 2. Select your device
 
    - It may be auto-selected since it is missing a driver
