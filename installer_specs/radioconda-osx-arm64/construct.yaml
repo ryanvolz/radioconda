@@ -23,7 +23,7 @@ specs:
 - asciimatics=1.15.0=pyhd8ed1ab_1
 - asttokens=3.0.0=pyhd8ed1ab_1
 - atk-1.0=2.38.0=hd03087b_2
-- attrs=25.2.0=pyh71513ae_0
+- attrs=25.3.0=pyh71513ae_0
 - bcrypt=4.3.0=py312hcd83bfe_0
 - bidict=0.23.1=pyhd8ed1ab_1
 - bladerf=2024.05=h5505292_2
@@ -268,8 +268,8 @@ specs:
 - mpg123=1.32.9=hf642e45_0
 - mplcursors=0.6=pyhd8ed1ab_1
 - munkres=1.1.4=pyh9f0ad1d_0
-- mysql-common=9.0.1=hd7719f6_4
-- mysql-libs=9.0.1=ha8be5b7_4
+- mysql-common=9.0.1=hd7719f6_5
+- mysql-libs=9.0.1=ha8be5b7_5
 - ncurses=6.5=h5e97a16_3
 - nspr=4.36=h5833ebf_0
 - nss=3.108=ha3c76ea_0
@@ -337,7 +337,7 @@ specs:
 - reproc=14.2.5.post0=h5505292_0
 - requests=2.32.3=pyhd8ed1ab_1
 - rpds-py=0.23.1=py312hd60eec9_0
-- rtl-sdr=2.0.2=h5505292_2
+- rtl-sdr=2.0.2=h5505292_3
 - ruamel.yaml.clib=0.2.8=py312h0bf5046_1
 - ruamel.yaml=0.18.10=py312hea69d52_0
 - scipy=1.15.2=py312h99a188d_0
@@ -386,7 +386,7 @@ specs:
 - wheel=0.45.1=pyhd8ed1ab_1
 - wsproto=1.2.0=pyhd8ed1ab_1
 - wxwidgets=3.2.6=hbeba7cf_3
-- xorg-libx11=1.8.11=h6a5fb8c_0
+- xorg-libx11=1.8.12=h6a5fb8c_0
 - xorg-libxau=1.0.12=h5505292_0
 - xorg-libxdamage=1.1.6=hd74edd7_0
 - xorg-libxdmcp=1.1.5=hd74edd7_0
@@ -468,6 +468,6 @@ user_requested_specs:
 - soapysdr-module-uhd
 - soapysdr-module-volk-converters
 - uhd
-version: 2025.03.13
+version: 2025.03.14
 welcome_image: welcome.png
 write_condarc: true

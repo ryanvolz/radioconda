@@ -83,7 +83,7 @@ https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/libvorbis-1.3.7-h9f76cd
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/libxcb-1.17.0-hdb1d25a_0.conda#af523aae2eca6dfa1c8eec693f5b9a79
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/libxml2-2.13.6-h178c5d8_0.conda#277864577d514bea4b30f8a9335b8d26
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/mpg123-1.32.9-hf642e45_0.conda#d2b4857bdc3b76c36e23236172d09840
-https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/mysql-common-9.0.1-hd7719f6_4.conda#9fa04d5a66c24234855c105f18c05695
+https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/mysql-common-9.0.1-hd7719f6_5.conda#0b7348c3e06689bdff9dfdf9e9caaab5
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/nspr-4.36-h5833ebf_0.conda#026a08bd5b6a2a2f240c00c32446156d
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/pcre2-10.44-h297a79d_2.conda#147c83e5e44780c7492998acbacddf52
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/pixman-0.44.2-h2f9eb0b_0.conda#fa8e429fdb9e5b757281f69b8cc4330b
@@ -91,7 +91,7 @@ https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/portaudio-19.7.0-h5833e
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/pugixml-1.15-hd3d436d_0.conda#b9a4004e46de7aeb005304a13b35cb94
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/qhull-2020.2-h420ef59_5.conda#6483b1f59526e05d7d894e466b5b6924
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/readline-8.2-h1d1bf99_2.conda#63ef3f6e6d6d5c589e64f11263dc5676
-https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/rtl-sdr-2.0.2-h5505292_2.conda#01e9d1f3d5e026710dbbdae59c1be1b0
+https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/rtl-sdr-2.0.2-h5505292_3.conda#121de75923e2e2dc71eb483ed8e16c77
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/tk-8.6.13-h5083fa2_1.conda#b50a57ba89c32b62428b71a875291c9b
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/volk-3.2.0-h71a8b11_0.conda#bfa09b70af6ad32c8207f8ec60b2962e
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/volk-gnss-sdr-0.0.19-h06bbddc_8.conda#2ee2f148ade00ae6b8403c50da4bdef5
@@ -121,15 +121,15 @@ https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/libtiff-4.7.0-h551f018_
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/libxslt-1.1.39-h223e5b9_0.conda#560c9cacc33e927f55b998eaa0cb1732
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/lua-5.4.6-hfd2a410_1.conda#087e4726e700f22692001da83f071bde
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/mirisdr-2.0.0-h5505292_1.conda#340ef6579d0b833a24720dac5c6ac5fd
-https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/mysql-libs-9.0.1-ha8be5b7_4.conda#c029a6b3510dbbb2d684cc3a935dbde2
+https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/mysql-libs-9.0.1-ha8be5b7_5.conda#f0eec7f32614b20d59a0a663219b15c2
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/nss-3.108-ha3c76ea_0.conda#c31f54afadf1024210057b76445227d1
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/python-3.12.9-hc22306f_1_cpython.conda#d9fac7b334ff6e5f93abd27509a53060
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/spdlog-1.15.1-hed1c2b2_0.conda#95277d613352000a8cd51533076bf1db
-https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/xorg-libx11-1.8.11-h6a5fb8c_0.conda#95ce770ea25f665b17af27d0d4164d20
+https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/xorg-libx11-1.8.12-h6a5fb8c_0.conda#89b59aaa3c35257dba0b7c2d980f35f0
 https://conda.anaconda.org/t/*****/conda-forge/noarch/appdirs-1.4.4-pyhd8ed1ab_1.conda#f4e90937bbfc3a4a92539545a37bb448
 https://conda.anaconda.org/t/*****/conda-forge/noarch/asttokens-3.0.0-pyhd8ed1ab_1.conda#8f587de4bcf981e26228f268df374a9b
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/atk-1.0-2.38.0-hd03087b_2.conda#57301986d02d30d6805fdce6c99074ee
-https://conda.anaconda.org/t/*****/conda-forge/noarch/attrs-25.2.0-pyh71513ae_0.conda#0d011de95db107ac3383b2041990007b
+https://conda.anaconda.org/t/*****/conda-forge/noarch/attrs-25.3.0-pyh71513ae_0.conda#a10d11958cadc13fdb43df75f8b1903f
 https://conda.anaconda.org/t/*****/conda-forge/osx-arm64/bcrypt-4.3.0-py312hcd83bfe_0.conda#346513ef778843401b775b184e68ea9b
 https://conda.anaconda.org/t/*****/conda-forge/noarch/bidict-0.23.1-pyhd8ed1ab_1.conda#a6d521e8054c6b38aea1095060bd7e14
 https://conda.anaconda.org/t/*****/conda-forge/noarch/blinker-1.9.0-pyhff2d567_0.conda#42834439227a4551b939beeeb8a4b085

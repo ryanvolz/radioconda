@@ -49,7 +49,7 @@ dependencies:
 - pyadi-iio=0.0.19=pyhd8ed1ab_0
 - pyfda=0.9.2=pyh9208f05_1
 - python=3.10.16=h389347d_1_cpython
-- rtl-sdr=2.0.2=h190368a_2
+- rtl-sdr=2.0.2=h190368a_3
 - scipy=1.15.2=py310h7438458_0
 - soapysdr-module-airspy=0.2.0=h6f8e04d_0
 - soapysdr-module-airspyhf=0.2.0=h6f8e04d_0
@@ -69,4 +69,4 @@ dependencies:
 - uhd=4.6.0.0=py310hcd7457b_0
 name: radioconda
 platform: linux-ppc64le
-version: 2025.03.13
+version: 2025.03.14

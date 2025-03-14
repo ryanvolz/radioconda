@@ -138,12 +138,12 @@ https://conda.anaconda.org/t/*****/conda-forge/linux-ppc64le/xcb-util-0.4.1-had9
 https://conda.anaconda.org/t/*****/conda-forge/linux-ppc64le/xcb-util-keysyms-0.4.1-had93e6f_0.conda#e51b247291f2a1d6f9e7c86b1881bb83
 https://conda.anaconda.org/t/*****/conda-forge/linux-ppc64le/xcb-util-renderutil-0.3.10-had93e6f_0.conda#a0c8203f9165e791fd9d3675d6a4ec0a
 https://conda.anaconda.org/t/*****/conda-forge/linux-ppc64le/xcb-util-wm-0.4.2-had93e6f_0.conda#ff3156fa3fe07b4698b066390a257811
-https://conda.anaconda.org/t/*****/conda-forge/linux-ppc64le/xorg-libsm-1.2.5-h9be89da_0.conda#cd7778117c54235321486aa6b4231947
-https://conda.anaconda.org/t/*****/conda-forge/linux-ppc64le/xorg-libx11-1.8.11-h67a18fa_0.conda#dc4f683125cd378d994e09ea307c63c7
+https://conda.anaconda.org/t/*****/conda-forge/linux-ppc64le/xorg-libsm-1.2.6-h9be89da_0.conda#602b7b7ab7d91f0e26a92b6febaa6662
+https://conda.anaconda.org/t/*****/conda-forge/linux-ppc64le/xorg-libx11-1.8.12-h67a18fa_0.conda#fc757353ae2ff3339db6b62bf580a499
 https://conda.anaconda.org/t/*****/conda-forge/linux-ppc64le/xz-5.6.4-h36435d8_0.conda#3530f1f3592e69b4a7f1bc08c80e13e9
 https://conda.anaconda.org/t/*****/conda-forge/noarch/appdirs-1.4.4-pyhd8ed1ab_1.conda#f4e90937bbfc3a4a92539545a37bb448
 https://conda.anaconda.org/t/*****/conda-forge/noarch/asttokens-3.0.0-pyhd8ed1ab_1.conda#8f587de4bcf981e26228f268df374a9b
-https://conda.anaconda.org/t/*****/conda-forge/noarch/attrs-25.2.0-pyh71513ae_0.conda#0d011de95db107ac3383b2041990007b
+https://conda.anaconda.org/t/*****/conda-forge/noarch/attrs-25.3.0-pyh71513ae_0.conda#a10d11958cadc13fdb43df75f8b1903f
 https://conda.anaconda.org/t/*****/conda-forge/linux-ppc64le/bcrypt-4.3.0-py310h99da70f_0.conda#684cf152c665a47e27a8ab9c9bc71ef6
 https://conda.anaconda.org/t/*****/conda-forge/noarch/bidict-0.23.1-pyhd8ed1ab_1.conda#a6d521e8054c6b38aea1095060bd7e14
 https://conda.anaconda.org/t/*****/conda-forge/noarch/blinker-1.9.0-pyhff2d567_0.conda#42834439227a4551b939beeeb8a4b085
@@ -318,7 +318,7 @@ https://conda.anaconda.org/t/*****/conda-forge/linux-ppc64le/pycairo-1.27.0-py31
 https://conda.anaconda.org/t/*****/conda-forge/linux-ppc64le/pynacl-1.5.0-py310hb2fe1c6_4.conda#f3bc7ed008a919cc4b8675a2f2812d90
 https://conda.anaconda.org/t/*****/conda-forge/linux-ppc64le/pyqt5-sip-12.12.2-py310h9de49d8_5.conda#5894de6a29f3555b293d3b67d3c14b12
 https://conda.anaconda.org/t/*****/conda-forge/noarch/qdarkstyle-3.2.3-pyhd8ed1ab_1.conda#b5d204064e9c816535282a94f30a40c9
-https://conda.anaconda.org/t/*****/conda-forge/linux-ppc64le/rtl-sdr-2.0.2-h190368a_2.conda#7ff2cb306caa462d07526034809aafb6
+https://conda.anaconda.org/t/*****/conda-forge/linux-ppc64le/rtl-sdr-2.0.2-h190368a_3.conda#0664e6fd0166c3d119ea720a65e77f2b
 https://conda.anaconda.org/t/*****/conda-forge/linux-ppc64le/superlu-5.2.2-ha2bd32a_0.tar.bz2#b78bbd0e2c35c0ee6052c8df9ca53937
 https://conda.anaconda.org/t/*****/conda-forge/noarch/wsproto-1.2.0-pyhd8ed1ab_1.conda#2c7536a04d9c21e1dd05bd4a3b1e3a39
 https://conda.anaconda.org/t/*****/conda-forge/linux-ppc64le/xorg-libxtst-1.2.5-h190368a_3.conda#bb5eab6a966202b0f088cf348bfcaa46

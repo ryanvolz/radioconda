@@ -31,7 +31,7 @@ specs:
 - at-spi2-core=2.40.3=h633f9df_0
 - atk-1.0=2.38.0=h912a750_2
 - attr=2.5.1=hb283c62_1
-- attrs=25.2.0=pyh71513ae_0
+- attrs=25.3.0=pyh71513ae_0
 - bcrypt=4.3.0=py310h99da70f_0
 - bidict=0.23.1=pyhd8ed1ab_1
 - bladerf=2024.05=h190368a_2
@@ -378,7 +378,7 @@ specs:
 - reproc=14.2.5.post0=h190368a_0
 - requests=2.32.3=pyhd8ed1ab_1
 - rpds-py=0.23.1=py310he847975_0
-- rtl-sdr=2.0.2=h190368a_2
+- rtl-sdr=2.0.2=h190368a_3
 - ruamel.yaml.clib=0.2.8=py310hb2fe1c6_1
 - ruamel.yaml=0.18.10=py310hb2fe1c6_0
 - scipy=1.15.2=py310h7438458_0
@@ -438,8 +438,8 @@ specs:
 - xcb-util=0.4.1=had93e6f_2
 - xkeyboard-config=2.43=h190368a_0
 - xorg-libice=1.1.2=h190368a_0
-- xorg-libsm=1.2.5=h9be89da_0
-- xorg-libx11=1.8.11=h67a18fa_0
+- xorg-libsm=1.2.6=h9be89da_0
+- xorg-libx11=1.8.12=h67a18fa_0
 - xorg-libxau=1.0.12=h190368a_0
 - xorg-libxcomposite=0.4.6=h190368a_2
 - xorg-libxcursor=1.2.3=h190368a_0
@@ -534,5 +534,5 @@ user_requested_specs:
 - soapysdr-module-uhd
 - soapysdr-module-volk-converters
 - uhd
-version: 2025.03.13
+version: 2025.03.14
 write_condarc: true

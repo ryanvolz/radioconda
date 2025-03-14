@@ -25,7 +25,7 @@ specs:
 - asciimatics=1.15.0=pyhd8ed1ab_1
 - asttokens=3.0.0=pyhd8ed1ab_1
 - atk-1.0=2.38.0=hb44c4ce_2
-- attrs=25.2.0=pyh71513ae_0
+- attrs=25.3.0=pyh71513ae_0
 - bcrypt=4.3.0=py312h2615798_0
 - bidict=0.23.1=pyhd8ed1ab_1
 - bladerf=2024.05=h2466b09_2
@@ -306,7 +306,7 @@ specs:
 - reproc=14.2.5.post0=h2466b09_0
 - requests=2.32.3=pyhd8ed1ab_1
 - rpds-py=0.23.1=py312hfe1d9c4_0
-- rtl-sdr=2.0.2=h2466b09_2
+- rtl-sdr=2.0.2=h2466b09_3
 - ruamel.yaml.clib=0.2.8=py312h4389bb4_1
 - ruamel.yaml=0.18.10=py312h4389bb4_0
 - scipy=1.15.2=py312h451d5c4_0
@@ -432,6 +432,6 @@ user_requested_specs:
 - soapysdr-module-uhd
 - soapysdr-module-volk-converters
 - uhd
-version: 2025.03.13
+version: 2025.03.14
 welcome_image: welcome.png
 write_condarc: true
