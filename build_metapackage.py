@@ -146,7 +146,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     bldpkgs_dir = pathlib.Path(conda_build_config.croot) / env_dict["platform"]
-    pkg_paths = list(bldpkgs_dir.glob(f"{env_dict['name']}-{env_dict['version']}*.bz2"))
+    pkg_paths = list(bldpkgs_dir.glob(f"{env_dict['name']}-{env_dict['version']}*.conda"))
     pkg_out_dir = args.output_dir / env_dict["platform"]
     pkg_out_dir.mkdir(parents=True, exist_ok=True)
 
