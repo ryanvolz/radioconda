@@ -94,10 +94,10 @@ specs:
 - gnuradio-fosphor=0.0.0.20250304.dev+g85a0b8f=np20py312h882ae0e_1
 - gnuradio-gpredict-doppler=0.0.0.20250303.dev+g9473cbf=win_py_1
 - gnuradio-grc=3.10.12.0=py312h8dc5eaa_1
-- gnuradio-ieee802_11=0.0.0.20250304.dev+g761bdd9=np20py312he13c6b4_1
+- gnuradio-ieee802_11=0.0.0.20250304.dev+g761bdd9=np20py312he13c6b4_2
 - gnuradio-ieee802_15_4=3.6.post20250304+g61f4c4a=np20py312h7473803_1
 - gnuradio-iio=3.10.12.0=py312hb16bde5_1
-- gnuradio-inspector=0.0.0.20250303.dev+gad6a69e=np20py312hdc842b3_1
+- gnuradio-inspector=0.0.0.20250303.dev+gad6a69e=np20py312hdc842b3_2
 - gnuradio-iqbalance=0.38.2=py312h8eec19f_7
 - gnuradio-iridium=1!1.0.0=py312hb011683_16
 - gnuradio-leo-data=1.0.0.post20250214+g8f62b92=win_2

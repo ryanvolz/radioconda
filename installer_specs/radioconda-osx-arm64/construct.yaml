@@ -103,10 +103,10 @@ specs:
 - gnuradio-grc=3.10.12.0=py312h66d8579_1
 - gnuradio-hermeslite2=1.0.0.0.post20250305+g2e66561=np20py312h21d183f_0
 - gnuradio-hpsdr=0.0.0.20250304.dev+g7748cc9=np20py312h21d183f_1
-- gnuradio-ieee802_11=0.0.0.20250304.dev+g761bdd9=np20py312h0f5d4df_1
+- gnuradio-ieee802_11=0.0.0.20250304.dev+g761bdd9=np20py312h0f5d4df_2
 - gnuradio-ieee802_15_4=3.6.post20250304+g61f4c4a=np20py312h5dd478e_1
 - gnuradio-iio=3.10.12.0=py312hcebcc41_1
-- gnuradio-inspector=0.0.0.20250303.dev+gad6a69e=np20py312h0417059_1
+- gnuradio-inspector=0.0.0.20250303.dev+gad6a69e=np20py312h0417059_2
 - gnuradio-iqbalance=0.38.2=py312he1353b8_7
 - gnuradio-iridium=1!1.0.0=py312h4cd8392_16
 - gnuradio-leo-data=1.0.0.post20250214+g8f62b92=unix_2
