@@ -1,0 +1,119 @@
+[workspace]
+authors = ["Ryan Volz <ryan.volz@gmail.com>"]
+channels = ["conda-forge", "ryanvolz"]
+name = "radioconda"
+platforms = ["linux-64", "linux-aarch64", "linux-ppc64le", "osx-64", "osx-arm64", "win-64"]
+version = "2025.03.14"
+
+[tasks]
+
+[dependencies]
+airspy = "==1.0.10"
+airspyhf = "==1.6.8"
+bladerf = "==2024.5"
+codec2 = "==1.2.0"
+digital_rf = "==2.6.11"
+ephem = "==4.2"
+gnuradio-adsb = "==0.0.0.20250304.dev+g9645757"
+gnuradio-dect2 = "==0.0.0.20250304.dev+g27a3d6"
+gnuradio-filerepeater = "==0.0.0.20250304.dev+gec6b386"
+gnuradio-foo = "==0.0.0.20250304.dev+g9e0e2"
+gnuradio-fosphor = "==0.0.0.20250304.dev+g85a0b8f"
+gnuradio-gpredict-doppler = "==0.0.0.20250303.dev+g9473cbf"
+gnuradio-ieee802_11 = "==0.0.0.20250304.dev+g761bdd9"
+gnuradio-ieee802_15_4 = "==3.6.post20250304+g61f4c4a"
+gnuradio-inspector = "==0.0.0.20250303.dev+gad6a69e"
+gnuradio-iqbalance = "==0.38.2"
+gnuradio-iridium = "==1!1.0.0"
+gnuradio-leo = "==1.0.0.post20250214+g8f62b92"
+gnuradio-lora_sdr = "==0.0.0.20250305.dev+ga8143cb"
+gnuradio-m2k = "==1.0.0"
+gnuradio-osmosdr = "==0.2.6"
+gnuradio-paint = "==0.0.0.20250303.dev+gfb4f7b6"
+gnuradio-radar = "==0.0.0.20250220.dev+g92adce2"
+gnuradio-rds = "==3.10.post20250305+gc1cba54"
+gnuradio-satellites = "==5.7.0"
+gnuradio = "==3.10.12.0"
+gqrx = "==2.17.6"
+hackrf = "==2024.2.1"
+hamlib-all = "==4.6.2"
+inspectrum = "==0.3.1"
+ipython = "==9.0.2"
+libiio = "==0.26"
+libm2k = "==0.9.0"
+limesuite = "==23.11.0"
+m17-cxx-demod = "==2.3.3"
+matplotlib = "==3.10.1"
+mirisdr = "==2.0.0"
+numpy = "==2.2.3"
+pandas = "==2.2.3"
+pyadi-iio = "==0.0.19"
+pyfda = "==0.9.2"
+python = "==3.12.9"
+rtl-sdr = "==2.0.2"
+scipy = "==1.15.2"
+soapysdr-module-airspy = "==0.2.0"
+soapysdr-module-airspyhf = "==0.2.0"
+soapysdr-module-audio = "==0.1.1"
+soapysdr-module-bladerf = "==0.4.1"
+soapysdr-module-hackrf = "==0.3.4"
+soapysdr-module-lms7 = "==23.11.0"
+soapysdr-module-netsdr = "==0.2.0"
+soapysdr-module-plutosdr = "==0.2.2"
+soapysdr-module-redpitaya = "==0.1.1"
+soapysdr-module-remote = "==0.5.2"
+soapysdr-module-rtlsdr = "==0.3.3"
+soapysdr-module-uhd = "==0.4.1"
+soapysdr-module-volk-converters = "==0.1.1"
+soapysdr = "==0.8.1"
+uhd = "==4.8.0.0"
+
+[target.unix.dependencies]
+gnss-sdr = "==0.0.19"
+gnuradio-hermeslite2 = "==1.0.0.0.post20250305+g2e66561"
+gnuradio-hpsdr = "==0.0.0.20250304.dev+g7748cc9"
+
+[target.linux.dependencies]
+alsa-plugins = "==1.2.12"
+gnuradio-funcube = "==3.10.0.rc3"
+soapysdr-module-fcdpp = "==0.1.1"
+
+[feature.installer.dependencies]
+conda = "==24.11.3"
+mamba = "==1.5.12"
+
+[feature.installer.target.win.dependencies]
+miniforge_console_shortcut = "==2"
+
+[feature.build-installer.target.linux-64.dependencies]
+anaconda-client = "==1.13.0"
+conda-build = "==25.1.2"
+constructor = "==3.11.2"
+patch-ng = "==1.18.1"
+requests = "==2.32.3"
+
+[feature.build-installer.target.osx-64.dependencies]
+anaconda-client = "==1.13.0"
+conda-build = "==25.1.2"
+constructor = "==3.11.2"
+patch-ng = "==1.18.1"
+requests = "==2.32.3"
+
+[feature.build-installer.target.osx-arm64.dependencies]
+anaconda-client = "==1.13.0"
+conda-build = "==25.1.2"
+constructor = "==3.11.2"
+patch-ng = "==1.18.1"
+requests = "==2.32.3"
+
+[feature.build-installer.target.win-64.dependencies]
+anaconda-client = "==1.13.0"
+conda-build = "==25.1.2"
+constructor = "==3.11.2"
+patch-ng = "==1.18.1"
+requests = "==2.32.3"
+
+[environments]
+installer = { features = ["installer"], solve-group = "default" }
+default = { solve-group = "default" }
+build-installer = { features = ["build-installer"], no-default-feature = true }

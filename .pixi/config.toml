@@ -1,0 +1,5 @@
+default-channels = ["https://prefix.dev/conda-forge"]
+pinning-strategy = "exact-version"
+
+[repodata-config]
+disable-sharded = false
